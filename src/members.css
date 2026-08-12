@@ -38,53 +38,6 @@ p{margin:0}
 ul,ol{margin:0;padding:0;list-style:none}
 :focus-visible{outline:2px solid var(--gold-deep);outline-offset:3px;border-radius:3px}
 
-/* ---------- 合言葉ゲート ---------- */
-html.gated body>.hd,
-html.gated body>main,
-html.gated body>.ft{display:none}
-
-.gate{
-  position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;
-  padding:24px;background:
-    radial-gradient(120% 90% at 50% 0%,var(--navy-soft) 0%,var(--navy) 45%,var(--navy-deep) 100%);
-}
-.gate__card{
-  width:min(100%,380px);text-align:center;color:#fff;
-  animation:rise .5s var(--ease) both;
-}
-@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
-.gate__logo{margin:0 0 22px}
-.gate__logo__a{
-  display:block;font-family:var(--f-en);font-size:25px;font-weight:500;
-  letter-spacing:.22em;color:#fff;
-}
-.gate__logo__a span{color:var(--gold);margin:0 .06em}
-.gate__logo__b{
-  display:block;margin-top:7px;font-family:var(--f-en);font-size:11px;font-weight:400;
-  letter-spacing:.44em;color:rgba(255,255,255,.55);
-}
-.gate__title{
-  font-family:var(--f-serif);font-size:19px;font-weight:600;letter-spacing:.16em;
-  color:var(--gold);margin-bottom:14px;
-}
-.gate__lead{font-size:13px;line-height:2;color:rgba(255,255,255,.72);margin-bottom:26px}
-.gate__input{
-  width:100%;height:52px;padding:0 18px;font-size:16px;font-family:inherit;color:#fff;
-  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.22);border-radius:var(--r);
-  transition:border-color .25s var(--ease),background .25s var(--ease);
-}
-.gate__input::placeholder{color:rgba(255,255,255,.4)}
-.gate__input:focus{outline:0;border-color:var(--gold);background:rgba(255,255,255,.11)}
-.gate__btn{
-  width:100%;height:52px;margin-top:12px;border-radius:var(--r);
-  background:var(--gold);color:var(--navy-deep);font-weight:700;letter-spacing:.14em;
-  transition:background .25s var(--ease),transform .2s var(--ease);
-}
-.gate__btn:hover{background:#D6B87C}
-.gate__btn:active{transform:translateY(1px)}
-.gate__err{margin-top:14px;font-size:13px;color:#F0B4A4}
-.gate__help{margin-top:22px;font-size:12px;color:rgba(255,255,255,.45)}
-
 /* ---------- ヘッダー ---------- */
 .hd{
   position:sticky;top:0;z-index:50;
@@ -295,4 +248,60 @@ html.gated body>.ft{display:none}
 
 @media (prefers-reduced-motion:reduce){
   *{animation-duration:.01ms !important;transition-duration:.01ms !important}
+}
+
+/* ---------- 有料記事 ---------- */
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag--paid{
+  background:var(--navy);color:var(--gold);letter-spacing:.16em;
+}
+.card--paid a{border-color:rgba(22,32,74,.16)}
+.card--paid a::before{
+  content:"";position:absolute;inset:0;border-radius:var(--r-lg);
+  background:linear-gradient(180deg,rgba(22,32,74,0) 55%,rgba(22,32,74,.045) 100%);
+  pointer-events:none;
+}
+.card--paid a{position:relative}
+.card--paid .card__go{color:var(--navy)}
+
+.paid{
+  margin-top:40px;padding:44px 34px 38px;text-align:center;
+  background:
+    linear-gradient(rgba(251,250,247,0) 0%,var(--bg) 42px),
+    radial-gradient(120% 90% at 50% 100%,var(--navy-soft) 0%,var(--navy) 100%);
+  border-radius:var(--r-lg);color:#fff;position:relative;overflow:hidden;
+}
+.paid::before{
+  content:"";position:absolute;left:0;right:0;top:-46px;height:64px;
+  background:linear-gradient(rgba(251,250,247,0),var(--bg));
+}
+.paid__mark{
+  font-family:var(--f-serif);font-size:17px;font-weight:600;letter-spacing:.14em;
+  color:var(--gold);margin-bottom:14px;
+}
+.paid__lead{font-size:13px;line-height:2.05;color:rgba(255,255,255,.72);margin-bottom:24px}
+.paid__form{display:flex;gap:10px;max-width:380px;margin-inline:auto}
+.paid__input{
+  flex:1;height:50px;padding:0 16px;font-size:16px;font-family:inherit;color:#fff;
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);border-radius:var(--r);
+  transition:border-color .25s var(--ease),background .25s var(--ease);
+}
+.paid__input::placeholder{color:rgba(255,255,255,.4)}
+.paid__input:focus{outline:0;border-color:var(--gold);background:rgba(255,255,255,.12)}
+.paid__btn{
+  padding:0 26px;height:50px;border-radius:var(--r);white-space:nowrap;
+  background:var(--gold);color:var(--navy-deep);font-weight:700;letter-spacing:.1em;
+  transition:background .25s var(--ease);
+}
+.paid__btn:hover{background:#D6B87C}
+.paid__btn:disabled{opacity:.6;cursor:default}
+.paid__err{margin-top:14px;font-size:13px;color:#F0B4A4}
+.paid__help{margin-top:22px;font-size:12px;color:rgba(255,255,255,.45)}
+
+@keyframes fadein{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+@media (max-width:640px){
+  .paid{padding:34px 20px 30px}
+  .paid__form{flex-direction:column}
+  .paid__btn{padding:0}
 }

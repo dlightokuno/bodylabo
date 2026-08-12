@@ -5,24 +5,36 @@
 使い方:  python3 build.py
 出力先:  site/
 原本は .md のほうです。HTMLは毎回作り直されるので直接編集しないでください。
+
+無料記事は誰でも読めます。
+原稿の frontmatter に `paid: true` を書いた記事だけ、本文が暗号化され、
+合言葉を入れないと読めなくなります（結論の一行だけは見出しとして残ります）。
 """
+import base64
 import glob
 import hashlib
 import html
 import io
+import json
 import os
 import re
 import shutil
+import struct
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(ROOT, "site")
 
 # =========================================================
-# 合言葉（変更したらこのファイルを書き換えて build.py を再実行）
-# ページ側にはハッシュだけが埋め込まれます。
+# 有料記事の合言葉（変更したらここを書き換えて build.py を再実行）
+#
+# ・辞書にある単語は使わないでください。ハッシュから割り出されます
+# ・大文字小文字と前後の空白は無視して照合します
 # =========================================================
-# 大文字・小文字は区別しません（Dlight でも dlight でも開きます）
-PASSWORD = "Dlight"
+PAID_PASSWORD = "labo-9x4k2m"
+# 合言葉から鍵を作るときの繰り返し回数。総当たりを重くするためのもの。
+# 増やすほど破りにくくなりますが、そのぶん読者の待ち時間が伸びます。
+# 合言葉が推測しにくい文字列であれば、この値で十分です。
+PAID_ITER = 300000
 
 # ブランド表記（ロゴはここを直せば全ページ変わります）
 BRAND_MAIN = "D/LIGHT"        # 前半（スラッシュは自動で金色になります）
@@ -32,6 +44,9 @@ PAGE_NAME = "会員ページ"
 
 # 公式サイトへのリンクを出す場合はURLを入れる（空なら出しません）
 HOME_URL = ""
+
+# 検索エンジンに載せない
+NOINDEX = True
 
 # 分野の並び順と表示名（この順でトップに並びます）
 CATEGORIES = [
@@ -147,6 +162,33 @@ def steps_to_html(lines):
 
 
 # ---------------------------------------------------------
+# 有料記事の暗号化
+# ---------------------------------------------------------
+def encrypt(text, password):
+    """合言葉から鍵を作り、本文を読めない形にする。
+
+    ページに入るのは、この関数が返す値だけです。合言葉そのものは入りません。
+    """
+    salt = os.urandom(16)
+    key = hashlib.pbkdf2_hmac("sha256", password.strip().lower().encode("utf-8"),
+                              salt, PAID_ITER, 32)
+    # 合言葉が合っているかを、本文を戻す前に確かめるための短い印
+    check = hashlib.sha256(key + b"check").hexdigest()[:16]
+
+    data = text.encode("utf-8")
+    stream = b"".join(hashlib.sha256(key + struct.pack(">I", i)).digest()
+                      for i in range((len(data) + 31) // 32))
+    body = bytes(a ^ b for a, b in zip(data, stream))
+
+    return {
+        "salt": base64.b64encode(salt).decode(),
+        "body": base64.b64encode(body).decode(),
+        "check": check,
+        "iter": PAID_ITER,
+    }
+
+
+# ---------------------------------------------------------
 # テンプレート
 # ---------------------------------------------------------
 def logo(cls):
@@ -156,52 +198,40 @@ def logo(cls):
         cls, main, cls, html.escape(BRAND_SUB))
 
 
-def head(title, desc, depth=0):
-    up = "../" * depth
+def head(title, desc, paid=False):
+    robots = ('<meta name="robots" content="noindex, nofollow, noarchive">\n'
+              if NOINDEX else "")
+    scripts = '<script src="assets/js/app.js" defer></script>'
+    if paid:
+        scripts += '\n<script src="assets/js/paid.js" defer></script>'
     return """<!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, nofollow, noarchive">
-<title>{title}</title>
+{robots}<title>{title}</title>
 <meta name="description" content="{desc}">
 <meta name="theme-color" content="#16204A">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Noto+Sans+JP:wght@400;500;700&family=Zen+Old+Mincho:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{up}assets/css/members.css">
-<script>document.documentElement.classList.add("gated");</script>
-<script src="{up}assets/js/gate.js" defer></script>
+<link rel="stylesheet" href="assets/css/members.css">
+{scripts}
 </head>
 <body>
-<div id="gate" class="gate" hidden>
-  <form class="gate__card" id="gate-form">
-    <p class="gate__logo">{logo}</p>
-    <h1 class="gate__title">{pagename}</h1>
-    <p class="gate__lead">合言葉を入力してください。<br>一度入れると、この端末では次回から聞かれません。</p>
-    <input class="gate__input" id="gate-input" type="password" inputmode="text"
-           autocomplete="current-password" placeholder="合言葉" aria-label="合言葉">
-    <button class="gate__btn" type="submit">開く</button>
-    <p class="gate__err" id="gate-err" hidden>合言葉が違います。</p>
-    <p class="gate__help">分からないときは、担当トレーナーにお尋ねください。</p>
-  </form>
-</div>
-""".format(title=html.escape(title), desc=html.escape(desc), up=up,
-           logo=logo("gate__logo"), pagename=html.escape(PAGE_NAME))
+""".format(title=html.escape(title), desc=html.escape(desc), robots=robots, scripts=scripts)
 
 
-def header(depth=0):
-    up = "../" * depth
+def header():
     home = ('<a class="hd__home" href="%s" target="_blank" rel="noopener">公式サイト</a>'
             % HOME_URL) if HOME_URL else ""
     return """<header class="hd">
   <div class="hd__in">
-    <a class="hd__logo" href="{up}index.html">{logo}</a>
+    <a class="hd__logo" href="index.html">{logo}</a>
     {home}
   </div>
 </header>
-""".format(up=up, home=home, logo=logo("hd__logo"))
+""".format(home=home, logo=logo("hd__logo"))
 
 
 FOOTER = """<footer class="ft">
@@ -213,12 +243,28 @@ FOOTER = """<footer class="ft">
 """.format(logo=logo("ft__logo"))
 
 
+PAID_FORM = """<div class="paid" id="paid">
+  <p class="paid__mark">この先は有料です</p>
+  <p class="paid__lead">続きは、お求めいただいた方だけが読めます。<br>
+    合言葉を入力してください。一度入れると、この端末では次回から聞かれません。</p>
+  <form class="paid__form" id="paid-form">
+    <input class="paid__input" id="paid-input" type="password" autocomplete="current-password"
+           placeholder="合言葉" aria-label="合言葉">
+    <button class="paid__btn" type="submit">読む</button>
+  </form>
+  <p class="paid__err" id="paid-err" hidden>合言葉が違います。</p>
+  <p class="paid__help">お求めになるときは、セッションのときに担当トレーナーへお申し付けください。</p>
+</div>"""
+
+
 def article_page(meta, sections, prev, nxt):
     cat_key = CATEGORY_OF.get(meta.get("category", ""), "diet")
     cat_name = dict((k, n) for k, n, _ in CATEGORIES)[cat_key]
+    is_paid = str(meta.get("paid", "")).lower() == "true"
 
-    lead_head, lead_lines = sections[0]
+    lead_head = sections[0][0]
     lead_txt = lead_head.split("：", 1)[-1].strip()
+
     body = ""
     for h, lines in sections[1:]:
         if h.startswith("やること"):
@@ -234,6 +280,14 @@ def article_page(meta, sections, prev, nxt):
                  "{vid}?rel=0&playsinline=1' title='動画' loading='lazy' allowfullscreen "
                  "frameborder='0'></iframe></div>").format(vid=html.escape(meta["video"]))
 
+    if is_paid:
+        # 本文は暗号化して埋め込む。合言葉なしでは取り出せません
+        enc = encrypt(body, PAID_PASSWORD)
+        body = (PAID_FORM +
+                '<script type="application/json" id="paid-data">%s</script>'
+                % json.dumps(enc, ensure_ascii=True))
+        video = ""  # 動画も有料側に置く場合は本文に含めてください
+
     nav = ""
     if prev or nxt:
         nav = "<nav class='pager'>"
@@ -243,12 +297,17 @@ def article_page(meta, sections, prev, nxt):
                 % (nxt["slug"], html.escape(nxt["title"]))) if nxt else "<span></span>"
         nav += "</nav>"
 
-    return (head(meta["title"] + "｜" + SITE_NAME + " " + PAGE_NAME, lead_txt)
+    tags = "<span class='tag tag--{cat}'>{catname}</span>".format(
+        cat=cat_key, catname=html.escape(cat_name))
+    if is_paid:
+        tags += "<span class='tag tag--paid'>有料</span>"
+
+    return (head(meta["title"] + "｜" + SITE_NAME + " " + PAGE_NAME, lead_txt, paid=is_paid)
             + header()
             + """<main class="art">
   <div class="art__hd">
     <a class="back" href="index.html">一覧にもどる</a>
-    <span class="tag tag--{cat}">{catname}</span>
+    <div class="tags">{tags}</div>
     <h1>{title}</h1>
   </div>
   <div class="lead">
@@ -259,7 +318,7 @@ def article_page(meta, sections, prev, nxt):
   <div class="art__body">{body}</div>
   {nav}
 </main>
-""".format(cat=cat_key, catname=html.escape(cat_name), title=html.escape(meta["title"]),
+""".format(tags=tags, title=html.escape(meta["title"]),
            lead=inline(lead_txt), video=video, body=body, nav=nav)
             + FOOTER)
 
@@ -277,15 +336,18 @@ def index_page(docs):
             continue
         cards = ""
         for d in items:
-            cards += """<li class="card" data-cat="{cat}" data-q="{q}">
+            tag = ("<span class='card__tag tag tag--paid'>有料</span>" if d["paid"]
+                   else "<span class='card__tag tag tag--%s'>%s</span>" % (d["cat"], html.escape(name)))
+            cards += """<li class="card{pc}" data-cat="{cat}" data-q="{q}">
       <a href="{slug}.html">
-        <span class="card__tag tag tag--{cat}">{catname}</span>
+        {tag}
         <h3 class="card__t">{title}</h3>
         <p class="card__l">{lead}</p>
-        <span class="card__go">読む</span>
+        <span class="card__go">{go}</span>
       </a>
-    </li>""".format(cat=d["cat"], catname=html.escape(name), slug=d["slug"],
+    </li>""".format(cat=d["cat"], tag=tag, slug=d["slug"], pc=" card--paid" if d["paid"] else "",
                     title=html.escape(d["title"]), lead=html.escape(d["lead"]),
+                    go="続きを読む" if d["paid"] else "読む",
                     q=html.escape(d["title"] + " " + d["lead"] + " " + d["kw"]))
         groups += """<section class="grp" data-cat="{cat}">
     <div class="grp__hd"><h2>{name}</h2><p>{sub}</p></div>
@@ -328,11 +390,12 @@ def main():
             continue
         lead_head = sections[0][0]
         docs.append({
-            "slug": meta.get("slug") or os.path.basename(path).split("-")[0],
+            "slug": meta["slug"],
             "title": meta["title"],
             "lead": lead_head.split("：", 1)[-1].strip(),
             "cat": CATEGORY_OF.get(meta.get("category", ""), "diet"),
             "kw": meta.get("keywords") or "",
+            "paid": str(meta.get("paid", "")).lower() == "true",
             "meta": meta,
             "sections": sections,
         })
@@ -351,20 +414,22 @@ def main():
 
     io.open(os.path.join(OUT, "index.html"), "w", encoding="utf-8").write(index_page(docs))
     io.open(os.path.join(OUT, "robots.txt"), "w", encoding="utf-8").write(
-        "User-agent: *\nDisallow: /\n")
+        "User-agent: *\nDisallow: /\n" if NOINDEX else "User-agent: *\nAllow: /\n")
 
-    # 合言葉のハッシュを差し込む
-    js = io.open(os.path.join(ROOT, "src", "gate.js"), encoding="utf-8").read()
-    # 小文字に揃えてからハッシュ化する（ページ側も同じ揃え方をします）
-    js = js.replace("__HASH__",
-                    hashlib.sha256(PASSWORD.strip().lower().encode("utf-8")).hexdigest())
-    io.open(os.path.join(OUT, "assets", "js", "gate.js"), "w", encoding="utf-8").write(js)
+    for name in ("app.js", "paid.js"):
+        shutil.copy(os.path.join(ROOT, "src", name),
+                    os.path.join(OUT, "assets", "js", name))
     shutil.copy(os.path.join(ROOT, "src", "members.css"),
                 os.path.join(OUT, "assets", "css", "members.css"))
+    # 以前あった合言葉ゲートの名残を消す
+    old = os.path.join(OUT, "assets", "js", "gate.js")
+    if os.path.exists(old):
+        os.remove(old)
 
-    print("生成しました: %d記事 + 目次" % len(docs))
+    paid = [d for d in docs if d["paid"]]
+    print("生成しました: %d記事（うち有料%d）+ 目次" % (len(docs), len(paid)))
     for d in docs:
-        print("  %-10s %s" % (d["cat"], d["title"]))
+        print("  %-8s %s%s" % (d["cat"], "[有料] " if d["paid"] else "", d["title"]))
 
 
 if __name__ == "__main__":
