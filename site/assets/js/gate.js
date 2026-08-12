@@ -5,12 +5,13 @@
 (function () {
   "use strict";
 
-  var HASH = "fa11bb10a2760fd7ded28e3da060c542484ca448fcf8c7da8b5e32e7ba938675";
+  var HASH = "d1d6171f67d38e77199d5e5a304fd351ce81199bd16a09d0b658cc0ca400964e";
   var KEY = "dlight-members";
 
   // ---------- 合言葉 ----------
+  // 大文字・小文字と前後の空白は無視して照合する
   function sha256(text) {
-    var buf = new TextEncoder().encode(text);
+    var buf = new TextEncoder().encode(String(text).trim().toLowerCase());
     return crypto.subtle.digest("SHA-256", buf).then(function (d) {
       return Array.prototype.map
         .call(new Uint8Array(d), function (b) { return b.toString(16).padStart(2, "0"); })

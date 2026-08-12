@@ -21,7 +21,8 @@ OUT = os.path.join(ROOT, "site")
 # 合言葉（変更したらこのファイルを書き換えて build.py を再実行）
 # ページ側にはハッシュだけが埋め込まれます。
 # =========================================================
-PASSWORD = "karada"
+# 大文字・小文字は区別しません（Dlight でも dlight でも開きます）
+PASSWORD = "Dlight"
 
 # ブランド表記（ロゴはここを直せば全ページ変わります）
 BRAND_MAIN = "D/LIGHT"        # 前半（スラッシュは自動で金色になります）
@@ -320,9 +321,10 @@ def index_page(docs):
 # ---------------------------------------------------------
 def main():
     docs = []
-    for path in sorted(glob.glob(os.path.join(ROOT, "*.md"))):
+    # 記事の原本は「01-」のように数字で始まるファイルだけ。README などは対象外。
+    for path in sorted(glob.glob(os.path.join(ROOT, "[0-9][0-9]-*.md"))):
         meta, sections = read_doc(path)
-        if not sections:
+        if not sections or not meta.get("slug"):
             continue
         lead_head = sections[0][0]
         docs.append({
@@ -353,7 +355,9 @@ def main():
 
     # 合言葉のハッシュを差し込む
     js = io.open(os.path.join(ROOT, "src", "gate.js"), encoding="utf-8").read()
-    js = js.replace("__HASH__", hashlib.sha256(PASSWORD.encode("utf-8")).hexdigest())
+    # 小文字に揃えてからハッシュ化する（ページ側も同じ揃え方をします）
+    js = js.replace("__HASH__",
+                    hashlib.sha256(PASSWORD.strip().lower().encode("utf-8")).hexdigest())
     io.open(os.path.join(OUT, "assets", "js", "gate.js"), "w", encoding="utf-8").write(js)
     shutil.copy(os.path.join(ROOT, "src", "members.css"),
                 os.path.join(OUT, "assets", "css", "members.css"))

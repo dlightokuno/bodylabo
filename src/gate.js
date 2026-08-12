@@ -9,8 +9,9 @@
   var KEY = "dlight-members";
 
   // ---------- 合言葉 ----------
+  // 大文字・小文字と前後の空白は無視して照合する
   function sha256(text) {
-    var buf = new TextEncoder().encode(text);
+    var buf = new TextEncoder().encode(String(text).trim().toLowerCase());
     return crypto.subtle.digest("SHA-256", buf).then(function (d) {
       return Array.prototype.map
         .call(new Uint8Array(d), function (b) { return b.toString(16).padStart(2, "0"); })

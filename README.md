@@ -3,7 +3,7 @@
 会員の方が、困ったときに自分で開いて読むためのページです。
 公式サイト（dlightgym.com）とは別のサイトとして運用します。
 
-- 合言葉：`karada`（変更方法は下記）
+- 合言葉：`Dlight`（大文字小文字は区別しません。変更方法は下記）
 - 検索には出ません（`noindex` ＋ `robots.txt` ＋ サーバー側のヘッダー）
 
 ---
@@ -99,10 +99,10 @@ video: null                     ← 動画があればYouTubeのID
 `build.py` の上のほうにある
 
 ```python
-PASSWORD = "karada"
+PASSWORD = "Dlight"
 ```
 
-を書き換えて `python3 build.py`。
+を書き換えて `python3 build.py`。大文字・小文字と前後の空白は無視して照合します。
 ページには合言葉そのものではなく、そこから作った文字列だけが入ります。
 
 **変えたら、会員への再周知が必要です。** 保存済みの端末でも、次から入力を求められます。
@@ -114,7 +114,7 @@ PASSWORD = "karada"
 合言葉を入力させずに開けるように、鍵をURLに付けたものを登録します。
 
 ```
-https://（サイトのURL）/?k=karada
+https://dlight-body-labo.netlify.app/?k=Dlight
 ```
 
 一度開けば端末に記憶されるので、以降はどのURLからでも入力なしで開きます。
