@@ -1,0 +1,19 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "members",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["serve.py"],
+      "port": 4322,
+      "autoPort": true
+    },
+    {
+      "name": "members-preview",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["/private/tmp/claude-502/-Users-yudaiokuno-Desktop------------D-LIGHT---------/3ec8c4ff-4586-47a6-adc5-f545f734bf7f/scratchpad/preview/serve.py"],
+      "port": 4399,
+      "autoPort": true
+    }
+  ]
+}

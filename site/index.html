@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>D/LIGHT BODY LABO 会員ページ</title>
+<meta name="description" content="会員の方向けの読みものです。">
+<meta name="theme-color" content="#16204A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Noto+Sans+JP:wght@400;500;700&family=Zen+Old+Mincho:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/members.css">
+<script>document.documentElement.classList.add("gated");</script>
+<script src="assets/js/gate.js" defer></script>
+</head>
+<body>
+<div id="gate" class="gate" hidden>
+  <form class="gate__card" id="gate-form">
+    <p class="gate__logo"><span class='gate__logo__a'>D<span>/</span>LIGHT</span><span class='gate__logo__b'>BODY LABO</span></p>
+    <h1 class="gate__title">会員ページ</h1>
+    <p class="gate__lead">合言葉を入力してください。<br>一度入れると、この端末では次回から聞かれません。</p>
+    <input class="gate__input" id="gate-input" type="password" inputmode="text"
+           autocomplete="current-password" placeholder="合言葉" aria-label="合言葉">
+    <button class="gate__btn" type="submit">開く</button>
+    <p class="gate__err" id="gate-err" hidden>合言葉が違います。</p>
+    <p class="gate__help">分からないときは、担当トレーナーにお尋ねください。</p>
+  </form>
+</div>
+<header class="hd">
+  <div class="hd__in">
+    <a class="hd__logo" href="index.html"><span class='hd__logo__a'>D<span>/</span>LIGHT</span><span class='hd__logo__b'>BODY LABO</span></a>
+    
+  </div>
+</header>
+<main class="top">
+  <section class="hero">
+    <p class="hero__eyebrow">MEMBERS</p>
+    <h1 class="hero__t">からだの悩みから、探す。</h1>
+    <p class="hero__l">セッションのあいだに全部は話しきれません。<br>
+      家での24時間のために、よく聞かれることをまとめました。</p>
+  </section>
+
+  <div class="filter">
+    <div class="chips"><button class='chip is-on' data-f='all'>すべて</button><button class='chip' data-f='diet'>ダイエット</button><button class='chip' data-f='posture'>姿勢・不調</button><button class='chip' data-f='sleep'>睡眠・頭痛</button></div>
+    <div class="search">
+      <input id="q" type="search" placeholder="キーワードで探す（例：停滞、外食、肩）" aria-label="キーワードで探す">
+    </div>
+  </div>
+
+  <div id="groups"><section class="grp" data-cat="diet">
+    <div class="grp__hd"><h2>ダイエット</h2><p>食事・体重・停滞期</p></div>
+    <ul class="cards"><li class="card" data-cat="diet" data-q="体重が2週間動かないとき 予定通りです 痩せない 減らない 落ちない 止まった 停滞 停滞期 プラトー 変化がない 数字が動かない 焦る やせない へらない おちない とまった ていたいき たいじゅう">
+      <a href="teitaiki.html">
+        <span class="card__tag tag tag--diet">ダイエット</span>
+        <h3 class="card__t">体重が2週間動かないとき</h3>
+        <p class="card__l">予定通りです</p>
+        <span class="card__go">読む</span>
+      </a>
+    </li><li class="card" data-cat="diet" data-q="外食・飲み会がある週の組み立て方 断らなくていいです 飲み会 会食 外食 居酒屋 焼肉 ランチ 旅行 出張 誘われた 断れない お酒 ビール 付き合い イベント 誕生日 がいしょく のみかい かいしょく いざかや やきにく りょこう おさけ">
+      <a href="gaishoku.html">
+        <span class="card__tag tag tag--diet">ダイエット</span>
+        <h3 class="card__t">外食・飲み会がある週の組み立て方</h3>
+        <p class="card__l">断らなくていいです</p>
+        <span class="card__go">読む</span>
+      </a>
+    </li><li class="card" data-cat="diet" data-q="夜に食べてしまった日の扱い方 1回では太りません 食べすぎた ドカ食い やけ食い 夜食 深夜 我慢できない 罪悪感 落ち込む リセット 反動 挫折 やり直し たべすぎた よふかし よしょく ざいあくかん がまん ざせつ">
+      <a href="yoru-tabesugi.html">
+        <span class="card__tag tag tag--diet">ダイエット</span>
+        <h3 class="card__t">夜に食べてしまった日の扱い方</h3>
+        <p class="card__l">1回では太りません</p>
+        <span class="card__go">読む</span>
+      </a>
+    </li><li class="card" data-cat="diet" data-q="体重計の数字の読み方 毎日乗って、1日の数字は無視してください 体重計 増えた 減った 体脂肪率 体組成計 測り方 いつ測る 数字 生理 むくみ 朝と夜 平均 たいじゅうけい ふえた へった たいしぼうりつ はかりかた すうじ むくみ">
+      <a href="taijukei.html">
+        <span class="card__tag tag tag--diet">ダイエット</span>
+        <h3 class="card__t">体重計の数字の読み方</h3>
+        <p class="card__l">毎日乗って、1日の数字は無視してください</p>
+        <span class="card__go">読む</span>
+      </a>
+    </li><li class="card" data-cat="diet" data-q="間食と飲み物の整理 お菓子を我慢する前に、食事を整えてください お菓子 甘いもの スイーツ 小腹 ジュース カフェラテ 甘い飲み物 プロテインバー グラノーラ ナッツ ヘルシー 液体 アルコール かんしょく おかし あまいもの のみもの ジュース こばら">
+      <a href="kanshoku.html">
+        <span class="card__tag tag tag--diet">ダイエット</span>
+        <h3 class="card__t">間食と飲み物の整理</h3>
+        <p class="card__l">お菓子を我慢する前に、食事を整えてください</p>
+        <span class="card__go">読む</span>
+      </a>
+    </li></ul>
+  </section><section class="grp" data-cat="posture">
+    <div class="grp__hd"><h2>姿勢・不調</h2><p>肩こり・姿勢</p></div>
+    <ul class="cards"><li class="card" data-cat="posture" data-q="肩こり・首こり 揉んでも戻るのは、原因が姿勢の「時間」にあるからです 肩こり 首こり 肩が重い 肩が痛い マッサージ 揉む デスクワーク パソコン スマホ 猫背 カバン リュック 頭が前 巻き肩 かたこり くびこり かたがおもい かたがいたい もむ ねこぜ かばん">
+      <a href="katakori.html">
+        <span class="card__tag tag tag--posture">姿勢・不調</span>
+        <h3 class="card__t">肩こり・首こり</h3>
+        <p class="card__l">揉んでも戻るのは、原因が姿勢の「時間」にあるからです</p>
+        <span class="card__go">読む</span>
+      </a>
+    </li><li class="card" data-cat="posture" data-q="反り腰・猫背 姿勢は意識では直りません。直るのは条件のほうです 反り腰 猫背 姿勢 姿勢が悪い 背中 立ち方 座り方 ヒール 靴 見た目 お腹が出る 骨盤 そりごし ねこぜ しせい たちかた すわりかた くつ こつばん">
+      <a href="shisei.html">
+        <span class="card__tag tag tag--posture">姿勢・不調</span>
+        <h3 class="card__t">反り腰・猫背</h3>
+        <p class="card__l">姿勢は意識では直りません。直るのは条件のほうです</p>
+        <span class="card__go">読む</span>
+      </a>
+    </li><li class="card" data-cat="posture" data-q="脚のむくみ 足りないのは水分ではなく、動く時間です むくみ 浮腫 脚が太い ふくらはぎ 足首 靴がきつい 夕方 立ち仕事 デスクワーク 座りっぱなし 塩分 水分 着圧 ソックス だるい 重い むくみとり おもい あしがむくむ ゆうがた しおぶん すいぶん ちゃくあつ">
+      <a href="mukumi.html">
+        <span class="card__tag tag tag--posture">姿勢・不調</span>
+        <h3 class="card__t">脚のむくみ</h3>
+        <p class="card__l">足りないのは水分ではなく、動く時間です</p>
+        <span class="card__go">読む</span>
+      </a>
+    </li></ul>
+  </section><section class="grp" data-cat="sleep">
+    <div class="grp__hd"><h2>睡眠・頭痛</h2><p>眠り・頭の重さ</p></div>
+    <ul class="cards"><li class="card" data-cat="sleep" data-q="寝つきが悪い・朝すっきりしない 寝つきは、布団に入る3時間前に決まっています 眠れない 寝つき 不眠 夜中に目が覚める 朝つらい 起きられない 寝起き 寝酒 カフェイン コーヒー 寝室 照明 スマホ 夜更かし 睡眠の質 ねむれない ねつき ふみん ねおき ねざけ よふかし すいみん あさつらい">
+      <a href="suimin.html">
+        <span class="card__tag tag tag--sleep">睡眠・頭痛</span>
+        <h3 class="card__t">寝つきが悪い・朝すっきりしない</h3>
+        <p class="card__l">寝つきは、布団に入る3時間前に決まっています</p>
+        <span class="card__go">読む</span>
+      </a>
+    </li><li class="card" data-cat="sleep" data-q="頭が重い・目の奥が痛い 疑うのは、画面との距離と、浅くなった呼吸です 頭痛 頭が重い 目の疲れ 眼精疲労 目の奥 こめかみ 画面 ディスプレイ ブルーライト 呼吸 浅い 夕方 集中 ずつう あたまがおもい めのつかれ がんせいひろう めのおく こきゅう">
+      <a href="atama.html">
+        <span class="card__tag tag tag--sleep">睡眠・頭痛</span>
+        <h3 class="card__t">頭が重い・目の奥が痛い</h3>
+        <p class="card__l">疑うのは、画面との距離と、浅くなった呼吸です</p>
+        <span class="card__go">読む</span>
+      </a>
+    </li></ul>
+  </section></div>
+  <p class="empty" id="empty" hidden>該当する記事がありませんでした。</p>
+</main>
+<footer class="ft">
+  <p class="ft__logo"><span class='ft__logo__a'>D<span>/</span>LIGHT</span><span class='ft__logo__b'>BODY LABO</span></p>
+  <p class="ft__txt">このページは会員の方向けです。内容についてのご質問は、セッションのときに担当トレーナーへどうぞ。</p>
+</footer>
+</body>
+</html>

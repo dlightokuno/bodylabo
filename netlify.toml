@@ -1,0 +1,31 @@
+# =========================================================
+# D/LIGHT BODY LABO（会員ページ）— Netlify 設定
+# site/ フォルダの中身をそのまま公開します。ビルド処理はありません。
+# 公式サイト（dlightgym.com）とは別のサイトとして運用します。
+# =========================================================
+
+[build]
+  publish = "site"
+
+# ---------------------------------------------------------
+# 検索エンジンに載せない
+# HTMLの noindex に加えて、サーバー側からも同じ指示を出しています。
+# ---------------------------------------------------------
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow, noarchive"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# ---------------------------------------------------------
+# CSSとJSのキャッシュ
+# 1時間はそのまま使い、そのあとは更新の有無を確認してから使う設定。
+# 合言葉を変えたときに古いJSが残り続けないようにしています。
+# ---------------------------------------------------------
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, stale-while-revalidate=86400"
