@@ -50,17 +50,29 @@ NOINDEX = True
 
 # 分野の並び順と表示名（この順でトップに並びます）
 CATEGORIES = [
-    ("diet", "ダイエット", "食事・体重・停滞期"),
-    ("posture", "姿勢・不調", "肩こり・姿勢"),
+    ("scene", "困った場面", "外食・飲み会・食べすぎ"),
+    ("base", "食事の基本", "何を、どれだけ"),
+    ("num", "数字と続け方", "体重・記録・停滞期"),
+    ("training", "運動・トレーニング", "筋トレ・有酸素"),
+    ("posture", "姿勢・不調", "肩こり・姿勢・むくみ"),
     ("sleep", "睡眠・頭痛", "眠り・頭の重さ"),
+    ("mind", "続け方・気持ち", "挫折・リバウンド"),
+    ("golf", "ゴルフ", "ラウンドと体の使い方"),
 ]
 CATEGORY_OF = {
-    "ダイエット": "diet",
-    "不調・姿勢": "posture",
+    "困った場面": "scene",
+    "食事の基本": "base",
+    "数字と続け方": "num",
+    "運動・トレーニング": "training",
     "姿勢・不調": "posture",
+    "不調・姿勢": "posture",
+    "睡眠・頭痛": "sleep",
     "睡眠": "sleep",
     "睡眠・頭部": "sleep",
-    "睡眠・頭痛": "sleep",
+    "続け方・気持ち": "mind",
+    "ゴルフ": "golf",
+    # 旧・分ける前の呼び名
+    "ダイエット": "base",
 }
 
 
@@ -104,17 +116,40 @@ def inline(text):
     return "".join(out)
 
 
+def cells(line):
+    return [c.strip() for c in line.strip().strip("|").split("|")]
+
+
 def blocks_to_html(lines):
     """通常セクション（承・転）の本文を組む。"""
-    out, ul = [], []
+    out, ul, table = [], [], []
 
     def flush_ul():
         if ul:
             out.append("<ul class='list'>%s</ul>" % "".join("<li>%s</li>" % x for x in ul))
             ul.clear()
 
+    def flush_table():
+        """| で区切った行を表にする。2行目の |---| は区切りなので飛ばす。"""
+        if not table:
+            return
+        rows = [r for r in table if not set(r.replace("|", "").replace(" ", "")) <= set("-:")]
+        if rows:
+            head = "".join("<th>%s</th>" % inline(c) for c in cells(rows[0]))
+            body = "".join(
+                "<tr>%s</tr>" % "".join("<td>%s</td>" % inline(c) for c in cells(r))
+                for r in rows[1:])
+            out.append("<div class='tablewrap'><table><thead><tr>%s</tr></thead>"
+                       "<tbody>%s</tbody></table></div>" % (head, body))
+        table.clear()
+
     for line in lines:
         s = line.strip()
+        if s.startswith("|"):
+            flush_ul()
+            table.append(s)
+            continue
+        flush_table()
         if not s or s == "---":
             flush_ul()
         elif s.startswith("- "):
@@ -126,6 +161,7 @@ def blocks_to_html(lines):
             flush_ul()
             out.append("<p>%s</p>" % inline(s))
     flush_ul()
+    flush_table()
     return "\n".join(out)
 
 

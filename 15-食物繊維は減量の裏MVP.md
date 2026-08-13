@@ -2,7 +2,7 @@
 slug: seni
 title: 食物繊維は減量の裏MVP
 keywords: 食物繊維 繊維 野菜 きのこ 海藻 豆 オートミール 便秘 お通じ 腸内環境 血糖値 満腹感 しょくもつせんい やさい きのこ かいそう べんぴ
-category: ダイエット
+category: 食事の基本
 video: null
 ---
 
