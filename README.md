@@ -93,7 +93,7 @@ video: null                ← YouTubeの動画IDを書くと埋め込まれる
 `build.py` の上のほうにある
 
 ```python
-PAID_PASSWORD = "labo-9x4k2m"
+PAID_PASSWORD = "dlightgymmember"
 ```
 
 を書き換えて `python3 build.py`。大文字・小文字と前後の空白は無視して照合します。
