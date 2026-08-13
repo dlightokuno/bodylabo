@@ -21,11 +21,22 @@
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
 
 # ---------------------------------------------------------
-# CSSとJSのキャッシュ
-# 1時間はそのまま使い、そのあとは更新の有無を確認してから使う設定。
-# 合言葉を変えたときに古いJSが残り続けないようにしています。
+# キャッシュ（転送量を抑えるための設定）
+#
+# 一度見た人のブラウザに保存させて、次からは読み込ませないようにします。
+# Netlify の無料枠は転送量にも上限があるので、ここを効かせると消費が減ります。
 # ---------------------------------------------------------
+
+# CSSとJS：1日そのまま使い、そのあとは更新の有無だけ確認する。
+# 更新があってもファイル名は変わらないので、長くしすぎないようにしています。
 [[headers]]
   for = "/assets/*"
   [headers.values]
-    Cache-Control = "public, max-age=3600, stale-while-revalidate=86400"
+    Cache-Control = "public, max-age=86400, stale-while-revalidate=604800"
+
+# HTML：毎回サーバーに確認するが、変わっていなければ本文は送られない。
+# 記事を直したときに、古いまま表示され続けるのを防ぎます。
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
