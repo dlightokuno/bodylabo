@@ -153,6 +153,9 @@ def blocks_to_html(lines):
         flush_table()
         if not s or s == "---":
             flush_ul()
+        elif s.startswith("### "):
+            flush_ul()
+            out.append("<h3 class='sub'>%s</h3>" % inline(s[4:]))
         elif s.startswith("- "):
             ul.append(inline(s[2:]))
         elif s.startswith("> "):
@@ -281,16 +284,16 @@ FOOTER = """<footer class="ft">
 
 
 PAID_FORM = """<div class="paid" id="paid">
-  <p class="paid__mark">この先は有料です</p>
-  <p class="paid__lead">続きは、お求めいただいた方だけが読めます。<br>
-    合言葉を入力してください。一度入れると、この端末では次回から聞かれません。</p>
+  <p class="paid__mark">この先はメンバー限定です</p>
+  <p class="paid__lead">続きは、合言葉をお持ちの方だけが読めます。<br>
+    一度入れると、この端末では次回から聞かれません。</p>
   <form class="paid__form" id="paid-form">
     <input class="paid__input" id="paid-input" type="password" autocomplete="current-password"
            placeholder="合言葉" aria-label="合言葉">
     <button class="paid__btn" type="submit">読む</button>
   </form>
   <p class="paid__err" id="paid-err" hidden>合言葉が違います。</p>
-  <p class="paid__help">お求めになるときは、セッションのときに担当トレーナーへお申し付けください。</p>
+  <p class="paid__help">合言葉が分からないときは、担当トレーナーにお尋ねください。</p>
 </div>"""
 
 
@@ -302,14 +305,21 @@ def article_page(meta, sections, prev, nxt):
     lead_head = sections[0][0]
     lead_txt = lead_head.split("：", 1)[-1].strip()
 
-    body = ""
-    for h, lines in sections[1:]:
+    body, toc = "", []
+    for i, (h, lines) in enumerate(sections[1:]):
+        sid = "s%d" % (i + 1)
+        toc.append((sid, h))
         if h.startswith("やること"):
-            body += "<section class='sec sec--do'><h2>%s</h2>%s</section>" % (
-                html.escape(h), steps_to_html(lines))
+            body += "<section class='sec sec--do' id='%s'><h2>%s</h2>%s</section>" % (
+                sid, html.escape(h), steps_to_html(lines))
         else:
-            body += "<section class='sec'><h2>%s</h2>%s</section>" % (
-                html.escape(h), blocks_to_html(lines))
+            body += "<section class='sec' id='%s'><h2>%s</h2>%s</section>" % (
+                sid, html.escape(h), blocks_to_html(lines))
+
+    # 長い記事には、先頭に中身の一覧を置く
+    if len(toc) >= 5:
+        items = "".join("<li><a href='#%s'>%s</a></li>" % (sid, html.escape(h)) for sid, h in toc)
+        body = ("<nav class='toc'><p class='toc__t'>この記事の中身</p><ol>%s</ol></nav>" % items) + body
 
     video = ""
     if meta.get("video"):
@@ -337,7 +347,7 @@ def article_page(meta, sections, prev, nxt):
     tags = "<span class='tag tag--{cat}'>{catname}</span>".format(
         cat=cat_key, catname=html.escape(cat_name))
     if is_paid:
-        tags += "<span class='tag tag--paid'>有料</span>"
+        tags += "<span class='tag tag--paid'>メンバー限定</span>"
 
     return (head(meta["title"] + "｜" + SITE_NAME + " " + PAGE_NAME, lead_txt, paid=is_paid)
             + header()
@@ -367,7 +377,7 @@ def index_page(docs):
             chips += "<button class='chip' data-f='%s'>%s</button>" % (key, html.escape(name))
     # 有料だけを見るボタン。分野とは別の軸なので、右端に離して置きます
     if any(d["paid"] for d in docs):
-        chips += "<button class='chip chip--paid' data-f='paid'>有料</button>"
+        chips += "<button class='chip chip--paid' data-f='paid'>メンバー限定</button>"
 
     groups = ""
     for key, name, sub in CATEGORIES:
@@ -376,8 +386,10 @@ def index_page(docs):
             continue
         cards = ""
         for d in items:
-            tag = ("<span class='card__tag tag tag--paid'>有料</span>" if d["paid"]
-                   else "<span class='card__tag tag tag--%s'>%s</span>" % (d["cat"], html.escape(name)))
+            tag = "<span class='tag tag--%s'>%s</span>" % (d["cat"], html.escape(name))
+            if d["paid"]:
+                tag += "<span class='tag tag--paid'>メンバー限定</span>"
+            tag = "<span class='card__tags'>%s</span>" % tag
             cards += """<li class="card{pc}" data-cat="{cat}" data-paid="{pd}" data-q="{q}">
       <a href="{slug}.html">
         {tag}

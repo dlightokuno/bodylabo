@@ -119,6 +119,7 @@ ul,ol{margin:0;padding:0;list-style:none}
   box-shadow:var(--sh);transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s var(--ease);
 }
 .card a:hover{transform:translateY(-3px);box-shadow:var(--sh-h);border-color:rgba(198,166,103,.5)}
+.card__tags{display:flex;flex-wrap:wrap;gap:6px}
 .card__t{
   font-family:var(--f-serif);font-size:18.5px;font-weight:600;line-height:1.62;
   color:var(--navy);margin:14px 0 10px;
@@ -134,9 +135,13 @@ ul,ol{margin:0;padding:0;list-style:none}
   align-self:flex-start;padding:4px 11px;border-radius:999px;
   font-size:10.5px;letter-spacing:.12em;line-height:1.7;
 }
-.tag--diet{background:rgba(198,166,103,.16);color:var(--gold-deep)}
-.tag--posture{background:rgba(78,122,114,.14);color:var(--teal)}
-.tag--sleep{background:rgba(120,135,159,.16);color:#5C6C86}
+.tag--food{background:rgba(198,166,103,.18);color:var(--gold-deep)}
+.tag--training{background:rgba(190,110,88,.14);color:var(--terra)}
+.tag--posture{background:rgba(78,122,114,.15);color:var(--teal)}
+.tag--sleep{background:rgba(120,135,159,.18);color:#5C6C86}
+.tag--mind{background:rgba(122,104,150,.15);color:#6E5A8C}
+.tag--golf{background:rgba(96,132,86,.15);color:#4F7046}
+.tag--paid{background:var(--navy);color:var(--gold);letter-spacing:.1em;font-weight:500}
 
 .empty{padding:70px 0;text-align:center;font-size:14px;color:var(--ink-3)}
 
@@ -252,9 +257,6 @@ ul,ol{margin:0;padding:0;list-style:none}
 
 /* ---------- 有料記事 ---------- */
 .tags{display:flex;flex-wrap:wrap;gap:8px}
-.tag--paid{
-  background:var(--navy);color:var(--gold);letter-spacing:.16em;
-}
 .card--paid a{border-color:rgba(22,32,74,.16)}
 .card--paid a::before{
   content:"";position:absolute;inset:0;border-radius:var(--r-lg);
@@ -328,3 +330,56 @@ ul,ol{margin:0;padding:0;list-style:none}
 .chip--paid:hover{border-color:var(--gold-deep);color:var(--gold-deep)}
 .chip--paid.is-on{background:var(--navy);border-color:var(--navy);color:var(--gold)}
 @media (max-width:640px){ .chip--paid{margin-left:0} }
+
+/* 分野ごとにカードの縁の色を変える（左端に細い線） */
+.card a{border-left-width:3px}
+.card[data-cat="food"] a{border-left-color:rgba(198,166,103,.55)}
+.card[data-cat="training"] a{border-left-color:rgba(190,110,88,.45)}
+.card[data-cat="posture"] a{border-left-color:rgba(78,122,114,.45)}
+.card[data-cat="sleep"] a{border-left-color:rgba(120,135,159,.5)}
+.card[data-cat="mind"] a{border-left-color:rgba(122,104,150,.45)}
+.card[data-cat="golf"] a{border-left-color:rgba(96,132,86,.45)}
+.card[data-paid="1"] a{border-left-color:var(--navy)}
+
+/* 分野ごとに見出しの下線の色も変える */
+.grp[data-cat="food"] .grp__hd{border-bottom-color:rgba(198,166,103,.5)}
+.grp[data-cat="training"] .grp__hd{border-bottom-color:rgba(190,110,88,.4)}
+.grp[data-cat="posture"] .grp__hd{border-bottom-color:rgba(78,122,114,.4)}
+.grp[data-cat="sleep"] .grp__hd{border-bottom-color:rgba(120,135,159,.45)}
+.grp[data-cat="mind"] .grp__hd{border-bottom-color:rgba(122,104,150,.4)}
+.grp[data-cat="golf"] .grp__hd{border-bottom-color:rgba(96,132,86,.4)}
+
+/* ---------- 長い記事のための要素 ---------- */
+
+/* 小見出し（### で書いたもの） */
+.sub{
+  font-size:16.5px;font-weight:700;color:var(--navy);
+  margin:34px 0 14px;padding-left:12px;border-left:3px solid var(--gold);line-height:1.7;
+}
+.sec p + .sub{margin-top:30px}
+
+/* 記事の中身の一覧（見出しが5つ以上のときに出ます） */
+.toc{
+  margin-top:36px;padding:24px 26px;background:var(--surface);
+  border:1px solid var(--line-soft);border-radius:var(--r-lg);
+}
+.toc__t{
+  font-family:var(--f-en);font-size:10.5px;letter-spacing:.28em;color:var(--gold-deep);
+  margin-bottom:14px;
+}
+.toc ol{counter-reset:toc}
+.toc li{counter-increment:toc;position:relative;padding-left:28px;margin-bottom:9px;line-height:1.85}
+.toc li::before{
+  content:counter(toc);position:absolute;left:0;top:0;
+  font-family:var(--f-en);font-size:11px;color:var(--ink-3);
+}
+.toc a{font-size:14.5px;color:var(--ink);border-bottom:1px solid transparent;transition:border-color .2s var(--ease)}
+.toc a:hover{border-bottom-color:var(--gold)}
+
+/* 長い記事でも読みやすいように、見出しの前に余白を足す */
+.art__body .sec + .sec{margin-top:8px}
+
+@media (max-width:640px){
+  .toc{padding:20px 18px}
+  .sub{font-size:15.5px;margin-top:28px}
+}
