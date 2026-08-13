@@ -29,130 +29,162 @@
   </section>
 
   <div class="filter">
-    <div class="chips"><button class='chip is-on' data-f='all'>すべて</button><button class='chip' data-f='scene'>困った場面</button><button class='chip' data-f='base'>食事の基本</button><button class='chip' data-f='num'>数字と続け方</button><button class='chip' data-f='training'>運動・トレーニング</button><button class='chip' data-f='posture'>姿勢・不調</button><button class='chip' data-f='sleep'>睡眠・頭痛</button><button class='chip' data-f='mind'>続け方・気持ち</button><button class='chip' data-f='golf'>ゴルフ</button></div>
+    <div class="chips"><button class='chip is-on' data-f='all'>すべて</button><button class='chip' data-f='food'>食事</button><button class='chip' data-f='training'>運動</button><button class='chip' data-f='posture'>姿勢・不調</button><button class='chip' data-f='sleep'>睡眠</button><button class='chip' data-f='mind'>マインド</button><button class='chip' data-f='golf'>ゴルフ</button><button class='chip chip--paid' data-f='paid'>有料</button></div>
     <div class="search">
       <input id="q" type="search" placeholder="キーワードで探す（例：停滞、外食、肩）" aria-label="キーワードで探す">
     </div>
   </div>
 
-  <div id="groups"><section class="grp" data-cat="scene">
-    <div class="grp__hd"><h2>困った場面</h2><p>外食・飲み会・食べすぎ</p></div>
-    <ul class="cards"><li class="card" data-cat="scene" data-q="外食・飲み会がある週の組み立て方 断らなくていいです 飲み会 会食 外食 居酒屋 焼肉 ランチ 旅行 出張 誘われた 断れない お酒 ビール 付き合い イベント 誕生日 がいしょく のみかい かいしょく いざかや やきにく りょこう おさけ">
+  <div id="groups"><section class="grp" data-cat="food">
+    <div class="grp__hd"><h2>食事</h2><p>外食・体重・食べ方</p></div>
+    <ul class="cards"><li class="card" data-cat="food" data-paid="0" data-q="体重が2週間動かないとき 予定通りです 痩せない 減らない 落ちない 止まった 停滞 停滞期 プラトー 変化がない 数字が動かない 焦る やせない へらない おちない とまった ていたいき たいじゅう">
+      <a href="teitaiki.html">
+        <span class='card__tag tag tag--food'>食事</span>
+        <h3 class="card__t">体重が2週間動かないとき</h3>
+        <p class="card__l">予定通りです</p>
+        <span class="card__go">読む</span>
+      </a>
+    </li><li class="card" data-cat="food" data-paid="0" data-q="外食・飲み会がある週の組み立て方 断らなくていいです 飲み会 会食 外食 居酒屋 焼肉 ランチ 旅行 出張 誘われた 断れない お酒 ビール 付き合い イベント 誕生日 がいしょく のみかい かいしょく いざかや やきにく りょこう おさけ">
       <a href="gaishoku.html">
-        <span class='card__tag tag tag--scene'>困った場面</span>
+        <span class='card__tag tag tag--food'>食事</span>
         <h3 class="card__t">外食・飲み会がある週の組み立て方</h3>
         <p class="card__l">断らなくていいです</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="scene" data-q="夜に食べてしまった日の扱い方 1回では太りません 食べすぎた ドカ食い やけ食い 夜食 深夜 我慢できない 罪悪感 落ち込む リセット 反動 挫折 やり直し たべすぎた よふかし よしょく ざいあくかん がまん ざせつ">
+    </li><li class="card" data-cat="food" data-paid="0" data-q="夜に食べてしまった日の扱い方 1回では太りません 食べすぎた ドカ食い やけ食い 夜食 深夜 我慢できない 罪悪感 落ち込む リセット 反動 挫折 やり直し たべすぎた よふかし よしょく ざいあくかん がまん ざせつ">
       <a href="yoru-tabesugi.html">
-        <span class='card__tag tag tag--scene'>困った場面</span>
+        <span class='card__tag tag tag--food'>食事</span>
         <h3 class="card__t">夜に食べてしまった日の扱い方</h3>
         <p class="card__l">1回では太りません</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="scene" data-q="間食と飲み物の整理 お菓子を我慢する前に、食事を整えてください お菓子 甘いもの スイーツ 小腹 ジュース カフェラテ 甘い飲み物 プロテインバー グラノーラ ナッツ ヘルシー 液体 アルコール かんしょく おかし あまいもの のみもの ジュース こばら">
+    </li><li class="card" data-cat="food" data-paid="0" data-q="体重計の数字の読み方 毎日乗って、1日の数字は無視してください 体重計 増えた 減った 体脂肪率 体組成計 測り方 いつ測る 数字 生理 むくみ 朝と夜 平均 たいじゅうけい ふえた へった たいしぼうりつ はかりかた すうじ むくみ">
+      <a href="taijukei.html">
+        <span class='card__tag tag tag--food'>食事</span>
+        <h3 class="card__t">体重計の数字の読み方</h3>
+        <p class="card__l">毎日乗って、1日の数字は無視してください</p>
+        <span class="card__go">読む</span>
+      </a>
+    </li><li class="card" data-cat="food" data-paid="0" data-q="間食と飲み物の整理 お菓子を我慢する前に、食事を整えてください お菓子 甘いもの スイーツ 小腹 ジュース カフェラテ 甘い飲み物 プロテインバー グラノーラ ナッツ ヘルシー 液体 アルコール かんしょく おかし あまいもの のみもの ジュース こばら">
       <a href="kanshoku.html">
-        <span class='card__tag tag tag--scene'>困った場面</span>
+        <span class='card__tag tag tag--food'>食事</span>
         <h3 class="card__t">間食と飲み物の整理</h3>
         <p class="card__l">お菓子を我慢する前に、食事を整えてください</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="scene" data-q="コンビニでの選び方 主菜から先に決めてください コンビニ 昼食 ランチ 弁当 サラダチキン おにぎり サンドイッチ カップ麺 パスタ 買い方 選び方 忙しい こんびに ちゅうしょく えらびかた">
-      <a href="konbini.html">
-        <span class='card__tag tag tag--scene'>困った場面</span>
-        <h3 class="card__t">コンビニでの選び方</h3>
-        <p class="card__l">主菜から先に決めてください</p>
-        <span class="card__go">読む</span>
-      </a>
-    </li><li class="card" data-cat="scene" data-q="自炊は最強、ただし今すぐでなくていい 自炊は最強の手段です。でも、今すぐ始めなくて構いません 自炊 料理 作り置き 時短 面倒 続かない 外食 中食 惣菜 弁当 じすい りょうり つくりおき めんどう つづかない">
-      <a href="jisui.html">
-        <span class='card__tag tag tag--scene'>困った場面</span>
-        <h3 class="card__t">自炊は最強、ただし今すぐでなくていい</h3>
-        <p class="card__l">自炊は最強の手段です。でも、今すぐ始めなくて構いません</p>
-        <span class="card__go">読む</span>
-      </a>
-    </li><li class="card" data-cat="scene" data-q="買い物の時点で勝負は決まっている 家に置かないことが、最強の意志力です 買い物 スーパー 買いだめ ストック 家に置かない お菓子 誘惑 意志力 環境 まとめ買い かいもの いしりょく かんきょう おかし">
-      <a href="kaimono.html">
-        <span class='card__tag tag tag--scene'>困った場面</span>
-        <h3 class="card__t">買い物の時点で勝負は決まっている</h3>
-        <p class="card__l">家に置かないことが、最強の意志力です</p>
-        <span class="card__go">読む</span>
-      </a>
-    </li><li class="card" data-cat="scene" data-q="お酒とのつきあい方 問題はお酒より、そのあとの食事です お酒 アルコール ビール ハイボール 焼酎 ワイン 糖質ゼロ 飲み会 二日酔い 〆 ラーメン 締め おさけ あるこーる のみかい しめ">
-      <a href="osake.html">
-        <span class='card__tag tag tag--scene'>困った場面</span>
-        <h3 class="card__t">お酒とのつきあい方</h3>
-        <p class="card__l">問題はお酒より、そのあとの食事です</p>
-        <span class="card__go">読む</span>
-      </a>
-    </li><li class="card" data-cat="scene" data-q="旅行・帰省がある週 その週は諦めなくていい。前後で均します 旅行 帰省 出張 連休 お盆 正月 ゴルフ 温泉 食べ歩き 増えた 戻らない りょこう きせい しゅっちょう れんきゅう おしょうがつ">
-      <a href="ryoko.html">
-        <span class='card__tag tag tag--scene'>困った場面</span>
-        <h3 class="card__t">旅行・帰省がある週</h3>
-        <p class="card__l">その週は諦めなくていい。前後で均します</p>
-        <span class="card__go">読む</span>
-      </a>
-    </li></ul>
-  </section><section class="grp" data-cat="base">
-    <div class="grp__hd"><h2>食事の基本</h2><p>何を、どれだけ</p></div>
-    <ul class="cards"><li class="card" data-cat="base" data-q="タンパク質はいくつ摂ればいいか 体重×1.6〜2.2g。まずここだけ合わせてください タンパク質 たんぱく質 プロテイン 量 目安 何グラム 筋肉 減量 プロテインバー 鶏むね ささみ 卵 たんぱくしつ ぷろていん りょう めやす きんにく">
+    </li><li class="card" data-cat="food" data-paid="0" data-q="タンパク質はいくつ摂ればいいか 体重×1.6〜2.2g。まずここだけ合わせてください タンパク質 たんぱく質 プロテイン 量 目安 何グラム 筋肉 減量 プロテインバー 鶏むね ささみ 卵 たんぱくしつ ぷろていん りょう めやす きんにく">
       <a href="protein.html">
-        <span class='card__tag tag tag--base'>食事の基本</span>
+        <span class='card__tag tag tag--food'>食事</span>
         <h3 class="card__t">タンパク質はいくつ摂ればいいか</h3>
         <p class="card__l">体重×1.6〜2.2g。まずここだけ合わせてください</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="base" data-q="脂質を減らしすぎてはいけない 1食15g、1日45gは残してください 脂質 油 あぶら 低脂質 揚げ物 ドレッシング マヨネーズ ナッツ ホルモン 肌荒れ 生理 満腹感 ししつ あぶらもの ていししつ">
+    </li><li class="card" data-cat="food" data-paid="0" data-q="脂質を減らしすぎてはいけない 1食15g、1日45gは残してください 脂質 油 あぶら 低脂質 揚げ物 ドレッシング マヨネーズ ナッツ ホルモン 肌荒れ 生理 満腹感 ししつ あぶらもの ていししつ">
       <a href="shishitsu.html">
-        <span class='card__tag tag tag--base'>食事の基本</span>
+        <span class='card__tag tag tag--food'>食事</span>
         <h3 class="card__t">脂質を減らしすぎてはいけない</h3>
         <p class="card__l">1食15g、1日45gは残してください</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="base" data-q="糖質制限をすすめない理由 効きます。ただし筋肉を売っています 糖質制限 ロカボ 炭水化物 ごはん パン 麺 主食 抜く ケトジェニック 停滞 リバウンド とうしつせいげん たんすいかぶつ しゅしょく ぬく">
+    </li><li class="card" data-cat="food" data-paid="0" data-q="糖質制限をすすめない理由 効きます。ただし筋肉を売っています 糖質制限 ロカボ 炭水化物 ごはん パン 麺 主食 抜く ケトジェニック 停滞 リバウンド とうしつせいげん たんすいかぶつ しゅしょく ぬく">
       <a href="toshitsu.html">
-        <span class='card__tag tag tag--base'>食事の基本</span>
+        <span class='card__tag tag tag--food'>食事</span>
         <h3 class="card__t">糖質制限をすすめない理由</h3>
         <p class="card__l">効きます。ただし筋肉を売っています</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="base" data-q="食物繊維は減量の裏MVP 何を足すか迷ったら、まず食物繊維です 食物繊維 繊維 野菜 きのこ 海藻 豆 オートミール 便秘 お通じ 腸内環境 血糖値 満腹感 しょくもつせんい やさい きのこ かいそう べんぴ">
+    </li><li class="card" data-cat="food" data-paid="0" data-q="食物繊維は減量の裏MVP 何を足すか迷ったら、まず食物繊維です 食物繊維 繊維 野菜 きのこ 海藻 豆 オートミール 便秘 お通じ 腸内環境 血糖値 満腹感 しょくもつせんい やさい きのこ かいそう べんぴ">
       <a href="seni.html">
-        <span class='card__tag tag tag--base'>食事の基本</span>
+        <span class='card__tag tag tag--food'>食事</span>
         <h3 class="card__t">食物繊維は減量の裏MVP</h3>
         <p class="card__l">何を足すか迷ったら、まず食物繊維です</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="base" data-q="同じカロリーでも満腹感が違う理由 手が加わっていないものほど、腹に溜まります 加工食品 未加工 原材料 満腹感 腹持ち カロリー 質 お菓子 ジュース 果物 精製 玄米 全粒粉 かこう まんぷくかん はらもち しつ">
+    </li><li class="card" data-cat="food" data-paid="0" data-q="同じカロリーでも満腹感が違う理由 手が加わっていないものほど、腹に溜まります 加工食品 未加工 原材料 満腹感 腹持ち カロリー 質 お菓子 ジュース 果物 精製 玄米 全粒粉 かこう まんぷくかん はらもち しつ">
       <a href="kakoudo.html">
-        <span class='card__tag tag tag--base'>食事の基本</span>
+        <span class='card__tag tag tag--food'>食事</span>
         <h3 class="card__t">同じカロリーでも満腹感が違う理由</h3>
         <p class="card__l">手が加わっていないものほど、腹に溜まります</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="base" data-q="早食いをやめる 噛む回数は、満腹の信号が届くまでの時間を稼ぐ手段です 早食い 噛む 咀嚼 満腹感 満腹中枢 食べる速さ ながら食べ スマホ 15分 20分 はやぐい かむ そしゃく まんぷく たべるはやさ">
+    </li><li class="card" data-cat="food" data-paid="0" data-q="コンビニでの選び方 主菜から先に決めてください コンビニ 昼食 ランチ 弁当 サラダチキン おにぎり サンドイッチ カップ麺 パスタ 買い方 選び方 忙しい こんびに ちゅうしょく えらびかた">
+      <a href="konbini.html">
+        <span class='card__tag tag tag--food'>食事</span>
+        <h3 class="card__t">コンビニでの選び方</h3>
+        <p class="card__l">主菜から先に決めてください</p>
+        <span class="card__go">読む</span>
+      </a>
+    </li><li class="card" data-cat="food" data-paid="0" data-q="自炊は最強、ただし今すぐでなくていい 自炊は最強の手段です。でも、今すぐ始めなくて構いません 自炊 料理 作り置き 時短 面倒 続かない 外食 中食 惣菜 弁当 じすい りょうり つくりおき めんどう つづかない">
+      <a href="jisui.html">
+        <span class='card__tag tag tag--food'>食事</span>
+        <h3 class="card__t">自炊は最強、ただし今すぐでなくていい</h3>
+        <p class="card__l">自炊は最強の手段です。でも、今すぐ始めなくて構いません</p>
+        <span class="card__go">読む</span>
+      </a>
+    </li><li class="card" data-cat="food" data-paid="0" data-q="買い物の時点で勝負は決まっている 家に置かないことが、最強の意志力です 買い物 スーパー 買いだめ ストック 家に置かない お菓子 誘惑 意志力 環境 まとめ買い かいもの いしりょく かんきょう おかし">
+      <a href="kaimono.html">
+        <span class='card__tag tag tag--food'>食事</span>
+        <h3 class="card__t">買い物の時点で勝負は決まっている</h3>
+        <p class="card__l">家に置かないことが、最強の意志力です</p>
+        <span class="card__go">読む</span>
+      </a>
+    </li><li class="card" data-cat="food" data-paid="0" data-q="早食いをやめる 噛む回数は、満腹の信号が届くまでの時間を稼ぐ手段です 早食い 噛む 咀嚼 満腹感 満腹中枢 食べる速さ ながら食べ スマホ 15分 20分 はやぐい かむ そしゃく まんぷく たべるはやさ">
       <a href="hayagui.html">
-        <span class='card__tag tag tag--base'>食事の基本</span>
+        <span class='card__tag tag tag--food'>食事</span>
         <h3 class="card__t">早食いをやめる</h3>
         <p class="card__l">噛む回数は、満腹の信号が届くまでの時間を稼ぐ手段です</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="base" data-q="3食か5食か どちらでも構いません。続く方でいい 食事回数 3食 5食 分食 こまめに食べる 代謝 血糖値 間食 プチ断食 16時間 しょくじかいすう さんしょく ぶんしょく たいしゃ">
+    </li><li class="card" data-cat="food" data-paid="0" data-q="3食か5食か どちらでも構いません。続く方でいい 食事回数 3食 5食 分食 こまめに食べる 代謝 血糖値 間食 プチ断食 16時間 しょくじかいすう さんしょく ぶんしょく たいしゃ">
       <a href="kaisu.html">
-        <span class='card__tag tag tag--base'>食事の基本</span>
+        <span class='card__tag tag tag--food'>食事</span>
         <h3 class="card__t">3食か5食か</h3>
         <p class="card__l">どちらでも構いません。続く方でいい</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="base" data-q="朝食は食べるべきか 食べても、抜いても構いません 朝食 朝ごはん 抜く 食べない 欠食 朝 時間がない 太る 痩せる ちょうしょく あさごはん ぬく たべない">
+    </li><li class="card" data-cat="food" data-paid="0" data-q="朝食は食べるべきか 食べても、抜いても構いません 朝食 朝ごはん 抜く 食べない 欠食 朝 時間がない 太る 痩せる ちょうしょく あさごはん ぬく たべない">
       <a href="choshoku.html">
-        <span class='card__tag tag tag--base'>食事の基本</span>
+        <span class='card__tag tag tag--food'>食事</span>
         <h3 class="card__t">朝食は食べるべきか</h3>
         <p class="card__l">食べても、抜いても構いません</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card card--paid" data-cat="base" data-q="PFCを実際の食事に落とす 数字は、3つの型に置き換えれば実行できます PFC 献立 メニュー 何を食べる 組み立て 手ばかり 目分量 実践 一日の例 ぴーえふしー こんだて くみたて てばかり めぶんりょう">
+    </li><li class="card" data-cat="food" data-paid="0" data-q="お酒とのつきあい方 問題はお酒より、そのあとの食事です お酒 アルコール ビール ハイボール 焼酎 ワイン 糖質ゼロ 飲み会 二日酔い 〆 ラーメン 締め おさけ あるこーる のみかい しめ">
+      <a href="osake.html">
+        <span class='card__tag tag tag--food'>食事</span>
+        <h3 class="card__t">お酒とのつきあい方</h3>
+        <p class="card__l">問題はお酒より、そのあとの食事です</p>
+        <span class="card__go">読む</span>
+      </a>
+    </li><li class="card" data-cat="food" data-paid="0" data-q="旅行・帰省がある週 その週は諦めなくていい。前後で均します 旅行 帰省 出張 連休 お盆 正月 ゴルフ 温泉 食べ歩き 増えた 戻らない りょこう きせい しゅっちょう れんきゅう おしょうがつ">
+      <a href="ryoko.html">
+        <span class='card__tag tag tag--food'>食事</span>
+        <h3 class="card__t">旅行・帰省がある週</h3>
+        <p class="card__l">その週は諦めなくていい。前後で均します</p>
+        <span class="card__go">読む</span>
+      </a>
+    </li><li class="card" data-cat="food" data-paid="0" data-q="生理周期と体重・食欲 その時期の増加は、無視して構いません 生理 月経 生理前 PMS 食欲 甘いもの むくみ 体重増加 周期 だるい せいり げっけい しょくよく あまいもの ちょうき">
+      <a href="seiri.html">
+        <span class='card__tag tag tag--food'>食事</span>
+        <h3 class="card__t">生理周期と体重・食欲</h3>
+        <p class="card__l">その時期の増加は、無視して構いません</p>
+        <span class="card__go">読む</span>
+      </a>
+    </li><li class="card card--paid" data-cat="food" data-paid="1" data-q="自分の適正カロリーを出す 目安の数字は、30分あれば自分で出せます カロリー 計算 基礎代謝 消費カロリー 摂取カロリー 何キロカロリー 目標 設定 活動量 かろりー けいさん きそたいしゃ せっしゅ もくひょう カロリー計算 かろりーけいさん 適正カロリー てきせいかろりー PFC ぴーえふしー">
+      <a href="calorie-keisan.html">
+        <span class='card__tag tag tag--paid'>有料</span>
+        <h3 class="card__t">自分の適正カロリーを出す</h3>
+        <p class="card__l">目安の数字は、30分あれば自分で出せます</p>
+        <span class="card__go">続きを読む</span>
+      </a>
+    </li><li class="card card--paid" data-cat="food" data-paid="1" data-q="停滞が3週間を超えたときの切り分け 順番に潰していけば、原因はほぼ特定できます 停滞 停滞期 長い 3週間 1ヶ月 落ちない 原因 切り分け チェック 手順 ていたい ながい おちない げんいん てじゅん">
+      <a href="teitai-kiriwake.html">
+        <span class='card__tag tag tag--paid'>有料</span>
+        <h3 class="card__t">停滞が3週間を超えたときの切り分け</h3>
+        <p class="card__l">順番に潰していけば、原因はほぼ特定できます</p>
+        <span class="card__go">続きを読む</span>
+      </a>
+    </li><li class="card card--paid" data-cat="food" data-paid="1" data-q="PFCを実際の食事に落とす 数字は、3つの型に置き換えれば実行できます PFC 献立 メニュー 何を食べる 組み立て 手ばかり 目分量 実践 一日の例 ぴーえふしー こんだて くみたて てばかり めぶんりょう">
       <a href="pfc-kondate.html">
         <span class='card__tag tag tag--paid'>有料</span>
         <h3 class="card__t">PFCを実際の食事に落とす</h3>
@@ -160,140 +192,74 @@
         <span class="card__go">続きを読む</span>
       </a>
     </li></ul>
-  </section><section class="grp" data-cat="num">
-    <div class="grp__hd"><h2>数字と続け方</h2><p>体重・記録・停滞期</p></div>
-    <ul class="cards"><li class="card" data-cat="num" data-q="体重が2週間動かないとき 予定通りです 痩せない 減らない 落ちない 止まった 停滞 停滞期 プラトー 変化がない 数字が動かない 焦る やせない へらない おちない とまった ていたいき たいじゅう">
-      <a href="teitaiki.html">
-        <span class='card__tag tag tag--num'>数字と続け方</span>
-        <h3 class="card__t">体重が2週間動かないとき</h3>
-        <p class="card__l">予定通りです</p>
-        <span class="card__go">読む</span>
-      </a>
-    </li><li class="card" data-cat="num" data-q="体重計の数字の読み方 毎日乗って、1日の数字は無視してください 体重計 増えた 減った 体脂肪率 体組成計 測り方 いつ測る 数字 生理 むくみ 朝と夜 平均 たいじゅうけい ふえた へった たいしぼうりつ はかりかた すうじ むくみ">
-      <a href="taijukei.html">
-        <span class='card__tag tag tag--num'>数字と続け方</span>
-        <h3 class="card__t">体重計の数字の読み方</h3>
-        <p class="card__l">毎日乗って、1日の数字は無視してください</p>
-        <span class="card__go">読む</span>
-      </a>
-    </li><li class="card" data-cat="num" data-q="記録が一番効く理由 書くだけで、食べ方が変わります 記録 レコーディング 食事記録 アプリ 写真 見える化 カロリー計算 面倒 きろく れこーでぃんぐ しょくじきろく しゃしん">
-      <a href="kiroku.html">
-        <span class='card__tag tag tag--num'>数字と続け方</span>
-        <h3 class="card__t">記録が一番効く理由</h3>
-        <p class="card__l">書くだけで、食べ方が変わります</p>
-        <span class="card__go">読む</span>
-      </a>
-    </li><li class="card" data-cat="num" data-q="記録が続かなくなったとき 完璧な記録より、続く記録です 記録 続かない やめた 挫折 面倒になった さぼった 再開 リスタート 完璧主義 きろく つづかない ざせつ さいかい">
-      <a href="kiroku-yameru.html">
-        <span class='card__tag tag tag--num'>数字と続け方</span>
-        <h3 class="card__t">記録が続かなくなったとき</h3>
-        <p class="card__l">完璧な記録より、続く記録です</p>
-        <span class="card__go">読む</span>
-      </a>
-    </li><li class="card" data-cat="num" data-q="生理周期と体重・食欲 その時期の増加は、無視して構いません 生理 月経 生理前 PMS 食欲 甘いもの むくみ 体重増加 周期 だるい せいり げっけい しょくよく あまいもの ちょうき">
-      <a href="seiri.html">
-        <span class='card__tag tag tag--num'>数字と続け方</span>
-        <h3 class="card__t">生理周期と体重・食欲</h3>
-        <p class="card__l">その時期の増加は、無視して構いません</p>
-        <span class="card__go">読む</span>
-      </a>
-    </li><li class="card" data-cat="num" data-q="減量には終わりの日を決める 終わりの日を、先に決めてください 期限 目標 いつまで 期間 3ヶ月 ゴール 終わり だらだら モチベーション 目標設定 きげん もくひょう きかん おわり">
-      <a href="kigen.html">
-        <span class='card__tag tag tag--num'>数字と続け方</span>
-        <h3 class="card__t">減量には終わりの日を決める</h3>
-        <p class="card__l">終わりの日を、先に決めてください</p>
-        <span class="card__go">読む</span>
-      </a>
-    </li><li class="card" data-cat="num" data-q="維持期の設計 減量期と維持期は、別の競技です 維持 維持期 リバウンド 卒業 終わったあと キープ 戻る 元の生活 上限 マイルール いじき いじ りばうんど そつぎょう">
-      <a href="ijiki.html">
-        <span class='card__tag tag tag--num'>数字と続け方</span>
-        <h3 class="card__t">維持期の設計</h3>
-        <p class="card__l">減量期と維持期は、別の競技です</p>
-        <span class="card__go">読む</span>
-      </a>
-    </li><li class="card card--paid" data-cat="num" data-q="自分の適正カロリーを出す 目安の数字は、30分あれば自分で出せます カロリー 計算 基礎代謝 消費カロリー 摂取カロリー 何キロカロリー 目標 設定 活動量 かろりー けいさん きそたいしゃ せっしゅ もくひょう カロリー計算 かろりーけいさん 適正カロリー てきせいかろりー PFC ぴーえふしー">
-      <a href="calorie-keisan.html">
-        <span class='card__tag tag tag--paid'>有料</span>
-        <h3 class="card__t">自分の適正カロリーを出す</h3>
-        <p class="card__l">目安の数字は、30分あれば自分で出せます</p>
-        <span class="card__go">続きを読む</span>
-      </a>
-    </li><li class="card card--paid" data-cat="num" data-q="停滞が3週間を超えたときの切り分け 順番に潰していけば、原因はほぼ特定できます 停滞 停滞期 長い 3週間 1ヶ月 落ちない 原因 切り分け チェック 手順 ていたい ながい おちない げんいん てじゅん">
-      <a href="teitai-kiriwake.html">
-        <span class='card__tag tag tag--paid'>有料</span>
-        <h3 class="card__t">停滞が3週間を超えたときの切り分け</h3>
-        <p class="card__l">順番に潰していけば、原因はほぼ特定できます</p>
-        <span class="card__go">続きを読む</span>
-      </a>
-    </li></ul>
   </section><section class="grp" data-cat="training">
-    <div class="grp__hd"><h2>運動・トレーニング</h2><p>筋トレ・有酸素</p></div>
-    <ul class="cards"><li class="card" data-cat="training" data-q="減量中こそ筋トレを優先する 食事 ＞ 筋トレ ＞ 有酸素、の順です 筋トレ 有酸素 ランニング ウォーキング 優先順位 どっち 脂肪燃焼 痩せたい 順番 きんとれ ゆうさんそ ゆうせん じゅんばん">
+    <div class="grp__hd"><h2>運動</h2><p>筋トレ・有酸素</p></div>
+    <ul class="cards"><li class="card" data-cat="training" data-paid="0" data-q="減量中こそ筋トレを優先する 食事 ＞ 筋トレ ＞ 有酸素、の順です 筋トレ 有酸素 ランニング ウォーキング 優先順位 どっち 脂肪燃焼 痩せたい 順番 きんとれ ゆうさんそ ゆうせん じゅんばん">
       <a href="kintore-yusen.html">
-        <span class='card__tag tag tag--training'>運動・トレーニング</span>
+        <span class='card__tag tag tag--training'>運動</span>
         <h3 class="card__t">減量中こそ筋トレを優先する</h3>
         <p class="card__l">食事 ＞ 筋トレ ＞ 有酸素、の順です</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="training" data-q="減量中に筋肉はつかない 減量中の目標は「維持」です。それで勝ちです 筋肉 つかない 増量 減量 同時 ボディメイク 引き締める 見た目 維持 きんにく つかない げんりょう ぞうりょう どうじ">
+    </li><li class="card" data-cat="training" data-paid="0" data-q="減量中に筋肉はつかない 減量中の目標は「維持」です。それで勝ちです 筋肉 つかない 増量 減量 同時 ボディメイク 引き締める 見た目 維持 きんにく つかない げんりょう ぞうりょう どうじ">
       <a href="kinniku-tsukanai.html">
-        <span class='card__tag tag tag--training'>運動・トレーニング</span>
+        <span class='card__tag tag tag--training'>運動</span>
         <h3 class="card__t">減量中に筋肉はつかない</h3>
         <p class="card__l">減量中の目標は「維持」です。それで勝ちです</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="training" data-q="週2回で十分効果が出る 週2回で、必要なものはほぼ取れます 週2回 頻度 回数 何回 通う 忙しい 時間がない 続かない 毎日 しゅうにかい ひんど かいすう いそがしい">
+    </li><li class="card" data-cat="training" data-paid="0" data-q="週2回で十分効果が出る 週2回で、必要なものはほぼ取れます 週2回 頻度 回数 何回 通う 忙しい 時間がない 続かない 毎日 しゅうにかい ひんど かいすう いそがしい">
       <a href="shu2kai.html">
-        <span class='card__tag tag tag--training'>運動・トレーニング</span>
+        <span class='card__tag tag tag--training'>運動</span>
         <h3 class="card__t">週2回で十分効果が出る</h3>
         <p class="card__l">週2回で、必要なものはほぼ取れます</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="training" data-q="種目は5〜6個で足りる 大きな動きを5〜6個。それで全身が入ります 種目 メニュー 何種目 コンパウンド スクワット デッドリフト ベンチプレス マシン 組み方 しゅもく めにゅー くみかた">
+    </li><li class="card" data-cat="training" data-paid="0" data-q="種目は5〜6個で足りる 大きな動きを5〜6個。それで全身が入ります 種目 メニュー 何種目 コンパウンド スクワット デッドリフト ベンチプレス マシン 組み方 しゅもく めにゅー くみかた">
       <a href="shumoku.html">
-        <span class='card__tag tag tag--training'>運動・トレーニング</span>
+        <span class='card__tag tag tag--training'>運動</span>
         <h3 class="card__t">種目は5〜6個で足りる</h3>
         <p class="card__l">大きな動きを5〜6個。それで全身が入ります</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="training" data-q="筋肉痛は成長の指標ではない 痛みの有無で、効いたかどうかは判断できません 筋肉痛 痛み 効いている 効いてない 翌日 遅発性 疲労 判断 きんにくつう いたみ きいてる よくじつ">
+    </li><li class="card" data-cat="training" data-paid="0" data-q="筋肉痛は成長の指標ではない 痛みの有無で、効いたかどうかは判断できません 筋肉痛 痛み 効いている 効いてない 翌日 遅発性 疲労 判断 きんにくつう いたみ きいてる よくじつ">
       <a href="kinnikutsu.html">
-        <span class='card__tag tag tag--training'>運動・トレーニング</span>
+        <span class='card__tag tag tag--training'>運動</span>
         <h3 class="card__t">筋肉痛は成長の指標ではない</h3>
         <p class="card__l">痛みの有無で、効いたかどうかは判断できません</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="training" data-q="減量中は重量が伸びなくていい 落ちていなければ、勝ちです 重量 伸びない 停滞 記録 落ちた 力が出ない 減量中 パフォーマンス じゅうりょう のびない ちからがでない">
+    </li><li class="card" data-cat="training" data-paid="0" data-q="減量中は重量が伸びなくていい 落ちていなければ、勝ちです 重量 伸びない 停滞 記録 落ちた 力が出ない 減量中 パフォーマンス じゅうりょう のびない ちからがでない">
       <a href="juryo.html">
-        <span class='card__tag tag tag--training'>運動・トレーニング</span>
+        <span class='card__tag tag tag--training'>運動</span>
         <h3 class="card__t">減量中は重量が伸びなくていい</h3>
         <p class="card__l">落ちていなければ、勝ちです</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="training" data-q="女性が筋トレでゴツくならない理由 まず、なりません 女性 ゴツくなる 太くなる ムキムキ 脚が太い 二の腕 重い重量 マシン 心配 じょせい ごつくなる ふとくなる むきむき">
+    </li><li class="card" data-cat="training" data-paid="0" data-q="女性が筋トレでゴツくならない理由 まず、なりません 女性 ゴツくなる 太くなる ムキムキ 脚が太い 二の腕 重い重量 マシン 心配 じょせい ごつくなる ふとくなる むきむき">
       <a href="gotsuku.html">
-        <span class='card__tag tag tag--training'>運動・トレーニング</span>
+        <span class='card__tag tag tag--training'>運動</span>
         <h3 class="card__t">女性が筋トレでゴツくならない理由</h3>
         <p class="card__l">まず、なりません</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="training" data-q="HIITをすすめない場合 きつすぎて続かないなら、価値はゼロです HIIT 高強度 インターバル 短時間 効率 きつい 続かない タバタ 脂肪燃焼 有酸素 ヒット こうきょうど たんじかん きつい">
+    </li><li class="card" data-cat="training" data-paid="0" data-q="HIITをすすめない場合 きつすぎて続かないなら、価値はゼロです HIIT 高強度 インターバル 短時間 効率 きつい 続かない タバタ 脂肪燃焼 有酸素 ヒット こうきょうど たんじかん きつい">
       <a href="hiit.html">
-        <span class='card__tag tag tag--training'>運動・トレーニング</span>
+        <span class='card__tag tag tag--training'>運動</span>
         <h3 class="card__t">HIITをすすめない場合</h3>
         <p class="card__l">きつすぎて続かないなら、価値はゼロです</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="training" data-q="フォームが完璧になるまで待たない 始めたほうが得です フォーム 正しい やり方 自信がない 怖い 始められない ジム 初心者 独学 ふぉーむ ただしい はじめられない しょしんしゃ">
+    </li><li class="card" data-cat="training" data-paid="0" data-q="フォームが完璧になるまで待たない 始めたほうが得です フォーム 正しい やり方 自信がない 怖い 始められない ジム 初心者 独学 ふぉーむ ただしい はじめられない しょしんしゃ">
       <a href="form.html">
-        <span class='card__tag tag tag--training'>運動・トレーニング</span>
+        <span class='card__tag tag tag--training'>運動</span>
         <h3 class="card__t">フォームが完璧になるまで待たない</h3>
         <p class="card__l">始めたほうが得です</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="training" data-q="有酸素運動の出番はいつか 食べすぎた後、数日かけて薄めるときです 有酸素 ランニング ウォーキング 歩く 何分 いつやる 食べすぎた後 調整 消費カロリー ゆうさんそ あるく はしる ちょうせい">
+    </li><li class="card" data-cat="training" data-paid="0" data-q="有酸素運動の出番はいつか 食べすぎた後、数日かけて薄めるときです 有酸素 ランニング ウォーキング 歩く 何分 いつやる 食べすぎた後 調整 消費カロリー ゆうさんそ あるく はしる ちょうせい">
       <a href="yusanso.html">
-        <span class='card__tag tag tag--training'>運動・トレーニング</span>
+        <span class='card__tag tag tag--training'>運動</span>
         <h3 class="card__t">有酸素運動の出番はいつか</h3>
         <p class="card__l">食べすぎた後、数日かけて薄めるときです</p>
         <span class="card__go">読む</span>
@@ -301,21 +267,21 @@
     </li></ul>
   </section><section class="grp" data-cat="posture">
     <div class="grp__hd"><h2>姿勢・不調</h2><p>肩こり・姿勢・むくみ</p></div>
-    <ul class="cards"><li class="card" data-cat="posture" data-q="肩こり・首こり 揉んでも戻るのは、原因が姿勢の「時間」にあるからです 肩こり 首こり 肩が重い 肩が痛い マッサージ 揉む デスクワーク パソコン スマホ 猫背 カバン リュック 頭が前 巻き肩 かたこり くびこり かたがおもい かたがいたい もむ ねこぜ かばん">
+    <ul class="cards"><li class="card" data-cat="posture" data-paid="0" data-q="肩こり・首こり 揉んでも戻るのは、原因が姿勢の「時間」にあるからです 肩こり 首こり 肩が重い 肩が痛い マッサージ 揉む デスクワーク パソコン スマホ 猫背 カバン リュック 頭が前 巻き肩 かたこり くびこり かたがおもい かたがいたい もむ ねこぜ かばん">
       <a href="katakori.html">
         <span class='card__tag tag tag--posture'>姿勢・不調</span>
         <h3 class="card__t">肩こり・首こり</h3>
         <p class="card__l">揉んでも戻るのは、原因が姿勢の「時間」にあるからです</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="posture" data-q="反り腰・猫背 姿勢は意識では直りません。直るのは条件のほうです 反り腰 猫背 姿勢 姿勢が悪い 背中 立ち方 座り方 ヒール 靴 見た目 お腹が出る 骨盤 そりごし ねこぜ しせい たちかた すわりかた くつ こつばん">
+    </li><li class="card" data-cat="posture" data-paid="0" data-q="反り腰・猫背 姿勢は意識では直りません。直るのは条件のほうです 反り腰 猫背 姿勢 姿勢が悪い 背中 立ち方 座り方 ヒール 靴 見た目 お腹が出る 骨盤 そりごし ねこぜ しせい たちかた すわりかた くつ こつばん">
       <a href="shisei.html">
         <span class='card__tag tag tag--posture'>姿勢・不調</span>
         <h3 class="card__t">反り腰・猫背</h3>
         <p class="card__l">姿勢は意識では直りません。直るのは条件のほうです</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="posture" data-q="脚のむくみ 足りないのは水分ではなく、動く時間です むくみ 浮腫 脚が太い ふくらはぎ 足首 靴がきつい 夕方 立ち仕事 デスクワーク 座りっぱなし 塩分 水分 着圧 ソックス だるい 重い むくみとり おもい あしがむくむ ゆうがた しおぶん すいぶん ちゃくあつ">
+    </li><li class="card" data-cat="posture" data-paid="0" data-q="脚のむくみ 足りないのは水分ではなく、動く時間です むくみ 浮腫 脚が太い ふくらはぎ 足首 靴がきつい 夕方 立ち仕事 デスクワーク 座りっぱなし 塩分 水分 着圧 ソックス だるい 重い むくみとり おもい あしがむくむ ゆうがた しおぶん すいぶん ちゃくあつ">
       <a href="mukumi.html">
         <span class='card__tag tag tag--posture'>姿勢・不調</span>
         <h3 class="card__t">脚のむくみ</h3>
@@ -324,62 +290,90 @@
       </a>
     </li></ul>
   </section><section class="grp" data-cat="sleep">
-    <div class="grp__hd"><h2>睡眠・頭痛</h2><p>眠り・頭の重さ</p></div>
-    <ul class="cards"><li class="card" data-cat="sleep" data-q="寝つきが悪い・朝すっきりしない 寝つきは、布団に入る3時間前に決まっています 眠れない 寝つき 不眠 夜中に目が覚める 朝つらい 起きられない 寝起き 寝酒 カフェイン コーヒー 寝室 照明 スマホ 夜更かし 睡眠の質 ねむれない ねつき ふみん ねおき ねざけ よふかし すいみん あさつらい">
+    <div class="grp__hd"><h2>睡眠</h2><p>眠り・頭の重さ</p></div>
+    <ul class="cards"><li class="card" data-cat="sleep" data-paid="0" data-q="寝つきが悪い・朝すっきりしない 寝つきは、布団に入る3時間前に決まっています 眠れない 寝つき 不眠 夜中に目が覚める 朝つらい 起きられない 寝起き 寝酒 カフェイン コーヒー 寝室 照明 スマホ 夜更かし 睡眠の質 ねむれない ねつき ふみん ねおき ねざけ よふかし すいみん あさつらい">
       <a href="suimin.html">
-        <span class='card__tag tag tag--sleep'>睡眠・頭痛</span>
+        <span class='card__tag tag tag--sleep'>睡眠</span>
         <h3 class="card__t">寝つきが悪い・朝すっきりしない</h3>
         <p class="card__l">寝つきは、布団に入る3時間前に決まっています</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="sleep" data-q="頭が重い・目の奥が痛い 疑うのは、画面との距離と、浅くなった呼吸です 頭痛 頭が重い 目の疲れ 眼精疲労 目の奥 こめかみ 画面 ディスプレイ ブルーライト 呼吸 浅い 夕方 集中 ずつう あたまがおもい めのつかれ がんせいひろう めのおく こきゅう">
+    </li><li class="card" data-cat="sleep" data-paid="0" data-q="頭が重い・目の奥が痛い 疑うのは、画面との距離と、浅くなった呼吸です 頭痛 頭が重い 目の疲れ 眼精疲労 目の奥 こめかみ 画面 ディスプレイ ブルーライト 呼吸 浅い 夕方 集中 ずつう あたまがおもい めのつかれ がんせいひろう めのおく こきゅう">
       <a href="atama.html">
-        <span class='card__tag tag tag--sleep'>睡眠・頭痛</span>
+        <span class='card__tag tag tag--sleep'>睡眠</span>
         <h3 class="card__t">頭が重い・目の奥が痛い</h3>
         <p class="card__l">疑うのは、画面との距離と、浅くなった呼吸です</p>
         <span class="card__go">読む</span>
       </a>
     </li></ul>
   </section><section class="grp" data-cat="mind">
-    <div class="grp__hd"><h2>続け方・気持ち</h2><p>挫折・リバウンド</p></div>
-    <ul class="cards"><li class="card" data-cat="mind" data-q="80点を続けた人が勝つ 完璧かゼロか、という考え方が最大の敵です 完璧主義 ゼロか百か 挫折 中途半端 続かない 失敗 やり直し 80点 かんぺき ぜろかひゃくか ざせつ ちゅうとはんぱ">
+    <div class="grp__hd"><h2>マインド</h2><p>続け方・挫折・リバウンド</p></div>
+    <ul class="cards"><li class="card" data-cat="mind" data-paid="0" data-q="記録が一番効く理由 書くだけで、食べ方が変わります 記録 レコーディング 食事記録 アプリ 写真 見える化 カロリー計算 面倒 きろく れこーでぃんぐ しょくじきろく しゃしん">
+      <a href="kiroku.html">
+        <span class='card__tag tag tag--mind'>マインド</span>
+        <h3 class="card__t">記録が一番効く理由</h3>
+        <p class="card__l">書くだけで、食べ方が変わります</p>
+        <span class="card__go">読む</span>
+      </a>
+    </li><li class="card" data-cat="mind" data-paid="0" data-q="記録が続かなくなったとき 完璧な記録より、続く記録です 記録 続かない やめた 挫折 面倒になった さぼった 再開 リスタート 完璧主義 きろく つづかない ざせつ さいかい">
+      <a href="kiroku-yameru.html">
+        <span class='card__tag tag tag--mind'>マインド</span>
+        <h3 class="card__t">記録が続かなくなったとき</h3>
+        <p class="card__l">完璧な記録より、続く記録です</p>
+        <span class="card__go">読む</span>
+      </a>
+    </li><li class="card" data-cat="mind" data-paid="0" data-q="減量には終わりの日を決める 終わりの日を、先に決めてください 期限 目標 いつまで 期間 3ヶ月 ゴール 終わり だらだら モチベーション 目標設定 きげん もくひょう きかん おわり">
+      <a href="kigen.html">
+        <span class='card__tag tag tag--mind'>マインド</span>
+        <h3 class="card__t">減量には終わりの日を決める</h3>
+        <p class="card__l">終わりの日を、先に決めてください</p>
+        <span class="card__go">読む</span>
+      </a>
+    </li><li class="card" data-cat="mind" data-paid="0" data-q="維持期の設計 減量期と維持期は、別の競技です 維持 維持期 リバウンド 卒業 終わったあと キープ 戻る 元の生活 上限 マイルール いじき いじ りばうんど そつぎょう">
+      <a href="ijiki.html">
+        <span class='card__tag tag tag--mind'>マインド</span>
+        <h3 class="card__t">維持期の設計</h3>
+        <p class="card__l">減量期と維持期は、別の競技です</p>
+        <span class="card__go">読む</span>
+      </a>
+    </li><li class="card" data-cat="mind" data-paid="0" data-q="80点を続けた人が勝つ 完璧かゼロか、という考え方が最大の敵です 完璧主義 ゼロか百か 挫折 中途半端 続かない 失敗 やり直し 80点 かんぺき ぜろかひゃくか ざせつ ちゅうとはんぱ">
       <a href="hachijitten.html">
-        <span class='card__tag tag tag--mind'>続け方・気持ち</span>
+        <span class='card__tag tag tag--mind'>マインド</span>
         <h3 class="card__t">80点を続けた人が勝つ</h3>
         <p class="card__l">完璧かゼロか、という考え方が最大の敵です</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="mind" data-q="リバウンドは失敗ではない 一度できた、という事実のほうが資産です リバウンド 戻った 太った 何度も 失敗 自己嫌悪 やり直し 再開 経験 りばうんど もどった ふとった しっぱい さいかい">
+    </li><li class="card" data-cat="mind" data-paid="0" data-q="リバウンドは失敗ではない 一度できた、という事実のほうが資産です リバウンド 戻った 太った 何度も 失敗 自己嫌悪 やり直し 再開 経験 りばうんど もどった ふとった しっぱい さいかい">
       <a href="rebound.html">
-        <span class='card__tag tag tag--mind'>続け方・気持ち</span>
+        <span class='card__tag tag tag--mind'>マインド</span>
         <h3 class="card__t">リバウンドは失敗ではない</h3>
         <p class="card__l">一度できた、という事実のほうが資産です</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="mind" data-q="人に宣言したほうがいい理由 言ったほうが、続きます 宣言 公言 周りに言う 内緒 恥ずかしい 応援 誘惑 断る 家族 職場 せんげん こうげん まわりにいう ないしょ おうえん">
+    </li><li class="card" data-cat="mind" data-paid="0" data-q="人に宣言したほうがいい理由 言ったほうが、続きます 宣言 公言 周りに言う 内緒 恥ずかしい 応援 誘惑 断る 家族 職場 せんげん こうげん まわりにいう ないしょ おうえん">
       <a href="sengen.html">
-        <span class='card__tag tag tag--mind'>続け方・気持ち</span>
+        <span class='card__tag tag tag--mind'>マインド</span>
         <h3 class="card__t">人に宣言したほうがいい理由</h3>
         <p class="card__l">言ったほうが、続きます</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="mind" data-q="モチベーションに頼らない やる気が出るのを待たないでください モチベーション やる気 続かない 三日坊主 意志力 習慣 環境 仕組み もちべーしょん やるき つづかない みっかぼうず しゅうかん">
+    </li><li class="card" data-cat="mind" data-paid="0" data-q="モチベーションに頼らない やる気が出るのを待たないでください モチベーション やる気 続かない 三日坊主 意志力 習慣 環境 仕組み もちべーしょん やるき つづかない みっかぼうず しゅうかん">
       <a href="motivation.html">
-        <span class='card__tag tag tag--mind'>続け方・気持ち</span>
+        <span class='card__tag tag tag--mind'>マインド</span>
         <h3 class="card__t">モチベーションに頼らない</h3>
         <p class="card__l">やる気が出るのを待たないでください</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="mind" data-q="「痩せたら〇〇する」を先にやる 先にやったほうが、続きます 痩せたら 目標 服 写真 旅行 我慢 先延ばし 自信 ご褒美 やせたら もくひょう ふく さきのばし じしん">
+    </li><li class="card" data-cat="mind" data-paid="0" data-q="「痩せたら〇〇する」を先にやる 先にやったほうが、続きます 痩せたら 目標 服 写真 旅行 我慢 先延ばし 自信 ご褒美 やせたら もくひょう ふく さきのばし じしん">
       <a href="saki-ni-yaru.html">
-        <span class='card__tag tag tag--mind'>続け方・気持ち</span>
+        <span class='card__tag tag tag--mind'>マインド</span>
         <h3 class="card__t">「痩せたら〇〇する」を先にやる</h3>
         <p class="card__l">先にやったほうが、続きます</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="mind" data-q="比べる相手は先週の自分 他人の経過は、条件が違いすぎて参考になりません 比較 SNS インスタ 他人 落ち込む 焦る 同じやり方 効かない 個人差 ひかく くらべる たにん おちこむ あせる">
+    </li><li class="card" data-cat="mind" data-paid="0" data-q="比べる相手は先週の自分 他人の経過は、条件が違いすぎて参考になりません 比較 SNS インスタ 他人 落ち込む 焦る 同じやり方 効かない 個人差 ひかく くらべる たにん おちこむ あせる">
       <a href="kuraberu.html">
-        <span class='card__tag tag tag--mind'>続け方・気持ち</span>
+        <span class='card__tag tag tag--mind'>マインド</span>
         <h3 class="card__t">比べる相手は先週の自分</h3>
         <p class="card__l">他人の経過は、条件が違いすぎて参考になりません</p>
         <span class="card__go">読む</span>
@@ -387,14 +381,14 @@
     </li></ul>
   </section><section class="grp" data-cat="golf">
     <div class="grp__hd"><h2>ゴルフ</h2><p>ラウンドと体の使い方</p></div>
-    <ul class="cards"><li class="card" data-cat="golf" data-q="ラウンド前日と当日の食べ方 前日に減らさない。当日は切らさない ゴルフ ラウンド 前日 当日 朝食 昼食 後半 バテる 集中力 飲み物 補給 ごるふ らうんど ぜんじつ とうじつ ばてる">
+    <ul class="cards"><li class="card" data-cat="golf" data-paid="0" data-q="ラウンド前日と当日の食べ方 前日に減らさない。当日は切らさない ゴルフ ラウンド 前日 当日 朝食 昼食 後半 バテる 集中力 飲み物 補給 ごるふ らうんど ぜんじつ とうじつ ばてる">
       <a href="golf-shokuji.html">
         <span class='card__tag tag tag--golf'>ゴルフ</span>
         <h3 class="card__t">ラウンド前日と当日の食べ方</h3>
         <p class="card__l">前日に減らさない。当日は切らさない</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="golf" data-q="飛距離は腕ではなく回旋から 胸が回らないぶんを、腕が振っています ゴルフ 飛距離 スイング 回旋 胸椎 股関節 体が硬い 腕で振る 力み 可動域 ごるふ ひきょり すいんぐ かいせん かたい">
+    </li><li class="card" data-cat="golf" data-paid="0" data-q="飛距離は腕ではなく回旋から 胸が回らないぶんを、腕が振っています ゴルフ 飛距離 スイング 回旋 胸椎 股関節 体が硬い 腕で振る 力み 可動域 ごるふ ひきょり すいんぐ かいせん かたい">
       <a href="golf-kaisen.html">
         <span class='card__tag tag tag--golf'>ゴルフ</span>
         <h3 class="card__t">飛距離は腕ではなく回旋から</h3>

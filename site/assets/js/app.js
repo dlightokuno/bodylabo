@@ -26,7 +26,9 @@
       var hit = 0;
 
       cards.forEach(function (card) {
-        var okCat = cat === "all" || card.dataset.cat === cat;
+        // 「有料」は分野ではなく、有料かどうかで絞ります
+        var okCat = cat === "all" ||
+          (cat === "paid" ? card.dataset.paid === "1" : card.dataset.cat === cat);
         var hay = norm(card.dataset.q || "");
         var okQ = words.every(function (w) { return hay.indexOf(w) !== -1; });
         var show = okCat && okQ;

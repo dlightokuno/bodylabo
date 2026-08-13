@@ -50,29 +50,30 @@ NOINDEX = True
 
 # 分野の並び順と表示名（この順でトップに並びます）
 CATEGORIES = [
-    ("scene", "困った場面", "外食・飲み会・食べすぎ"),
-    ("base", "食事の基本", "何を、どれだけ"),
-    ("num", "数字と続け方", "体重・記録・停滞期"),
-    ("training", "運動・トレーニング", "筋トレ・有酸素"),
+    ("food", "食事", "外食・体重・食べ方"),
+    ("training", "運動", "筋トレ・有酸素"),
     ("posture", "姿勢・不調", "肩こり・姿勢・むくみ"),
-    ("sleep", "睡眠・頭痛", "眠り・頭の重さ"),
-    ("mind", "続け方・気持ち", "挫折・リバウンド"),
+    ("sleep", "睡眠", "眠り・頭の重さ"),
+    ("mind", "マインド", "続け方・挫折・リバウンド"),
     ("golf", "ゴルフ", "ラウンドと体の使い方"),
 ]
 CATEGORY_OF = {
-    "困った場面": "scene",
-    "食事の基本": "base",
-    "数字と続け方": "num",
-    "運動・トレーニング": "training",
+    "食事": "food",
+    "運動": "training",
     "姿勢・不調": "posture",
+    "睡眠": "sleep",
+    "マインド": "mind",
+    "ゴルフ": "golf",
+    # 以前の呼び名（古い原稿があっても動くように残しています）
+    "ダイエット": "food",
+    "困った場面": "food",
+    "食事の基本": "food",
+    "数字と続け方": "food",
+    "運動・トレーニング": "training",
     "不調・姿勢": "posture",
     "睡眠・頭痛": "sleep",
-    "睡眠": "sleep",
     "睡眠・頭部": "sleep",
     "続け方・気持ち": "mind",
-    "ゴルフ": "golf",
-    # 旧・分ける前の呼び名
-    "ダイエット": "base",
 }
 
 
@@ -364,6 +365,9 @@ def index_page(docs):
     for key, name, _ in CATEGORIES:
         if any(d["cat"] == key for d in docs):
             chips += "<button class='chip' data-f='%s'>%s</button>" % (key, html.escape(name))
+    # 有料だけを見るボタン。分野とは別の軸なので、右端に離して置きます
+    if any(d["paid"] for d in docs):
+        chips += "<button class='chip chip--paid' data-f='paid'>有料</button>"
 
     groups = ""
     for key, name, sub in CATEGORIES:
@@ -374,7 +378,7 @@ def index_page(docs):
         for d in items:
             tag = ("<span class='card__tag tag tag--paid'>有料</span>" if d["paid"]
                    else "<span class='card__tag tag tag--%s'>%s</span>" % (d["cat"], html.escape(name)))
-            cards += """<li class="card{pc}" data-cat="{cat}" data-q="{q}">
+            cards += """<li class="card{pc}" data-cat="{cat}" data-paid="{pd}" data-q="{q}">
       <a href="{slug}.html">
         {tag}
         <h3 class="card__t">{title}</h3>
@@ -382,6 +386,7 @@ def index_page(docs):
         <span class="card__go">{go}</span>
       </a>
     </li>""".format(cat=d["cat"], tag=tag, slug=d["slug"], pc=" card--paid" if d["paid"] else "",
+                    pd="1" if d["paid"] else "0",
                     title=html.escape(d["title"]), lead=html.escape(d["lead"]),
                     go="続きを読む" if d["paid"] else "読む",
                     q=html.escape(d["title"] + " " + d["lead"] + " " + d["kw"]))

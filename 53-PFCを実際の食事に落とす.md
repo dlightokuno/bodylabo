@@ -2,7 +2,7 @@
 slug: pfc-kondate
 title: PFCを実際の食事に落とす
 keywords: PFC 献立 メニュー 何を食べる 組み立て 手ばかり 目分量 実践 一日の例 ぴーえふしー こんだて くみたて てばかり めぶんりょう
-category: 食事の基本
+category: 食事
 paid: true
 video: null
 ---

@@ -2,7 +2,7 @@
 slug: hiit
 title: HIITをすすめない場合
 keywords: HIIT 高強度 インターバル 短時間 効率 きつい 続かない タバタ 脂肪燃焼 有酸素 ヒット こうきょうど たんじかん きつい
-category: 運動・トレーニング
+category: 運動
 video: null
 ---
 
