@@ -449,6 +449,13 @@ def main():
             article_page(d["meta"], d["sections"], prev, nxt))
 
     io.open(os.path.join(OUT, "index.html"), "w", encoding="utf-8").write(index_page(docs))
+
+    # 原稿を消した記事のページが残らないように掃除する
+    keep = {d["slug"] + ".html" for d in docs} | {"index.html"}
+    for name in os.listdir(OUT):
+        if name.endswith(".html") and name not in keep:
+            os.remove(os.path.join(OUT, name))
+            print("  （削除）%s" % name)
     io.open(os.path.join(OUT, "robots.txt"), "w", encoding="utf-8").write(
         "User-agent: *\nDisallow: /\n" if NOINDEX else "User-agent: *\nAllow: /\n")
 
