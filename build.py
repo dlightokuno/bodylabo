@@ -21,8 +21,12 @@ import re
 import shutil
 import struct
 
+import covers
+
 ROOT = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(ROOT, "site")
+# 自分で用意した写真を置く場所。「記事のslug.jpg」で置くと、自動生成の図柄より優先されます
+PHOTO_DIR = os.path.join(ROOT, "images")
 
 # =========================================================
 # 有料記事の合言葉（変更したらここを書き換えて build.py を再実行）
@@ -75,6 +79,36 @@ CATEGORY_OF = {
     "睡眠・頭部": "sleep",
     "続け方・気持ち": "mind",
 }
+
+# 分野は複数つけられます。原稿には「category: 睡眠, 食事」のようにカンマで並べます。
+# 最初に書いたものが「主な分野」になり、目次でどの見出しの下に並ぶかを決めます。
+CATEGORY_SPLIT = re.compile(r"[,，/／]")
+
+
+def parse_cats(text):
+    """frontmatter の category 行を、分野キーの一覧にする。"""
+    keys = []
+    for part in CATEGORY_SPLIT.split(text or ""):
+        k = CATEGORY_OF.get(part.strip())
+        if k and k not in keys:
+            keys.append(k)
+    return keys or ["food"]
+
+
+def plain_text(sections):
+    """検索用に、本文を飾りのない一続きの文にする。"""
+    out = []
+    for h, lines in sections:
+        out.append(h)
+        for line in lines:
+            t = line.strip()
+            if not t or t == "---":
+                continue
+            t = re.sub(r"\*\*(.+?)\*\*", r"\1", t)
+            t = re.sub(r"^#+\s*", "", t)
+            t = re.sub(r"^[->]\s*", "", t)
+            out.append(t.replace("|", " "))
+    return re.sub(r"\s+", " ", " ".join(out)).strip()
 
 
 # ---------------------------------------------------------
@@ -297,9 +331,16 @@ PAID_FORM = """<div class="paid" id="paid">
 </div>"""
 
 
-def article_page(meta, sections, prev, nxt):
-    cat_key = CATEGORY_OF.get(meta.get("category", ""), "diet")
-    cat_name = dict((k, n) for k, n, _ in CATEGORIES)[cat_key]
+def cover_tag(doc, cls):
+    """記事のトップ画。images/ に写真があればそれを、なければ自動生成の図柄を使う。"""
+    return ("<img src='img/{src}' alt='' width='1200' height='600' loading='{lz}' decoding='async'>"
+            .format(src=html.escape(doc["cover"]), lz="eager" if cls == "cover" else "lazy"))
+
+
+def article_page(doc, prev, nxt):
+    meta, sections = doc["meta"], doc["sections"]
+    cat_keys = doc["cats"]
+    name_of = dict((k, n) for k, n, _ in CATEGORIES)
     is_paid = str(meta.get("paid", "")).lower() == "true"
 
     lead_head = sections[0][0]
@@ -344,8 +385,8 @@ def article_page(meta, sections, prev, nxt):
                 % (nxt["slug"], html.escape(nxt["title"]))) if nxt else "<span></span>"
         nav += "</nav>"
 
-    tags = "<span class='tag tag--{cat}'>{catname}</span>".format(
-        cat=cat_key, catname=html.escape(cat_name))
+    tags = "".join("<span class='tag tag--%s'>%s</span>" % (k, html.escape(name_of[k]))
+                   for k in cat_keys)
     if is_paid:
         tags += "<span class='tag tag--paid'>メンバー限定</span>"
 
@@ -354,6 +395,7 @@ def article_page(meta, sections, prev, nxt):
             + """<main class="art">
   <div class="art__hd">
     <a class="back" href="index.html">一覧にもどる</a>
+    <figure class="cover">{cover}</figure>
     <div class="tags">{tags}</div>
     <h1>{title}</h1>
   </div>
@@ -365,47 +407,58 @@ def article_page(meta, sections, prev, nxt):
   <div class="art__body">{body}</div>
   {nav}
 </main>
-""".format(tags=tags, title=html.escape(meta["title"]),
+""".format(tags=tags, title=html.escape(meta["title"]), cover=cover_tag(doc, "cover"),
            lead=inline(lead_txt), video=video, body=body, nav=nav)
             + FOOTER)
 
 
 def index_page(docs):
+    name_of = dict((k, n) for k, n, _ in CATEGORIES)
+
     chips = "<button class='chip is-on' data-f='all'>すべて</button>"
     for key, name, _ in CATEGORIES:
-        if any(d["cat"] == key for d in docs):
+        if any(key in d["cats"] for d in docs):
             chips += "<button class='chip' data-f='%s'>%s</button>" % (key, html.escape(name))
     # 有料だけを見るボタン。分野とは別の軸なので、右端に離して置きます
     if any(d["paid"] for d in docs):
         chips += "<button class='chip chip--paid' data-f='paid'>メンバー限定</button>"
 
-    groups = ""
+    # 目次はひとつの表です。分野の見出しも、その表の中の1行として置きます。
+    # こうすると、分野で絞ったときに見出しだけ消して、カードをきれいに詰められます。
+    cells = ""
     for key, name, sub in CATEGORIES:
         items = [d for d in docs if d["cat"] == key]
         if not items:
             continue
-        cards = ""
+        cells += ("<li class='grp__hd' data-cat='%s'><h2>%s</h2><p>%s</p></li>"
+                  % (key, html.escape(name), html.escape(sub)))
         for d in items:
-            tag = "<span class='tag tag--%s'>%s</span>" % (d["cat"], html.escape(name))
+            tag = "".join("<span class='tag tag--%s'>%s</span>" % (c, html.escape(name_of[c]))
+                          for c in d["cats"])
             if d["paid"]:
                 tag += "<span class='tag tag--paid'>メンバー限定</span>"
             tag = "<span class='card__tags'>%s</span>" % tag
-            cards += """<li class="card{pc}" data-cat="{cat}" data-paid="{pd}" data-q="{q}">
+            cells += """<li class="card{pc}" data-cat="{cat}" data-cats="{cats}" data-slug="{slug}"
+        data-paid="{pd}" data-q="{q}">
       <a href="{slug}.html">
+        <span class="card__img">{cover}</span>
         {tag}
         <h3 class="card__t">{title}</h3>
         <p class="card__l">{lead}</p>
         <span class="card__go">{go}</span>
       </a>
-    </li>""".format(cat=d["cat"], tag=tag, slug=d["slug"], pc=" card--paid" if d["paid"] else "",
+    </li>""".format(cat=d["cat"], cats=" ".join(d["cats"]), tag=tag, slug=d["slug"],
+                    cover=cover_tag(d, "card__img"),
+                    pc=" card--paid" if d["paid"] else "",
                     pd="1" if d["paid"] else "0",
                     title=html.escape(d["title"]), lead=html.escape(d["lead"]),
                     go="続きを読む" if d["paid"] else "読む",
                     q=html.escape(d["title"] + " " + d["lead"] + " " + d["kw"]))
-        groups += """<section class="grp" data-cat="{cat}">
-    <div class="grp__hd"><h2>{name}</h2><p>{sub}</p></div>
-    <ul class="cards">{cards}</ul>
-  </section>""".format(cat=key, name=html.escape(name), sub=html.escape(sub), cards=cards)
+
+    # 本文でも探せるようにする。
+    # メンバー限定の記事は本文を入れません（入れると合言葉なしで読めてしまいます）。
+    fulltext = dict((d["slug"], d["text"]) for d in docs if not d["paid"])
+    ftjson = json.dumps(fulltext, ensure_ascii=False).replace("</", "<\\/")
 
     return (head(SITE_NAME + " " + PAGE_NAME, "会員の方向けの読みものです。")
             + header()
@@ -420,14 +473,16 @@ def index_page(docs):
   <div class="filter">
     <div class="chips">{chips}</div>
     <div class="search">
-      <input id="q" type="search" placeholder="キーワードで探す（例：停滞、外食、肩）" aria-label="キーワードで探す">
+      <input id="q" type="search" placeholder="言葉で探す（本文の中も探します）" aria-label="言葉で探す">
     </div>
   </div>
 
-  <div id="groups">{groups}</div>
+  <p class="hits" id="hits" hidden></p>
+  <ul class="cards" id="grid">{cells}</ul>
   <p class="empty" id="empty" hidden>該当する記事がありませんでした。</p>
 </main>
-""".format(chips=chips, groups=groups)
+<script type="application/json" id="fulltext">{ftjson}</script>
+""".format(chips=chips, cells=cells, ftjson=ftjson)
             + FOOTER)
 
 
@@ -442,12 +497,15 @@ def main():
         if not sections or not meta.get("slug"):
             continue
         lead_head = sections[0][0]
+        cats = parse_cats(meta.get("category", ""))
         docs.append({
             "slug": meta["slug"],
             "title": meta["title"],
             "lead": lead_head.split("：", 1)[-1].strip(),
-            "cat": CATEGORY_OF.get(meta.get("category", ""), "diet"),
+            "cats": cats,          # つけた分野すべて
+            "cat": cats[0],        # 主な分野（目次で並ぶ場所）
             "kw": meta.get("keywords") or "",
+            "text": plain_text(sections),
             "paid": str(meta.get("paid", "")).lower() == "true",
             "meta": meta,
             "sections": sections,
@@ -459,11 +517,32 @@ def main():
     os.makedirs(os.path.join(OUT, "assets", "css"), exist_ok=True)
     os.makedirs(os.path.join(OUT, "assets", "js"), exist_ok=True)
 
+    # --- トップ画 ---
+    # images/ に「記事のslug.jpg」を置いた記事は、その写真を使います。
+    # 置いていない記事は、covers.py が分野ごとの図柄を描きます。
+    img_out = os.path.join(OUT, "img")
+    os.makedirs(img_out, exist_ok=True)
+    photos = 0
+    for d in docs:
+        d["cover"] = d["slug"] + ".svg"
+        for ext in (".jpg", ".jpeg", ".png", ".webp", ".svg"):
+            src = os.path.join(PHOTO_DIR, d["slug"] + ext)
+            if os.path.exists(src):
+                d["cover"] = d["slug"] + ext
+                shutil.copy(src, os.path.join(img_out, d["cover"]))
+                photos += 1
+                break
+    covers.write_covers(docs, img_out)
+    keep_img = {d["cover"] for d in docs}
+    for name in os.listdir(img_out):
+        if name not in keep_img:
+            os.remove(os.path.join(img_out, name))
+
     for i, d in enumerate(docs):
         prev = docs[i - 1] if i > 0 else None
         nxt = docs[i + 1] if i < len(docs) - 1 else None
         io.open(os.path.join(OUT, d["slug"] + ".html"), "w", encoding="utf-8").write(
-            article_page(d["meta"], d["sections"], prev, nxt))
+            article_page(d, prev, nxt))
 
     io.open(os.path.join(OUT, "index.html"), "w", encoding="utf-8").write(index_page(docs))
 

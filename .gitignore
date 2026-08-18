@@ -5,3 +5,8 @@ __pycache__/
 
 # 公開用リポジトリの作業フォルダ（別リポジトリなので入れない）
 _public/
+
+# 生成した画像の元データ（1枚1.5MBあるので入れない）
+# サイトで使う軽いほう（images/*.jpg）は入れます
+images/_raw/
+images/prompts.tsv

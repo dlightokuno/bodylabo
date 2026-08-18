@@ -31,374 +31,726 @@
   <div class="filter">
     <div class="chips"><button class='chip is-on' data-f='all'>すべて</button><button class='chip' data-f='food'>食事</button><button class='chip' data-f='training'>運動</button><button class='chip' data-f='posture'>姿勢・不調</button><button class='chip' data-f='sleep'>睡眠</button><button class='chip' data-f='mind'>マインド</button><button class='chip' data-f='golf'>ゴルフ</button><button class='chip chip--paid' data-f='paid'>メンバー限定</button></div>
     <div class="search">
-      <input id="q" type="search" placeholder="キーワードで探す（例：停滞、外食、肩）" aria-label="キーワードで探す">
+      <input id="q" type="search" placeholder="言葉で探す（本文の中も探します）" aria-label="言葉で探す">
     </div>
   </div>
 
-  <div id="groups"><section class="grp" data-cat="food">
-    <div class="grp__hd"><h2>食事</h2><p>外食・体重・食べ方</p></div>
-    <ul class="cards"><li class="card" data-cat="food" data-paid="0" data-q="体重が2週間動かないとき 予定通りです 痩せない 減らない 落ちない 止まった 停滞 停滞期 プラトー 変化がない 数字が動かない 焦る やせない へらない おちない とまった ていたいき たいじゅう">
+  <p class="hits" id="hits" hidden></p>
+  <ul class="cards" id="grid"><li class='grp__hd' data-cat='food'><h2>食事</h2><p>外食・体重・食べ方</p></li><li class="card" data-cat="food" data-cats="food" data-slug="teitaiki"
+        data-paid="0" data-q="体重が2週間動かないとき 予定通りです 痩せない 減らない 落ちない 止まった 停滞 停滞期 プラトー 変化がない 数字が動かない 焦る やせない へらない おちない とまった ていたいき たいじゅう">
       <a href="teitaiki.html">
+        <span class="card__img"><img src='img/teitaiki.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
         <span class='card__tags'><span class='tag tag--food'>食事</span></span>
         <h3 class="card__t">体重が2週間動かないとき</h3>
         <p class="card__l">予定通りです</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="food" data-paid="0" data-q="外食・飲み会がある週の組み立て方 断らなくていいです 飲み会 会食 外食 居酒屋 焼肉 ランチ 旅行 出張 誘われた 断れない お酒 ビール 付き合い イベント 誕生日 がいしょく のみかい かいしょく いざかや やきにく りょこう おさけ">
+    </li><li class="card" data-cat="food" data-cats="food" data-slug="gaishoku"
+        data-paid="0" data-q="外食・飲み会がある週の組み立て方 断らなくていいです 飲み会 会食 外食 居酒屋 焼肉 ランチ 旅行 出張 誘われた 断れない お酒 ビール 付き合い イベント 誕生日 がいしょく のみかい かいしょく いざかや やきにく りょこう おさけ">
       <a href="gaishoku.html">
+        <span class="card__img"><img src='img/gaishoku.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
         <span class='card__tags'><span class='tag tag--food'>食事</span></span>
         <h3 class="card__t">外食・飲み会がある週の組み立て方</h3>
         <p class="card__l">断らなくていいです</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="food" data-paid="0" data-q="夜に食べてしまった日の扱い方 1回では太りません 食べすぎた ドカ食い やけ食い 夜食 深夜 我慢できない 罪悪感 落ち込む リセット 反動 挫折 やり直し たべすぎた よふかし よしょく ざいあくかん がまん ざせつ">
+    </li><li class="card" data-cat="food" data-cats="food" data-slug="yoru-tabesugi"
+        data-paid="0" data-q="夜に食べてしまった日の扱い方 1回では太りません 食べすぎた ドカ食い やけ食い 夜食 深夜 我慢できない 罪悪感 落ち込む リセット 反動 挫折 やり直し たべすぎた よふかし よしょく ざいあくかん がまん ざせつ">
       <a href="yoru-tabesugi.html">
+        <span class="card__img"><img src='img/yoru-tabesugi.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
         <span class='card__tags'><span class='tag tag--food'>食事</span></span>
         <h3 class="card__t">夜に食べてしまった日の扱い方</h3>
         <p class="card__l">1回では太りません</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="food" data-paid="0" data-q="体重計の数字の読み方 毎日乗って、1日の数字は無視してください 体重計 増えた 減った 体脂肪率 体組成計 測り方 いつ測る 数字 生理 むくみ 朝と夜 平均 たいじゅうけい ふえた へった たいしぼうりつ はかりかた すうじ むくみ">
+    </li><li class="card" data-cat="food" data-cats="food" data-slug="taijukei"
+        data-paid="0" data-q="体重計の数字の読み方 毎日乗って、1日の数字は無視してください 体重計 増えた 減った 体脂肪率 体組成計 測り方 いつ測る 数字 生理 むくみ 朝と夜 平均 たいじゅうけい ふえた へった たいしぼうりつ はかりかた すうじ むくみ">
       <a href="taijukei.html">
+        <span class="card__img"><img src='img/taijukei.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
         <span class='card__tags'><span class='tag tag--food'>食事</span></span>
         <h3 class="card__t">体重計の数字の読み方</h3>
         <p class="card__l">毎日乗って、1日の数字は無視してください</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="food" data-paid="0" data-q="間食と飲み物の整理 お菓子を我慢する前に、食事を整えてください お菓子 甘いもの スイーツ 小腹 ジュース カフェラテ 甘い飲み物 プロテインバー グラノーラ ナッツ ヘルシー 液体 アルコール かんしょく おかし あまいもの のみもの ジュース こばら">
+    </li><li class="card" data-cat="food" data-cats="food" data-slug="kanshoku"
+        data-paid="0" data-q="間食と飲み物の整理 お菓子を我慢する前に、食事を整えてください お菓子 甘いもの スイーツ 小腹 ジュース カフェラテ 甘い飲み物 プロテインバー グラノーラ ナッツ ヘルシー 液体 アルコール かんしょく おかし あまいもの のみもの ジュース こばら">
       <a href="kanshoku.html">
+        <span class="card__img"><img src='img/kanshoku.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
         <span class='card__tags'><span class='tag tag--food'>食事</span></span>
         <h3 class="card__t">間食と飲み物の整理</h3>
         <p class="card__l">お菓子を我慢する前に、食事を整えてください</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="food" data-paid="0" data-q="タンパク質はいくつ摂ればいいか 体重×1.6〜2.2g。まずここだけ合わせてください タンパク質 たんぱく質 プロテイン 量 目安 何グラム 筋肉 減量 プロテインバー 鶏むね ささみ 卵 たんぱくしつ ぷろていん りょう めやす きんにく">
+    </li><li class="card" data-cat="food" data-cats="food" data-slug="protein"
+        data-paid="0" data-q="タンパク質はいくつ摂ればいいか 体重×1.6〜2.2g。まずここだけ合わせてください タンパク質 たんぱく質 プロテイン 量 目安 何グラム 筋肉 減量 プロテインバー 鶏むね ささみ 卵 たんぱくしつ ぷろていん りょう めやす きんにく">
       <a href="protein.html">
+        <span class="card__img"><img src='img/protein.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
         <span class='card__tags'><span class='tag tag--food'>食事</span></span>
         <h3 class="card__t">タンパク質はいくつ摂ればいいか</h3>
         <p class="card__l">体重×1.6〜2.2g。まずここだけ合わせてください</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="food" data-paid="0" data-q="脂質を減らしすぎてはいけない 1食15g、1日45gは残してください 脂質 油 あぶら 低脂質 揚げ物 ドレッシング マヨネーズ ナッツ ホルモン 肌荒れ 生理 満腹感 ししつ あぶらもの ていししつ">
+    </li><li class="card" data-cat="food" data-cats="food" data-slug="shishitsu"
+        data-paid="0" data-q="脂質を減らしすぎてはいけない 1食15g、1日45gは残してください 脂質 油 あぶら 低脂質 揚げ物 ドレッシング マヨネーズ ナッツ ホルモン 肌荒れ 生理 満腹感 ししつ あぶらもの ていししつ">
       <a href="shishitsu.html">
+        <span class="card__img"><img src='img/shishitsu.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
         <span class='card__tags'><span class='tag tag--food'>食事</span></span>
         <h3 class="card__t">脂質を減らしすぎてはいけない</h3>
         <p class="card__l">1食15g、1日45gは残してください</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="food" data-paid="0" data-q="糖質制限をすすめない理由 効きます。ただし筋肉を売っています 糖質制限 ロカボ 炭水化物 ごはん パン 麺 主食 抜く ケトジェニック 停滞 リバウンド とうしつせいげん たんすいかぶつ しゅしょく ぬく">
+    </li><li class="card" data-cat="food" data-cats="food" data-slug="toshitsu"
+        data-paid="0" data-q="糖質制限をすすめない理由 効きます。ただし筋肉を売っています 糖質制限 ロカボ 炭水化物 ごはん パン 麺 主食 抜く ケトジェニック 停滞 リバウンド とうしつせいげん たんすいかぶつ しゅしょく ぬく">
       <a href="toshitsu.html">
+        <span class="card__img"><img src='img/toshitsu.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
         <span class='card__tags'><span class='tag tag--food'>食事</span></span>
         <h3 class="card__t">糖質制限をすすめない理由</h3>
         <p class="card__l">効きます。ただし筋肉を売っています</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="food" data-paid="0" data-q="食物繊維は減量の裏MVP 何を足すか迷ったら、まず食物繊維です 食物繊維 繊維 野菜 きのこ 海藻 豆 オートミール 便秘 お通じ 腸内環境 血糖値 満腹感 しょくもつせんい やさい きのこ かいそう べんぴ">
+    </li><li class="card" data-cat="food" data-cats="food" data-slug="seni"
+        data-paid="0" data-q="食物繊維は減量の裏MVP 何を足すか迷ったら、まず食物繊維です 食物繊維 繊維 野菜 きのこ 海藻 豆 オートミール 便秘 お通じ 腸内環境 血糖値 満腹感 しょくもつせんい やさい きのこ かいそう べんぴ">
       <a href="seni.html">
+        <span class="card__img"><img src='img/seni.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
         <span class='card__tags'><span class='tag tag--food'>食事</span></span>
         <h3 class="card__t">食物繊維は減量の裏MVP</h3>
         <p class="card__l">何を足すか迷ったら、まず食物繊維です</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="food" data-paid="0" data-q="同じカロリーでも満腹感が違う理由 手が加わっていないものほど、腹に溜まります 加工食品 未加工 原材料 満腹感 腹持ち カロリー 質 お菓子 ジュース 果物 精製 玄米 全粒粉 かこう まんぷくかん はらもち しつ">
+    </li><li class="card" data-cat="food" data-cats="food" data-slug="kakoudo"
+        data-paid="0" data-q="同じカロリーでも満腹感が違う理由 手が加わっていないものほど、腹に溜まります 加工食品 未加工 原材料 満腹感 腹持ち カロリー 質 お菓子 ジュース 果物 精製 玄米 全粒粉 かこう まんぷくかん はらもち しつ">
       <a href="kakoudo.html">
+        <span class="card__img"><img src='img/kakoudo.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
         <span class='card__tags'><span class='tag tag--food'>食事</span></span>
         <h3 class="card__t">同じカロリーでも満腹感が違う理由</h3>
         <p class="card__l">手が加わっていないものほど、腹に溜まります</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="food" data-paid="0" data-q="コンビニでの選び方 主菜から先に決めてください コンビニ 昼食 ランチ 弁当 サラダチキン おにぎり サンドイッチ カップ麺 パスタ 買い方 選び方 忙しい こんびに ちゅうしょく えらびかた">
+    </li><li class="card" data-cat="food" data-cats="food" data-slug="konbini"
+        data-paid="0" data-q="コンビニでの選び方 主菜から先に決めてください コンビニ 昼食 ランチ 弁当 サラダチキン おにぎり サンドイッチ カップ麺 パスタ 買い方 選び方 忙しい こんびに ちゅうしょく えらびかた">
       <a href="konbini.html">
+        <span class="card__img"><img src='img/konbini.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
         <span class='card__tags'><span class='tag tag--food'>食事</span></span>
         <h3 class="card__t">コンビニでの選び方</h3>
         <p class="card__l">主菜から先に決めてください</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="food" data-paid="0" data-q="自炊は最強、ただし今すぐでなくていい 自炊は最強の手段です。でも、今すぐ始めなくて構いません 自炊 料理 作り置き 時短 面倒 続かない 外食 中食 惣菜 弁当 じすい りょうり つくりおき めんどう つづかない">
+    </li><li class="card" data-cat="food" data-cats="food" data-slug="jisui"
+        data-paid="0" data-q="自炊は最強、ただし今すぐでなくていい 自炊は最強の手段です。でも、今すぐ始めなくて構いません 自炊 料理 作り置き 時短 面倒 続かない 外食 中食 惣菜 弁当 じすい りょうり つくりおき めんどう つづかない">
       <a href="jisui.html">
+        <span class="card__img"><img src='img/jisui.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
         <span class='card__tags'><span class='tag tag--food'>食事</span></span>
         <h3 class="card__t">自炊は最強、ただし今すぐでなくていい</h3>
         <p class="card__l">自炊は最強の手段です。でも、今すぐ始めなくて構いません</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="food" data-paid="0" data-q="買い物の時点で勝負は決まっている 家に置かないことが、最強の意志力です 買い物 スーパー 買いだめ ストック 家に置かない お菓子 誘惑 意志力 環境 まとめ買い かいもの いしりょく かんきょう おかし">
+    </li><li class="card" data-cat="food" data-cats="food mind" data-slug="kaimono"
+        data-paid="0" data-q="買い物の時点で勝負は決まっている 家に置かないことが、最強の意志力です 買い物 スーパー 買いだめ ストック 家に置かない お菓子 誘惑 意志力 環境 まとめ買い かいもの いしりょく かんきょう おかし">
       <a href="kaimono.html">
-        <span class='card__tags'><span class='tag tag--food'>食事</span></span>
+        <span class="card__img"><img src='img/kaimono.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
+        <span class='card__tags'><span class='tag tag--food'>食事</span><span class='tag tag--mind'>マインド</span></span>
         <h3 class="card__t">買い物の時点で勝負は決まっている</h3>
         <p class="card__l">家に置かないことが、最強の意志力です</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="food" data-paid="0" data-q="早食いをやめる 噛む回数は、満腹の信号が届くまでの時間を稼ぐ手段です 早食い 噛む 咀嚼 満腹感 満腹中枢 食べる速さ ながら食べ スマホ 15分 20分 はやぐい かむ そしゃく まんぷく たべるはやさ">
+    </li><li class="card" data-cat="food" data-cats="food mind" data-slug="hayagui"
+        data-paid="0" data-q="早食いをやめる 噛む回数は、満腹の信号が届くまでの時間を稼ぐ手段です 早食い 噛む 咀嚼 満腹感 満腹中枢 食べる速さ ながら食べ スマホ 15分 20分 はやぐい かむ そしゃく まんぷく たべるはやさ">
       <a href="hayagui.html">
-        <span class='card__tags'><span class='tag tag--food'>食事</span></span>
+        <span class="card__img"><img src='img/hayagui.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
+        <span class='card__tags'><span class='tag tag--food'>食事</span><span class='tag tag--mind'>マインド</span></span>
         <h3 class="card__t">早食いをやめる</h3>
         <p class="card__l">噛む回数は、満腹の信号が届くまでの時間を稼ぐ手段です</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="food" data-paid="0" data-q="3食か5食か どちらでも構いません。続く方でいい 食事回数 3食 5食 分食 こまめに食べる 代謝 血糖値 間食 プチ断食 16時間 しょくじかいすう さんしょく ぶんしょく たいしゃ">
+    </li><li class="card" data-cat="food" data-cats="food" data-slug="kaisu"
+        data-paid="0" data-q="3食か5食か どちらでも構いません。続く方でいい 食事回数 3食 5食 分食 こまめに食べる 代謝 血糖値 間食 プチ断食 16時間 しょくじかいすう さんしょく ぶんしょく たいしゃ">
       <a href="kaisu.html">
+        <span class="card__img"><img src='img/kaisu.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
         <span class='card__tags'><span class='tag tag--food'>食事</span></span>
         <h3 class="card__t">3食か5食か</h3>
         <p class="card__l">どちらでも構いません。続く方でいい</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="food" data-paid="0" data-q="朝食は食べるべきか 食べても、抜いても構いません 朝食 朝ごはん 抜く 食べない 欠食 朝 時間がない 太る 痩せる ちょうしょく あさごはん ぬく たべない">
+    </li><li class="card" data-cat="food" data-cats="food" data-slug="choshoku"
+        data-paid="0" data-q="朝食は食べるべきか 食べても、抜いても構いません 朝食 朝ごはん 抜く 食べない 欠食 朝 時間がない 太る 痩せる ちょうしょく あさごはん ぬく たべない">
       <a href="choshoku.html">
+        <span class="card__img"><img src='img/choshoku.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
         <span class='card__tags'><span class='tag tag--food'>食事</span></span>
         <h3 class="card__t">朝食は食べるべきか</h3>
         <p class="card__l">食べても、抜いても構いません</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="food" data-paid="0" data-q="お酒とのつきあい方 問題はお酒より、そのあとの食事です お酒 アルコール ビール ハイボール 焼酎 ワイン 糖質ゼロ 飲み会 二日酔い 〆 ラーメン 締め おさけ あるこーる のみかい しめ">
+    </li><li class="card" data-cat="food" data-cats="food" data-slug="osake"
+        data-paid="0" data-q="お酒とのつきあい方 問題はお酒より、そのあとの食事です お酒 アルコール ビール ハイボール 焼酎 ワイン 糖質ゼロ 飲み会 二日酔い 〆 ラーメン 締め おさけ あるこーる のみかい しめ">
       <a href="osake.html">
+        <span class="card__img"><img src='img/osake.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
         <span class='card__tags'><span class='tag tag--food'>食事</span></span>
         <h3 class="card__t">お酒とのつきあい方</h3>
         <p class="card__l">問題はお酒より、そのあとの食事です</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="food" data-paid="0" data-q="旅行・帰省がある週 その週は諦めなくていい。前後で均します 旅行 帰省 出張 連休 お盆 正月 ゴルフ 温泉 食べ歩き 増えた 戻らない りょこう きせい しゅっちょう れんきゅう おしょうがつ">
+    </li><li class="card" data-cat="food" data-cats="food" data-slug="ryoko"
+        data-paid="0" data-q="旅行・帰省がある週 その週は諦めなくていい。前後で均します 旅行 帰省 出張 連休 お盆 正月 ゴルフ 温泉 食べ歩き 増えた 戻らない りょこう きせい しゅっちょう れんきゅう おしょうがつ">
       <a href="ryoko.html">
+        <span class="card__img"><img src='img/ryoko.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
         <span class='card__tags'><span class='tag tag--food'>食事</span></span>
         <h3 class="card__t">旅行・帰省がある週</h3>
         <p class="card__l">その週は諦めなくていい。前後で均します</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="food" data-paid="0" data-q="生理周期と体重・食欲 その時期の増加は、無視して構いません 生理 月経 生理前 PMS 食欲 甘いもの むくみ 体重増加 周期 だるい せいり げっけい しょくよく あまいもの ちょうき">
+    </li><li class="card" data-cat="food" data-cats="food posture" data-slug="seiri"
+        data-paid="0" data-q="生理周期と体重・食欲 その時期の増加は、無視して構いません 生理 月経 生理前 PMS 食欲 甘いもの むくみ 体重増加 周期 だるい せいり げっけい しょくよく あまいもの ちょうき">
       <a href="seiri.html">
-        <span class='card__tags'><span class='tag tag--food'>食事</span></span>
+        <span class="card__img"><img src='img/seiri.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
+        <span class='card__tags'><span class='tag tag--food'>食事</span><span class='tag tag--posture'>姿勢・不調</span></span>
         <h3 class="card__t">生理周期と体重・食欲</h3>
         <p class="card__l">その時期の増加は、無視して構いません</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card card--paid" data-cat="food" data-paid="1" data-q="自分の適正カロリーを出す 目安の数字は、30分あれば自分で出せます カロリー 計算 基礎代謝 消費カロリー 摂取カロリー 何キロカロリー 目標 設定 活動量 かろりー けいさん きそたいしゃ せっしゅ もくひょう カロリー計算 かろりーけいさん 適正カロリー てきせいかろりー PFC ぴーえふしー">
+    </li><li class="card card--paid" data-cat="food" data-cats="food" data-slug="calorie-keisan"
+        data-paid="1" data-q="自分の適正カロリーを出す 目安の数字は、30分あれば自分で出せます カロリー 計算 基礎代謝 消費カロリー 摂取カロリー 何キロカロリー 目標 設定 活動量 かろりー けいさん きそたいしゃ せっしゅ もくひょう カロリー計算 かろりーけいさん 適正カロリー てきせいかろりー PFC ぴーえふしー">
       <a href="calorie-keisan.html">
+        <span class="card__img"><img src='img/calorie-keisan.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
         <span class='card__tags'><span class='tag tag--food'>食事</span><span class='tag tag--paid'>メンバー限定</span></span>
         <h3 class="card__t">自分の適正カロリーを出す</h3>
         <p class="card__l">目安の数字は、30分あれば自分で出せます</p>
         <span class="card__go">続きを読む</span>
       </a>
-    </li><li class="card card--paid" data-cat="food" data-paid="1" data-q="停滞が3週間を超えたときの切り分け 順番に潰していけば、原因はほぼ特定できます 停滞 停滞期 長い 3週間 1ヶ月 落ちない 原因 切り分け チェック 手順 ていたい ながい おちない げんいん てじゅん">
+    </li><li class="card card--paid" data-cat="food" data-cats="food" data-slug="teitai-kiriwake"
+        data-paid="1" data-q="停滞が3週間を超えたときの切り分け 順番に潰していけば、原因はほぼ特定できます 停滞 停滞期 長い 3週間 1ヶ月 落ちない 原因 切り分け チェック 手順 ていたい ながい おちない げんいん てじゅん">
       <a href="teitai-kiriwake.html">
+        <span class="card__img"><img src='img/teitai-kiriwake.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
         <span class='card__tags'><span class='tag tag--food'>食事</span><span class='tag tag--paid'>メンバー限定</span></span>
         <h3 class="card__t">停滞が3週間を超えたときの切り分け</h3>
         <p class="card__l">順番に潰していけば、原因はほぼ特定できます</p>
         <span class="card__go">続きを読む</span>
       </a>
-    </li><li class="card card--paid" data-cat="food" data-paid="1" data-q="PFCを実際の食事に落とす 数字は、3つの型に置き換えれば実行できます PFC 献立 メニュー 何を食べる 組み立て 手ばかり 目分量 実践 一日の例 ぴーえふしー こんだて くみたて てばかり めぶんりょう">
+    </li><li class="card card--paid" data-cat="food" data-cats="food" data-slug="pfc-kondate"
+        data-paid="1" data-q="PFCを実際の食事に落とす 数字は、3つの型に置き換えれば実行できます PFC 献立 メニュー 何を食べる 組み立て 手ばかり 目分量 実践 一日の例 ぴーえふしー こんだて くみたて てばかり めぶんりょう">
       <a href="pfc-kondate.html">
+        <span class="card__img"><img src='img/pfc-kondate.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
         <span class='card__tags'><span class='tag tag--food'>食事</span><span class='tag tag--paid'>メンバー限定</span></span>
         <h3 class="card__t">PFCを実際の食事に落とす</h3>
         <p class="card__l">数字は、3つの型に置き換えれば実行できます</p>
         <span class="card__go">続きを読む</span>
       </a>
-    </li></ul>
-  </section><section class="grp" data-cat="training">
-    <div class="grp__hd"><h2>運動</h2><p>筋トレ・有酸素</p></div>
-    <ul class="cards"><li class="card" data-cat="training" data-paid="0" data-q="減量中こそ筋トレを優先する 食事 ＞ 筋トレ ＞ 有酸素、の順です 筋トレ 有酸素 ランニング ウォーキング 優先順位 どっち 脂肪燃焼 痩せたい 順番 きんとれ ゆうさんそ ゆうせん じゅんばん">
+    </li><li class='grp__hd' data-cat='training'><h2>運動</h2><p>筋トレ・有酸素</p></li><li class="card" data-cat="training" data-cats="training" data-slug="kintore-yusen"
+        data-paid="0" data-q="減量中こそ筋トレを優先する 食事 ＞ 筋トレ ＞ 有酸素、の順です 筋トレ 有酸素 ランニング ウォーキング 優先順位 どっち 脂肪燃焼 痩せたい 順番 きんとれ ゆうさんそ ゆうせん じゅんばん">
       <a href="kintore-yusen.html">
+        <span class="card__img"><img src='img/kintore-yusen.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
         <span class='card__tags'><span class='tag tag--training'>運動</span></span>
         <h3 class="card__t">減量中こそ筋トレを優先する</h3>
         <p class="card__l">食事 ＞ 筋トレ ＞ 有酸素、の順です</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="training" data-paid="0" data-q="減量中に筋肉はつかない 減量中の目標は「維持」です。それで勝ちです 筋肉 つかない 増量 減量 同時 ボディメイク 引き締める 見た目 維持 きんにく つかない げんりょう ぞうりょう どうじ">
+    </li><li class="card" data-cat="training" data-cats="training" data-slug="kinniku-tsukanai"
+        data-paid="0" data-q="減量中に筋肉はつかない 減量中の目標は「維持」です。それで勝ちです 筋肉 つかない 増量 減量 同時 ボディメイク 引き締める 見た目 維持 きんにく つかない げんりょう ぞうりょう どうじ">
       <a href="kinniku-tsukanai.html">
+        <span class="card__img"><img src='img/kinniku-tsukanai.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
         <span class='card__tags'><span class='tag tag--training'>運動</span></span>
         <h3 class="card__t">減量中に筋肉はつかない</h3>
         <p class="card__l">減量中の目標は「維持」です。それで勝ちです</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="training" data-paid="0" data-q="週2回で十分効果が出る 週2回で、必要なものはほぼ取れます 週2回 頻度 回数 何回 通う 忙しい 時間がない 続かない 毎日 しゅうにかい ひんど かいすう いそがしい">
+    </li><li class="card" data-cat="training" data-cats="training mind" data-slug="shu2kai"
+        data-paid="0" data-q="週2回で十分効果が出る 週2回で、必要なものはほぼ取れます 週2回 頻度 回数 何回 通う 忙しい 時間がない 続かない 毎日 しゅうにかい ひんど かいすう いそがしい">
       <a href="shu2kai.html">
-        <span class='card__tags'><span class='tag tag--training'>運動</span></span>
+        <span class="card__img"><img src='img/shu2kai.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
+        <span class='card__tags'><span class='tag tag--training'>運動</span><span class='tag tag--mind'>マインド</span></span>
         <h3 class="card__t">週2回で十分効果が出る</h3>
         <p class="card__l">週2回で、必要なものはほぼ取れます</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="training" data-paid="0" data-q="種目は5〜6個で足りる 大きな動きを5〜6個。それで全身が入ります 種目 メニュー 何種目 コンパウンド スクワット デッドリフト ベンチプレス マシン 組み方 しゅもく めにゅー くみかた">
+    </li><li class="card" data-cat="training" data-cats="training" data-slug="shumoku"
+        data-paid="0" data-q="種目は5〜6個で足りる 大きな動きを5〜6個。それで全身が入ります 種目 メニュー 何種目 コンパウンド スクワット デッドリフト ベンチプレス マシン 組み方 しゅもく めにゅー くみかた">
       <a href="shumoku.html">
+        <span class="card__img"><img src='img/shumoku.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
         <span class='card__tags'><span class='tag tag--training'>運動</span></span>
         <h3 class="card__t">種目は5〜6個で足りる</h3>
         <p class="card__l">大きな動きを5〜6個。それで全身が入ります</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="training" data-paid="0" data-q="筋肉痛は成長の指標ではない 痛みの有無で、効いたかどうかは判断できません 筋肉痛 痛み 効いている 効いてない 翌日 遅発性 疲労 判断 きんにくつう いたみ きいてる よくじつ">
+    </li><li class="card" data-cat="training" data-cats="training posture" data-slug="kinnikutsu"
+        data-paid="0" data-q="筋肉痛は成長の指標ではない 痛みの有無で、効いたかどうかは判断できません 筋肉痛 痛み 効いている 効いてない 翌日 遅発性 疲労 判断 きんにくつう いたみ きいてる よくじつ">
       <a href="kinnikutsu.html">
-        <span class='card__tags'><span class='tag tag--training'>運動</span></span>
+        <span class="card__img"><img src='img/kinnikutsu.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
+        <span class='card__tags'><span class='tag tag--training'>運動</span><span class='tag tag--posture'>姿勢・不調</span></span>
         <h3 class="card__t">筋肉痛は成長の指標ではない</h3>
         <p class="card__l">痛みの有無で、効いたかどうかは判断できません</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="training" data-paid="0" data-q="減量中は重量が伸びなくていい 落ちていなければ、勝ちです 重量 伸びない 停滞 記録 落ちた 力が出ない 減量中 パフォーマンス じゅうりょう のびない ちからがでない">
+    </li><li class="card" data-cat="training" data-cats="training" data-slug="juryo"
+        data-paid="0" data-q="減量中は重量が伸びなくていい 落ちていなければ、勝ちです 重量 伸びない 停滞 記録 落ちた 力が出ない 減量中 パフォーマンス じゅうりょう のびない ちからがでない">
       <a href="juryo.html">
+        <span class="card__img"><img src='img/juryo.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
         <span class='card__tags'><span class='tag tag--training'>運動</span></span>
         <h3 class="card__t">減量中は重量が伸びなくていい</h3>
         <p class="card__l">落ちていなければ、勝ちです</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="training" data-paid="0" data-q="女性が筋トレでゴツくならない理由 まず、なりません 女性 ゴツくなる 太くなる ムキムキ 脚が太い 二の腕 重い重量 マシン 心配 じょせい ごつくなる ふとくなる むきむき">
+    </li><li class="card" data-cat="training" data-cats="training" data-slug="gotsuku"
+        data-paid="0" data-q="女性が筋トレでゴツくならない理由 まず、なりません 女性 ゴツくなる 太くなる ムキムキ 脚が太い 二の腕 重い重量 マシン 心配 じょせい ごつくなる ふとくなる むきむき">
       <a href="gotsuku.html">
+        <span class="card__img"><img src='img/gotsuku.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
         <span class='card__tags'><span class='tag tag--training'>運動</span></span>
         <h3 class="card__t">女性が筋トレでゴツくならない理由</h3>
         <p class="card__l">まず、なりません</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="training" data-paid="0" data-q="HIITをすすめない場合 きつすぎて続かないなら、価値はゼロです HIIT 高強度 インターバル 短時間 効率 きつい 続かない タバタ 脂肪燃焼 有酸素 ヒット こうきょうど たんじかん きつい">
+    </li><li class="card" data-cat="training" data-cats="training" data-slug="hiit"
+        data-paid="0" data-q="HIITをすすめない場合 きつすぎて続かないなら、価値はゼロです HIIT 高強度 インターバル 短時間 効率 きつい 続かない タバタ 脂肪燃焼 有酸素 ヒット こうきょうど たんじかん きつい">
       <a href="hiit.html">
+        <span class="card__img"><img src='img/hiit.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
         <span class='card__tags'><span class='tag tag--training'>運動</span></span>
         <h3 class="card__t">HIITをすすめない場合</h3>
         <p class="card__l">きつすぎて続かないなら、価値はゼロです</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="training" data-paid="0" data-q="フォームが完璧になるまで待たない 始めたほうが得です フォーム 正しい やり方 自信がない 怖い 始められない ジム 初心者 独学 ふぉーむ ただしい はじめられない しょしんしゃ">
+    </li><li class="card" data-cat="training" data-cats="training" data-slug="form"
+        data-paid="0" data-q="フォームが完璧になるまで待たない 始めたほうが得です フォーム 正しい やり方 自信がない 怖い 始められない ジム 初心者 独学 ふぉーむ ただしい はじめられない しょしんしゃ">
       <a href="form.html">
+        <span class="card__img"><img src='img/form.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
         <span class='card__tags'><span class='tag tag--training'>運動</span></span>
         <h3 class="card__t">フォームが完璧になるまで待たない</h3>
         <p class="card__l">始めたほうが得です</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="training" data-paid="0" data-q="有酸素運動の出番はいつか 食べすぎた後、数日かけて薄めるときです 有酸素 ランニング ウォーキング 歩く 何分 いつやる 食べすぎた後 調整 消費カロリー ゆうさんそ あるく はしる ちょうせい">
+    </li><li class="card" data-cat="training" data-cats="training" data-slug="yusanso"
+        data-paid="0" data-q="有酸素運動の出番はいつか 食べすぎた後、数日かけて薄めるときです 有酸素 ランニング ウォーキング 歩く 何分 いつやる 食べすぎた後 調整 消費カロリー ゆうさんそ あるく はしる ちょうせい">
       <a href="yusanso.html">
+        <span class="card__img"><img src='img/yusanso.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
         <span class='card__tags'><span class='tag tag--training'>運動</span></span>
         <h3 class="card__t">有酸素運動の出番はいつか</h3>
         <p class="card__l">食べすぎた後、数日かけて薄めるときです</p>
         <span class="card__go">読む</span>
       </a>
-    </li></ul>
-  </section><section class="grp" data-cat="posture">
-    <div class="grp__hd"><h2>姿勢・不調</h2><p>肩こり・姿勢・むくみ</p></div>
-    <ul class="cards"><li class="card" data-cat="posture" data-paid="0" data-q="肩こり・首こり 揉んでも戻るのは、原因が姿勢の「時間」にあるからです 肩こり 首こり 肩が重い 肩が痛い マッサージ 揉む デスクワーク パソコン スマホ 猫背 カバン リュック 頭が前 巻き肩 かたこり くびこり かたがおもい かたがいたい もむ ねこぜ かばん">
+    </li><li class='grp__hd' data-cat='posture'><h2>姿勢・不調</h2><p>肩こり・姿勢・むくみ</p></li><li class="card" data-cat="posture" data-cats="posture" data-slug="katakori"
+        data-paid="0" data-q="肩こり・首こり 揉んでも戻るのは、原因が姿勢の「時間」にあるからです 肩こり 首こり 肩が重い 肩が痛い マッサージ 揉む デスクワーク パソコン スマホ 猫背 カバン リュック 頭が前 巻き肩 かたこり くびこり かたがおもい かたがいたい もむ ねこぜ かばん">
       <a href="katakori.html">
+        <span class="card__img"><img src='img/katakori.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
         <span class='card__tags'><span class='tag tag--posture'>姿勢・不調</span></span>
         <h3 class="card__t">肩こり・首こり</h3>
         <p class="card__l">揉んでも戻るのは、原因が姿勢の「時間」にあるからです</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="posture" data-paid="0" data-q="反り腰・猫背 姿勢は意識では直りません。直るのは条件のほうです 反り腰 猫背 姿勢 姿勢が悪い 背中 立ち方 座り方 ヒール 靴 見た目 お腹が出る 骨盤 そりごし ねこぜ しせい たちかた すわりかた くつ こつばん">
+    </li><li class="card" data-cat="posture" data-cats="posture" data-slug="shisei"
+        data-paid="0" data-q="反り腰・猫背 姿勢は意識では直りません。直るのは条件のほうです 反り腰 猫背 姿勢 姿勢が悪い 背中 立ち方 座り方 ヒール 靴 見た目 お腹が出る 骨盤 そりごし ねこぜ しせい たちかた すわりかた くつ こつばん">
       <a href="shisei.html">
+        <span class="card__img"><img src='img/shisei.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
         <span class='card__tags'><span class='tag tag--posture'>姿勢・不調</span></span>
         <h3 class="card__t">反り腰・猫背</h3>
         <p class="card__l">姿勢は意識では直りません。直るのは条件のほうです</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="posture" data-paid="0" data-q="脚のむくみ 足りないのは水分ではなく、動く時間です むくみ 浮腫 脚が太い ふくらはぎ 足首 靴がきつい 夕方 立ち仕事 デスクワーク 座りっぱなし 塩分 水分 着圧 ソックス だるい 重い むくみとり おもい あしがむくむ ゆうがた しおぶん すいぶん ちゃくあつ">
+    </li><li class="card" data-cat="posture" data-cats="posture training" data-slug="mukumi"
+        data-paid="0" data-q="脚のむくみ 足りないのは水分ではなく、動く時間です むくみ 浮腫 脚が太い ふくらはぎ 足首 靴がきつい 夕方 立ち仕事 デスクワーク 座りっぱなし 塩分 水分 着圧 ソックス だるい 重い むくみとり おもい あしがむくむ ゆうがた しおぶん すいぶん ちゃくあつ">
       <a href="mukumi.html">
-        <span class='card__tags'><span class='tag tag--posture'>姿勢・不調</span></span>
+        <span class="card__img"><img src='img/mukumi.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
+        <span class='card__tags'><span class='tag tag--posture'>姿勢・不調</span><span class='tag tag--training'>運動</span></span>
         <h3 class="card__t">脚のむくみ</h3>
         <p class="card__l">足りないのは水分ではなく、動く時間です</p>
         <span class="card__go">読む</span>
       </a>
-    </li></ul>
-  </section><section class="grp" data-cat="sleep">
-    <div class="grp__hd"><h2>睡眠</h2><p>眠り・頭の重さ</p></div>
-    <ul class="cards"><li class="card" data-cat="sleep" data-paid="0" data-q="寝つきが悪い・朝すっきりしない 寝つきは、布団に入る3時間前に決まっています 眠れない 寝つき 不眠 夜中に目が覚める 朝つらい 起きられない 寝起き 寝酒 カフェイン コーヒー 寝室 照明 スマホ 夜更かし 睡眠の質 ねむれない ねつき ふみん ねおき ねざけ よふかし すいみん あさつらい">
+    </li><li class="card" data-cat="posture" data-cats="posture mind" data-slug="shisei-ishiki"
+        data-paid="0" data-q="姿勢を意識しても続かない 姿勢は、意識ではなく環境で決まります 姿勢 意識 続かない 気をつける 猫背 デスク 環境 集中 しせい いしき つづかない ねこぜ かんきょう 姿勢を意識">
+      <a href="shisei-ishiki.html">
+        <span class="card__img"><img src='img/shisei-ishiki.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
+        <span class='card__tags'><span class='tag tag--posture'>姿勢・不調</span><span class='tag tag--mind'>マインド</span></span>
+        <h3 class="card__t">姿勢を意識しても続かない</h3>
+        <p class="card__l">姿勢は、意識ではなく環境で決まります</p>
+        <span class="card__go">読む</span>
+      </a>
+    </li><li class="card" data-cat="posture" data-cats="posture" data-slug="desk-suwarikata"
+        data-paid="0" data-q="デスクワーク中の座り方 正しい座り方より、同じ座り方を続けないことです 座り方 椅子 デスクワーク 高さ 骨盤 足裏 座りっぱなし 長時間 すわりかた いす たかさ こつばん あしうら デスクワーク 座る">
+      <a href="desk-suwarikata.html">
+        <span class="card__img"><img src='img/desk-suwarikata.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
+        <span class='card__tags'><span class='tag tag--posture'>姿勢・不調</span></span>
+        <h3 class="card__t">デスクワーク中の座り方</h3>
+        <p class="card__l">正しい座り方より、同じ座り方を続けないことです</p>
+        <span class="card__go">読む</span>
+      </a>
+    </li><li class="card" data-cat="posture" data-cats="posture" data-slug="sumaho-kubi"
+        data-paid="0" data-q="首が前に出る（スマホ首） 首の問題ではなく、目線の高さの問題です スマホ首 ストレートネック 首 前に出る 頭の位置 スマホ 携帯 目線 くび まえにでる すまほくび ストレートネック 首が痛い">
+      <a href="sumaho-kubi.html">
+        <span class="card__img"><img src='img/sumaho-kubi.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
+        <span class='card__tags'><span class='tag tag--posture'>姿勢・不調</span></span>
+        <h3 class="card__t">首が前に出る（スマホ首）</h3>
+        <p class="card__l">首の問題ではなく、目線の高さの問題です</p>
+        <span class="card__go">読む</span>
+      </a>
+    </li><li class="card" data-cat="posture" data-cats="posture training" data-slug="makikata"
+        data-paid="0" data-q="巻き肩 胸の前が縮んで、背中が使われていない状態です 巻き肩 肩が内側 胸が縮む 猫背 小胸筋 大胸筋 背中 まきかた かたがうちがわ むねがちぢむ ねこぜ 肩が前に">
+      <a href="makikata.html">
+        <span class="card__img"><img src='img/makikata.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
+        <span class='card__tags'><span class='tag tag--posture'>姿勢・不調</span><span class='tag tag--training'>運動</span></span>
+        <h3 class="card__t">巻き肩</h3>
+        <p class="card__l">胸の前が縮んで、背中が使われていない状態です</p>
+        <span class="card__go">読む</span>
+      </a>
+    </li><li class="card" data-cat="posture" data-cats="posture" data-slug="kotsuban"
+        data-paid="0" data-q="骨盤の前傾・後傾 どちらが悪いかではなく、真ん中に戻れるかどうかです 骨盤 前傾 後傾 反り腰 骨盤の傾き 立ち方 座り方 こつばん ぜんけい こうけい そりごし かたむき 骨盤が歪む">
+      <a href="kotsuban.html">
+        <span class="card__img"><img src='img/kotsuban.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
+        <span class='card__tags'><span class='tag tag--posture'>姿勢・不調</span></span>
+        <h3 class="card__t">骨盤の前傾・後傾</h3>
+        <p class="card__l">どちらが悪いかではなく、真ん中に戻れるかどうかです</p>
+        <span class="card__go">読む</span>
+      </a>
+    </li><li class="card" data-cat="posture" data-cats="posture training" data-slug="kokansetsu"
+        data-paid="0" data-q="股関節が硬い 硬いのは筋肉より、動かす角度が少ない生活のほうです 股関節 硬い 開かない しゃがめない 可動域 ストレッチ あぐら こかんせつ かたい かどういき ひらかない 股関節が痛い">
+      <a href="kokansetsu.html">
+        <span class="card__img"><img src='img/kokansetsu.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
+        <span class='card__tags'><span class='tag tag--posture'>姿勢・不調</span><span class='tag tag--training'>運動</span></span>
+        <h3 class="card__t">股関節が硬い</h3>
+        <p class="card__l">硬いのは筋肉より、動かす角度が少ない生活のほうです</p>
+        <span class="card__go">読む</span>
+      </a>
+    </li><li class="card" data-cat="posture" data-cats="posture training" data-slug="zenkutsu"
+        data-paid="0" data-q="前屈ができない もも裏の硬さより、骨盤が倒れていないことが原因です 前屈 体が硬い 手が床につかない ハムストリングス もも裏 柔軟性 ぜんくつ からだがかたい じゅうなんせい 前屈できない">
+      <a href="zenkutsu.html">
+        <span class="card__img"><img src='img/zenkutsu.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
+        <span class='card__tags'><span class='tag tag--posture'>姿勢・不調</span><span class='tag tag--training'>運動</span></span>
+        <h3 class="card__t">前屈ができない</h3>
+        <p class="card__l">もも裏の硬さより、骨盤が倒れていないことが原因です</p>
+        <span class="card__go">読む</span>
+      </a>
+    </li><li class="card" data-cat="posture" data-cats="posture training" data-slug="ashikubi"
+        data-paid="0" data-q="足首が硬い・しゃがめない スクワットが浅いのは、足首が止めていることが多いです 足首 硬い しゃがめない かかとが浮く スクワット ふくらはぎ 背屈 あしくび かたい しゃがむ かかとがうく すくわっと">
+      <a href="ashikubi.html">
+        <span class="card__img"><img src='img/ashikubi.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
+        <span class='card__tags'><span class='tag tag--posture'>姿勢・不調</span><span class='tag tag--training'>運動</span></span>
+        <h3 class="card__t">足首が硬い・しゃがめない</h3>
+        <p class="card__l">スクワットが浅いのは、足首が止めていることが多いです</p>
+        <span class="card__go">読む</span>
+      </a>
+    </li><li class="card" data-cat="posture" data-cats="posture training" data-slug="kenkokotsu"
+        data-paid="0" data-q="肩甲骨が動かない はがすものではなく、動かす回数が足りていないだけです 肩甲骨 動かない はがす 背中 可動域 けんこうこつ うごかない はがす せなか 肩甲骨はがし 肩甲骨を寄せる">
+      <a href="kenkokotsu.html">
+        <span class="card__img"><img src='img/kenkokotsu.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
+        <span class='card__tags'><span class='tag tag--posture'>姿勢・不調</span><span class='tag tag--training'>運動</span></span>
+        <h3 class="card__t">肩甲骨が動かない</h3>
+        <p class="card__l">はがすものではなく、動かす回数が足りていないだけです</p>
+        <span class="card__go">読む</span>
+      </a>
+    </li><li class="card" data-cat="posture" data-cats="posture" data-slug="kokyu"
+        data-paid="0" data-q="呼吸が浅い 吸えないのではなく、吐き切れていません 呼吸 浅い 深呼吸 息が吸えない 横隔膜 肋骨 猫背 こきゅう あさい しんこきゅう ろっこつ 息苦しい 呼吸が浅い">
+      <a href="kokyu.html">
+        <span class="card__img"><img src='img/kokyu.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
+        <span class='card__tags'><span class='tag tag--posture'>姿勢・不調</span></span>
+        <h3 class="card__t">呼吸が浅い</h3>
+        <p class="card__l">吸えないのではなく、吐き切れていません</p>
+        <span class="card__go">読む</span>
+      </a>
+    </li><li class="card" data-cat="posture" data-cats="posture training" data-slug="knee-in"
+        data-paid="0" data-q="膝が内に入る 膝の向きは、お尻と足裏が決めています 膝 内に入る ニーイン 膝が痛い スクワット お尻 中臀筋 ひざ うちにはいる にーいん おしり 膝の向き">
+      <a href="knee-in.html">
+        <span class="card__img"><img src='img/knee-in.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
+        <span class='card__tags'><span class='tag tag--posture'>姿勢・不調</span><span class='tag tag--training'>運動</span></span>
+        <h3 class="card__t">膝が内に入る</h3>
+        <p class="card__l">膝の向きは、お尻と足裏が決めています</p>
+        <span class="card__go">読む</span>
+      </a>
+    </li><li class="card" data-cat="posture" data-cats="posture" data-slug="ashiura"
+        data-paid="0" data-q="足裏が疲れる・土踏まずが落ちる 足裏の疲れは、地面と体の間の設定の問題です 足裏 土踏まず アーチ 扁平足 疲れる 靴 インソール 足が痛い あしうら つちふまず あーち へんぺいそく くつ">
+      <a href="ashiura.html">
+        <span class="card__img"><img src='img/ashiura.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
+        <span class='card__tags'><span class='tag tag--posture'>姿勢・不調</span></span>
+        <h3 class="card__t">足裏が疲れる・土踏まずが落ちる</h3>
+        <p class="card__l">足裏の疲れは、地面と体の間の設定の問題です</p>
+        <span class="card__go">読む</span>
+      </a>
+    </li><li class="card" data-cat="posture" data-cats="posture training" data-slug="hie"
+        data-paid="0" data-q="手足の冷え 熱を作る量と、運ぶ力の両方が足りていません 冷え 冷え性 手足が冷たい 末端 血流 筋肉量 ふくらはぎ ひえ ひえしょう つめたい けつりゅう 冷える">
+      <a href="hie.html">
+        <span class="card__img"><img src='img/hie.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
+        <span class='card__tags'><span class='tag tag--posture'>姿勢・不調</span><span class='tag tag--training'>運動</span></span>
+        <h3 class="card__t">手足の冷え</h3>
+        <p class="card__l">熱を作る量と、運ぶ力の両方が足りていません</p>
+        <span class="card__go">読む</span>
+      </a>
+    </li><li class="card" data-cat="posture" data-cats="posture training" data-slug="tachishigoto"
+        data-paid="0" data-q="立ち仕事で脚が疲れる 立ちっぱなしは、座りっぱなしと同じ「固定」です 立ち仕事 脚が疲れる 立ちっぱなし むくみ ふくらはぎ 重心 たちしごと あしがつかれる たちっぱなし じゅうしん">
+      <a href="tachishigoto.html">
+        <span class="card__img"><img src='img/tachishigoto.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
+        <span class='card__tags'><span class='tag tag--posture'>姿勢・不調</span><span class='tag tag--training'>運動</span></span>
+        <h3 class="card__t">立ち仕事で脚が疲れる</h3>
+        <p class="card__l">立ちっぱなしは、座りっぱなしと同じ「固定」です</p>
+        <span class="card__go">読む</span>
+      </a>
+    </li><li class="card" data-cat="posture" data-cats="posture" data-slug="onaka-mie"
+        data-paid="0" data-q="お腹が出て見える姿勢 お腹の出方の一部は、脂肪ではなく骨盤の角度です お腹が出る ぽっこりお腹 反り腰 見た目 姿勢 腹圧 おなかがでる ぽっこり そりごし みため お腹だけ出る">
+      <a href="onaka-mie.html">
+        <span class="card__img"><img src='img/onaka-mie.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
+        <span class='card__tags'><span class='tag tag--posture'>姿勢・不調</span></span>
+        <h3 class="card__t">お腹が出て見える姿勢</h3>
+        <p class="card__l">お腹の出方の一部は、脂肪ではなく骨盤の角度です</p>
+        <span class="card__go">読む</span>
+      </a>
+    </li><li class='grp__hd' data-cat='sleep'><h2>睡眠</h2><p>眠り・頭の重さ</p></li><li class="card" data-cat="sleep" data-cats="sleep" data-slug="suimin"
+        data-paid="0" data-q="寝つきが悪い・朝すっきりしない 寝つきは、布団に入る3時間前に決まっています 眠れない 寝つき 不眠 夜中に目が覚める 朝つらい 起きられない 寝起き 寝酒 カフェイン コーヒー 寝室 照明 スマホ 夜更かし 睡眠の質 ねむれない ねつき ふみん ねおき ねざけ よふかし すいみん あさつらい">
       <a href="suimin.html">
+        <span class="card__img"><img src='img/suimin.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
         <span class='card__tags'><span class='tag tag--sleep'>睡眠</span></span>
         <h3 class="card__t">寝つきが悪い・朝すっきりしない</h3>
         <p class="card__l">寝つきは、布団に入る3時間前に決まっています</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="sleep" data-paid="0" data-q="頭が重い・目の奥が痛い 疑うのは、画面との距離と、浅くなった呼吸です 頭痛 頭が重い 目の疲れ 眼精疲労 目の奥 こめかみ 画面 ディスプレイ ブルーライト 呼吸 浅い 夕方 集中 ずつう あたまがおもい めのつかれ がんせいひろう めのおく こきゅう">
+    </li><li class="card" data-cat="sleep" data-cats="sleep posture" data-slug="atama"
+        data-paid="0" data-q="頭が重い・目の奥が痛い 疑うのは、画面との距離と、浅くなった呼吸です 頭痛 頭が重い 目の疲れ 眼精疲労 目の奥 こめかみ 画面 ディスプレイ ブルーライト 呼吸 浅い 夕方 集中 ずつう あたまがおもい めのつかれ がんせいひろう めのおく こきゅう">
       <a href="atama.html">
-        <span class='card__tags'><span class='tag tag--sleep'>睡眠</span></span>
+        <span class="card__img"><img src='img/atama.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
+        <span class='card__tags'><span class='tag tag--sleep'>睡眠</span><span class='tag tag--posture'>姿勢・不調</span></span>
         <h3 class="card__t">頭が重い・目の奥が痛い</h3>
         <p class="card__l">疑うのは、画面との距離と、浅くなった呼吸です</p>
         <span class="card__go">読む</span>
       </a>
-    </li></ul>
-  </section><section class="grp" data-cat="mind">
-    <div class="grp__hd"><h2>マインド</h2><p>続け方・挫折・リバウンド</p></div>
-    <ul class="cards"><li class="card" data-cat="mind" data-paid="0" data-q="記録が一番効く理由 書くだけで、食べ方が変わります 記録 レコーディング 食事記録 アプリ 写真 見える化 カロリー計算 面倒 きろく れこーでぃんぐ しょくじきろく しゃしん">
+    </li><li class="card" data-cat="sleep" data-cats="sleep" data-slug="yonaka"
+        data-paid="0" data-q="夜中に目が覚める 目が覚めること自体は、異常ではありません 夜中に目が覚める 中途覚醒 眠りが浅い 寝直せない トイレ 時計 よなかにめがさめる ちゅうとかくせい ねむりがあさい 何度も起きる">
+      <a href="yonaka.html">
+        <span class="card__img"><img src='img/yonaka.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
+        <span class='card__tags'><span class='tag tag--sleep'>睡眠</span></span>
+        <h3 class="card__t">夜中に目が覚める</h3>
+        <p class="card__l">目が覚めること自体は、異常ではありません</p>
+        <span class="card__go">読む</span>
+      </a>
+    </li><li class="card" data-cat="sleep" data-cats="sleep" data-slug="nidone"
+        data-paid="0" data-q="二度寝・寝過ぎた朝がだるい 寝過ぎた朝がだるいのは、体内時計がずれるからです 二度寝 寝過ぎ 寝すぎ 朝だるい 起きられない 体内時計 にどね ねすぎ あさだるい おきられない 休日 起床時刻">
+      <a href="nidone.html">
+        <span class="card__img"><img src='img/nidone.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
+        <span class='card__tags'><span class='tag tag--sleep'>睡眠</span></span>
+        <h3 class="card__t">二度寝・寝過ぎた朝がだるい</h3>
+        <p class="card__l">寝過ぎた朝がだるいのは、体内時計がずれるからです</p>
+        <span class="card__go">読む</span>
+      </a>
+    </li><li class="card" data-cat="sleep" data-cats="sleep" data-slug="nemae-sumaho"
+        data-paid="0" data-q="寝る前のスマホ 光より、終わりがないことのほうが問題です 寝る前 スマホ ブルーライト 寝つき 夜更かし 動画 SNS ねるまえ すまほ ぶるーらいと ねつき よふかし 布団でスマホ">
+      <a href="nemae-sumaho.html">
+        <span class="card__img"><img src='img/nemae-sumaho.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
+        <span class='card__tags'><span class='tag tag--sleep'>睡眠</span></span>
+        <h3 class="card__t">寝る前のスマホ</h3>
+        <p class="card__l">光より、終わりがないことのほうが問題です</p>
+        <span class="card__go">読む</span>
+      </a>
+    </li><li class="card" data-cat="sleep" data-cats="sleep food" data-slug="caffeine"
+        data-paid="0" data-q="カフェインの門限 カフェインは、半分消えるのに5〜6時間かかります カフェイン コーヒー 門限 半減期 眠れない エナジードリンク 緑茶 かふぇいん こーひー もんげん ねむれない 何時まで">
+      <a href="caffeine.html">
+        <span class="card__img"><img src='img/caffeine.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
+        <span class='card__tags'><span class='tag tag--sleep'>睡眠</span><span class='tag tag--food'>食事</span></span>
+        <h3 class="card__t">カフェインの門限</h3>
+        <p class="card__l">カフェインは、半分消えるのに5〜6時間かかります</p>
+        <span class="card__go">読む</span>
+      </a>
+    </li><li class="card" data-cat="sleep" data-cats="sleep food" data-slug="nezake"
+        data-paid="0" data-q="寝る前のお酒と睡眠 お酒は寝つきを良くして、眠りを浅くします 寝酒 お酒 アルコール 睡眠 寝つき 夜中に起きる 浅い ねざけ おさけ あるこーる すいみん 酒を飲むと眠れる">
+      <a href="nezake.html">
+        <span class="card__img"><img src='img/nezake.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
+        <span class='card__tags'><span class='tag tag--sleep'>睡眠</span><span class='tag tag--food'>食事</span></span>
+        <h3 class="card__t">寝る前のお酒と睡眠</h3>
+        <p class="card__l">お酒は寝つきを良くして、眠りを浅くします</p>
+        <span class="card__go">読む</span>
+      </a>
+    </li><li class="card" data-cat="sleep" data-cats="sleep" data-slug="suimin-jikan"
+        data-paid="0" data-q="睡眠時間は何時間必要か 時間の数字より、翌日の眠気で判断してください 睡眠時間 何時間 7時間 ショートスリーパー 足りない 眠気 すいみんじかん なんじかん たりない ねむけ 短眠">
+      <a href="suimin-jikan.html">
+        <span class="card__img"><img src='img/suimin-jikan.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
+        <span class='card__tags'><span class='tag tag--sleep'>睡眠</span></span>
+        <h3 class="card__t">睡眠時間は何時間必要か</h3>
+        <p class="card__l">時間の数字より、翌日の眠気で判断してください</p>
+        <span class="card__go">読む</span>
+      </a>
+    </li><li class="card" data-cat="sleep" data-cats="sleep" data-slug="nedame"
+        data-paid="0" data-q="休日の寝だめ 寝だめは、借金の返済にはなっても、貯金にはなりません 寝だめ 休日 寝すぎ 社会的時差ぼけ 月曜 だるい ねだめ きゅうじつ げつよう 時差ぼけ 休みの日に寝る">
+      <a href="nedame.html">
+        <span class="card__img"><img src='img/nedame.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
+        <span class='card__tags'><span class='tag tag--sleep'>睡眠</span></span>
+        <h3 class="card__t">休日の寝だめ</h3>
+        <p class="card__l">寝だめは、借金の返済にはなっても、貯金にはなりません</p>
+        <span class="card__go">読む</span>
+      </a>
+    </li><li class="card" data-cat="sleep" data-cats="sleep" data-slug="hirune"
+        data-paid="0" data-q="昼寝の使い方 20分まで。それを超えると、夜に響きます 昼寝 仮眠 20分 パワーナップ 眠い 午後 ひるね かみん ねむい ごご 昼寝の時間 何分">
+      <a href="hirune.html">
+        <span class="card__img"><img src='img/hirune.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
+        <span class='card__tags'><span class='tag tag--sleep'>睡眠</span></span>
+        <h3 class="card__t">昼寝の使い方</h3>
+        <p class="card__l">20分まで。それを超えると、夜に響きます</p>
+        <span class="card__go">読む</span>
+      </a>
+    </li><li class="card" data-cat="sleep" data-cats="sleep" data-slug="shinshitsu"
+        data-paid="0" data-q="寝室の温度と光 眠りは、体温が下がるときに深くなります 寝室 温度 湿度 エアコン 光 暗さ 遮光 入浴 しんしつ おんど ひかり くらさ しゃこう エアコンつけっぱなし">
+      <a href="shinshitsu.html">
+        <span class="card__img"><img src='img/shinshitsu.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
+        <span class='card__tags'><span class='tag tag--sleep'>睡眠</span></span>
+        <h3 class="card__t">寝室の温度と光</h3>
+        <p class="card__l">眠りは、体温が下がるときに深くなります</p>
+        <span class="card__go">読む</span>
+      </a>
+    </li><li class="card" data-cat="sleep" data-cats="sleep food" data-slug="nemae-shokuji"
+        data-paid="0" data-q="寝る前の食事 寝る直前の食事は、体が休む時間を削ります 寝る前 食事 夜遅い 消化 空腹 夜食 帰りが遅い ねるまえ しょくじ よるおそい しょうか くうふく やしょく">
+      <a href="nemae-shokuji.html">
+        <span class="card__img"><img src='img/nemae-shokuji.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
+        <span class='card__tags'><span class='tag tag--sleep'>睡眠</span><span class='tag tag--food'>食事</span></span>
+        <h3 class="card__t">寝る前の食事</h3>
+        <p class="card__l">寝る直前の食事は、体が休む時間を削ります</p>
+        <span class="card__go">読む</span>
+      </a>
+    </li><li class="card" data-cat="sleep" data-cats="sleep" data-slug="asahi"
+        data-paid="0" data-q="朝の光を浴びる 夜の眠りは、朝の光で決まります 朝の光 日光 体内時計 メラトニン カーテン 起床 リセット あさのひかり にっこう たいないどけい めざめ 朝日">
+      <a href="asahi.html">
+        <span class="card__img"><img src='img/asahi.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
+        <span class='card__tags'><span class='tag tag--sleep'>睡眠</span></span>
+        <h3 class="card__t">朝の光を浴びる</h3>
+        <p class="card__l">夜の眠りは、朝の光で決まります</p>
+        <span class="card__go">読む</span>
+      </a>
+    </li><li class="card" data-cat="sleep" data-cats="sleep training" data-slug="undo-timing"
+        data-paid="0" data-q="運動のタイミングと睡眠 運動は眠りを深くします。ただし直前は逆です 運動 タイミング 夜 トレーニング 睡眠 深くなる 興奮 うんどう たいみんぐ よる すいみん 夜トレ 寝る前の運動">
+      <a href="undo-timing.html">
+        <span class="card__img"><img src='img/undo-timing.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
+        <span class='card__tags'><span class='tag tag--sleep'>睡眠</span><span class='tag tag--training'>運動</span></span>
+        <h3 class="card__t">運動のタイミングと睡眠</h3>
+        <p class="card__l">運動は眠りを深くします。ただし直前は逆です</p>
+        <span class="card__go">読む</span>
+      </a>
+    </li><li class="card" data-cat="sleep" data-cats="sleep food" data-slug="suiminbusoku-shokuyoku"
+        data-paid="0" data-q="寝不足の日は食欲が増える 寝不足の日に食べすぎるのは、意志の問題ではありません 寝不足 食欲 グレリン レプチン 甘いもの 我慢できない ダイエット ねぶそく しょくよく あまいもの がまん 睡眠不足">
+      <a href="suiminbusoku-shokuyoku.html">
+        <span class="card__img"><img src='img/suiminbusoku-shokuyoku.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
+        <span class='card__tags'><span class='tag tag--sleep'>睡眠</span><span class='tag tag--food'>食事</span></span>
+        <h3 class="card__t">寝不足の日は食欲が増える</h3>
+        <p class="card__l">寝不足の日に食べすぎるのは、意志の問題ではありません</p>
+        <span class="card__go">読む</span>
+      </a>
+    </li><li class="card" data-cat="sleep" data-cats="sleep posture" data-slug="ibiki"
+        data-paid="0" data-q="いびき・口呼吸 いびきは、空気の通り道が狭くなっているサインです いびき 口呼吸 気道 無呼吸 横向き 鼻づまり 喉が乾く いびきをかく こうこきゅう きどう むこきゅう 寝てる時 口が開く">
+      <a href="ibiki.html">
+        <span class="card__img"><img src='img/ibiki.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
+        <span class='card__tags'><span class='tag tag--sleep'>睡眠</span><span class='tag tag--posture'>姿勢・不調</span></span>
+        <h3 class="card__t">いびき・口呼吸</h3>
+        <p class="card__l">いびきは、空気の通り道が狭くなっているサインです</p>
+        <span class="card__go">読む</span>
+      </a>
+    </li><li class="card" data-cat="sleep" data-cats="sleep" data-slug="nemurenai-yoru"
+        data-paid="0" data-q="眠れない夜に、ベッドで粘らない 眠れないままベッドにいると、ベッドが眠れない場所になります 眠れない 寝られない ベッド 布団 粘る 焦る 不眠 ねむれない ふとん あせる ふみん 寝ようとすると眠れない">
+      <a href="nemurenai-yoru.html">
+        <span class="card__img"><img src='img/nemurenai-yoru.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
+        <span class='card__tags'><span class='tag tag--sleep'>睡眠</span></span>
+        <h3 class="card__t">眠れない夜に、ベッドで粘らない</h3>
+        <p class="card__l">眠れないままベッドにいると、ベッドが眠れない場所になります</p>
+        <span class="card__go">読む</span>
+      </a>
+    </li><li class='grp__hd' data-cat='mind'><h2>マインド</h2><p>続け方・挫折・リバウンド</p></li><li class="card" data-cat="mind" data-cats="mind" data-slug="kiroku"
+        data-paid="0" data-q="記録が一番効く理由 書くだけで、食べ方が変わります 記録 レコーディング 食事記録 アプリ 写真 見える化 カロリー計算 面倒 きろく れこーでぃんぐ しょくじきろく しゃしん">
       <a href="kiroku.html">
+        <span class="card__img"><img src='img/kiroku.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
         <span class='card__tags'><span class='tag tag--mind'>マインド</span></span>
         <h3 class="card__t">記録が一番効く理由</h3>
         <p class="card__l">書くだけで、食べ方が変わります</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="mind" data-paid="0" data-q="記録が続かなくなったとき 完璧な記録より、続く記録です 記録 続かない やめた 挫折 面倒になった さぼった 再開 リスタート 完璧主義 きろく つづかない ざせつ さいかい">
+    </li><li class="card" data-cat="mind" data-cats="mind" data-slug="kiroku-yameru"
+        data-paid="0" data-q="記録が続かなくなったとき 完璧な記録より、続く記録です 記録 続かない やめた 挫折 面倒になった さぼった 再開 リスタート 完璧主義 きろく つづかない ざせつ さいかい">
       <a href="kiroku-yameru.html">
+        <span class="card__img"><img src='img/kiroku-yameru.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
         <span class='card__tags'><span class='tag tag--mind'>マインド</span></span>
         <h3 class="card__t">記録が続かなくなったとき</h3>
         <p class="card__l">完璧な記録より、続く記録です</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="mind" data-paid="0" data-q="減量には終わりの日を決める 終わりの日を、先に決めてください 期限 目標 いつまで 期間 3ヶ月 ゴール 終わり だらだら モチベーション 目標設定 きげん もくひょう きかん おわり">
+    </li><li class="card" data-cat="mind" data-cats="mind" data-slug="kigen"
+        data-paid="0" data-q="減量には終わりの日を決める 終わりの日を、先に決めてください 期限 目標 いつまで 期間 3ヶ月 ゴール 終わり だらだら モチベーション 目標設定 きげん もくひょう きかん おわり">
       <a href="kigen.html">
+        <span class="card__img"><img src='img/kigen.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
         <span class='card__tags'><span class='tag tag--mind'>マインド</span></span>
         <h3 class="card__t">減量には終わりの日を決める</h3>
         <p class="card__l">終わりの日を、先に決めてください</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="mind" data-paid="0" data-q="維持期の設計 減量期と維持期は、別の競技です 維持 維持期 リバウンド 卒業 終わったあと キープ 戻る 元の生活 上限 マイルール いじき いじ りばうんど そつぎょう">
+    </li><li class="card" data-cat="mind" data-cats="mind" data-slug="ijiki"
+        data-paid="0" data-q="維持期の設計 減量期と維持期は、別の競技です 維持 維持期 リバウンド 卒業 終わったあと キープ 戻る 元の生活 上限 マイルール いじき いじ りばうんど そつぎょう">
       <a href="ijiki.html">
+        <span class="card__img"><img src='img/ijiki.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
         <span class='card__tags'><span class='tag tag--mind'>マインド</span></span>
         <h3 class="card__t">維持期の設計</h3>
         <p class="card__l">減量期と維持期は、別の競技です</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="mind" data-paid="0" data-q="80点を続けた人が勝つ 完璧かゼロか、という考え方が最大の敵です 完璧主義 ゼロか百か 挫折 中途半端 続かない 失敗 やり直し 80点 かんぺき ぜろかひゃくか ざせつ ちゅうとはんぱ">
+    </li><li class="card" data-cat="mind" data-cats="mind" data-slug="hachijitten"
+        data-paid="0" data-q="80点を続けた人が勝つ 完璧かゼロか、という考え方が最大の敵です 完璧主義 ゼロか百か 挫折 中途半端 続かない 失敗 やり直し 80点 かんぺき ぜろかひゃくか ざせつ ちゅうとはんぱ">
       <a href="hachijitten.html">
+        <span class="card__img"><img src='img/hachijitten.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
         <span class='card__tags'><span class='tag tag--mind'>マインド</span></span>
         <h3 class="card__t">80点を続けた人が勝つ</h3>
         <p class="card__l">完璧かゼロか、という考え方が最大の敵です</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="mind" data-paid="0" data-q="リバウンドは失敗ではない 一度できた、という事実のほうが資産です リバウンド 戻った 太った 何度も 失敗 自己嫌悪 やり直し 再開 経験 りばうんど もどった ふとった しっぱい さいかい">
+    </li><li class="card" data-cat="mind" data-cats="mind" data-slug="rebound"
+        data-paid="0" data-q="リバウンドは失敗ではない 一度できた、という事実のほうが資産です リバウンド 戻った 太った 何度も 失敗 自己嫌悪 やり直し 再開 経験 りばうんど もどった ふとった しっぱい さいかい">
       <a href="rebound.html">
+        <span class="card__img"><img src='img/rebound.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
         <span class='card__tags'><span class='tag tag--mind'>マインド</span></span>
         <h3 class="card__t">リバウンドは失敗ではない</h3>
         <p class="card__l">一度できた、という事実のほうが資産です</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="mind" data-paid="0" data-q="人に宣言したほうがいい理由 言ったほうが、続きます 宣言 公言 周りに言う 内緒 恥ずかしい 応援 誘惑 断る 家族 職場 せんげん こうげん まわりにいう ないしょ おうえん">
+    </li><li class="card" data-cat="mind" data-cats="mind food" data-slug="sengen"
+        data-paid="0" data-q="人に宣言したほうがいい理由 言ったほうが、続きます 宣言 公言 周りに言う 内緒 恥ずかしい 応援 誘惑 断る 家族 職場 せんげん こうげん まわりにいう ないしょ おうえん">
       <a href="sengen.html">
-        <span class='card__tags'><span class='tag tag--mind'>マインド</span></span>
+        <span class="card__img"><img src='img/sengen.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
+        <span class='card__tags'><span class='tag tag--mind'>マインド</span><span class='tag tag--food'>食事</span></span>
         <h3 class="card__t">人に宣言したほうがいい理由</h3>
         <p class="card__l">言ったほうが、続きます</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="mind" data-paid="0" data-q="モチベーションに頼らない やる気が出るのを待たないでください モチベーション やる気 続かない 三日坊主 意志力 習慣 環境 仕組み もちべーしょん やるき つづかない みっかぼうず しゅうかん">
+    </li><li class="card" data-cat="mind" data-cats="mind" data-slug="motivation"
+        data-paid="0" data-q="モチベーションに頼らない やる気が出るのを待たないでください モチベーション やる気 続かない 三日坊主 意志力 習慣 環境 仕組み もちべーしょん やるき つづかない みっかぼうず しゅうかん">
       <a href="motivation.html">
+        <span class="card__img"><img src='img/motivation.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
         <span class='card__tags'><span class='tag tag--mind'>マインド</span></span>
         <h3 class="card__t">モチベーションに頼らない</h3>
         <p class="card__l">やる気が出るのを待たないでください</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="mind" data-paid="0" data-q="「痩せたら〇〇する」を先にやる 先にやったほうが、続きます 痩せたら 目標 服 写真 旅行 我慢 先延ばし 自信 ご褒美 やせたら もくひょう ふく さきのばし じしん">
+    </li><li class="card" data-cat="mind" data-cats="mind" data-slug="saki-ni-yaru"
+        data-paid="0" data-q="「痩せたら〇〇する」を先にやる 先にやったほうが、続きます 痩せたら 目標 服 写真 旅行 我慢 先延ばし 自信 ご褒美 やせたら もくひょう ふく さきのばし じしん">
       <a href="saki-ni-yaru.html">
+        <span class="card__img"><img src='img/saki-ni-yaru.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
         <span class='card__tags'><span class='tag tag--mind'>マインド</span></span>
         <h3 class="card__t">「痩せたら〇〇する」を先にやる</h3>
         <p class="card__l">先にやったほうが、続きます</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="mind" data-paid="0" data-q="比べる相手は先週の自分 他人の経過は、条件が違いすぎて参考になりません 比較 SNS インスタ 他人 落ち込む 焦る 同じやり方 効かない 個人差 ひかく くらべる たにん おちこむ あせる">
+    </li><li class="card" data-cat="mind" data-cats="mind" data-slug="kuraberu"
+        data-paid="0" data-q="比べる相手は先週の自分 他人の経過は、条件が違いすぎて参考になりません 比較 SNS インスタ 他人 落ち込む 焦る 同じやり方 効かない 個人差 ひかく くらべる たにん おちこむ あせる">
       <a href="kuraberu.html">
+        <span class="card__img"><img src='img/kuraberu.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
         <span class='card__tags'><span class='tag tag--mind'>マインド</span></span>
         <h3 class="card__t">比べる相手は先週の自分</h3>
         <p class="card__l">他人の経過は、条件が違いすぎて参考になりません</p>
         <span class="card__go">読む</span>
       </a>
-    </li></ul>
-  </section><section class="grp" data-cat="golf">
-    <div class="grp__hd"><h2>ゴルフ</h2><p>ラウンドと体の使い方</p></div>
-    <ul class="cards"><li class="card" data-cat="golf" data-paid="0" data-q="ラウンド前日と当日の食べ方 前日に減らさない。当日は切らさない ゴルフ ラウンド 前日 当日 朝食 昼食 後半 バテる 集中力 飲み物 補給 ごるふ らうんど ぜんじつ とうじつ ばてる">
+    </li><li class='grp__hd' data-cat='golf'><h2>ゴルフ</h2><p>ラウンドと体の使い方</p></li><li class="card" data-cat="golf" data-cats="golf food" data-slug="golf-shokuji"
+        data-paid="0" data-q="ラウンド前日と当日の食べ方 前日に減らさない。当日は切らさない ゴルフ ラウンド 前日 当日 朝食 昼食 後半 バテる 集中力 飲み物 補給 ごるふ らうんど ぜんじつ とうじつ ばてる">
       <a href="golf-shokuji.html">
-        <span class='card__tags'><span class='tag tag--golf'>ゴルフ</span></span>
+        <span class="card__img"><img src='img/golf-shokuji.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
+        <span class='card__tags'><span class='tag tag--golf'>ゴルフ</span><span class='tag tag--food'>食事</span></span>
         <h3 class="card__t">ラウンド前日と当日の食べ方</h3>
         <p class="card__l">前日に減らさない。当日は切らさない</p>
         <span class="card__go">読む</span>
       </a>
-    </li><li class="card" data-cat="golf" data-paid="0" data-q="飛距離は腕ではなく回旋から 胸が回らないぶんを、腕が振っています ゴルフ 飛距離 スイング 回旋 胸椎 股関節 体が硬い 腕で振る 力み 可動域 ごるふ ひきょり すいんぐ かいせん かたい">
+    </li><li class="card" data-cat="golf" data-cats="golf training" data-slug="golf-kaisen"
+        data-paid="0" data-q="飛距離は腕ではなく回旋から 胸が回らないぶんを、腕が振っています ゴルフ 飛距離 スイング 回旋 胸椎 股関節 体が硬い 腕で振る 力み 可動域 ごるふ ひきょり すいんぐ かいせん かたい">
       <a href="golf-kaisen.html">
-        <span class='card__tags'><span class='tag tag--golf'>ゴルフ</span></span>
+        <span class="card__img"><img src='img/golf-kaisen.jpg' alt='' width='1200' height='600' loading='lazy' decoding='async'></span>
+        <span class='card__tags'><span class='tag tag--golf'>ゴルフ</span><span class='tag tag--training'>運動</span></span>
         <h3 class="card__t">飛距離は腕ではなく回旋から</h3>
         <p class="card__l">胸が回らないぶんを、腕が振っています</p>
         <span class="card__go">読む</span>
       </a>
     </li></ul>
-  </section></div>
   <p class="empty" id="empty" hidden>該当する記事がありませんでした。</p>
 </main>
+<script type="application/json" id="fulltext">{"teitaiki": "結論：予定通りです 体重の停滞は、うまくいっていない証拠ではありません。開始から4〜6週目あたりで、ほぼ全員に来ます。来ないほうが珍しいくらいです。 いま起きているのは、事故ではなく予定です。 なぜ止まるのか 体重が落ちると、体はそれに合わせて消費カロリーを下げます。体が小さくなった分だけ、必要な燃料も減るからです。同じ食事、同じ運動を続けていれば、どこかで収支が釣り合う点が来ます。それが停滞です。 もうひとつ、意識できないところでも消費は落ちています。歩く速さ、姿勢を保つ力、手足の細かい動き。こうした無意識の活動量は、減量が進むと体が勝手に節約します。サボっているわけではありません。 そして体重は、そもそも直線では落ちません。階段状に、落ちては止まり、また落ちます。止まっている時間のほうが長いのが普通です。 ここで、ほとんどの人が食事を減らします 止まった。だから、もっと減らす。 一番自然な発想で、一番まずい対応です。 減らせば確かに動きます。ただし落ちるのは脂肪だけではありません。食事だけで痩せると、脂肪と筋肉はおよそ1対1で減ります。筋肉が落ちれば、さきほどの「体が下げる消費カロリー」がさらに下がります。 つまり、停滞を抜けるために、次のもっと重い停滞を自分で作っていることになります。 停滞は、耐える時期です。削る時期ではありません。 やること 1. 体重を1週間分、平均する 1日の増減は水分と便です。先週7日の平均と、今週7日の平均を比べてください。そこが下がっていれば、止まっていません。 2. 写真を撮る 正面と横を1枚ずつ。前に撮ったものと並べる。鏡は毎日見ているぶん、変化に気づけません。 3. 座っている時間を思い返す 食事も運動も変えていないのに止まったなら、犯人はたいていここです。立つ回数を増やしてください。", "gaishoku": "結論：断らなくていいです 大切な人との食事や、楽しみにしていた会。ダイエットのために断る必要はありません。 断らせるようなやり方を、D/LIGHT では取りません。痩せたけれど人生がつまらなくなった、というのは、この方法では失敗として扱います。 その日は100%楽しんでください。やることは、その日を迎えるまでの準備です。 なぜ1回の外食で太らないのか 体重は1食では決まりません。1日でも決まりません。数日単位の合計で決まります。 金曜に2000kcal多く摂ったとしても、木・金・土・日の4日で見れば、1日あたり500kcalの上乗せです。前後の日を少し軽くしておけば、その週の合計はほとんど動きません。 だから見るべき単位は「その日」ではなく「その日を含む前後数日」です。この見方に切り替わると、外食は事故ではなく、計画に組み込める予定になります。 「翌日抜いて帳消し」も「運動で消す」も、成立しません 食べすぎた翌日に食事を抜く。これは一番よくある対応ですが、うまくいきません。強い空腹が来て、その反動で結局また食べることになります。1回の食べすぎでは太りません。太るのは、そのあとの「もういいや」です。 運動で相殺する、という発想も同じです。運動で現実的に取り返せるのは、数百kcalを数日かけて、という範囲です。飲み会1回分を1回のトレーニングで消すことはできません。 ここで向きの違いを覚えてください。 前借り（運動したから食べていい）→ ほぼ必ず赤字になります 事後調整（食べたから、数日かけて薄める）→ これは成立します 同じ「運動と食事」の話でも、順番が逆になるだけで結果が変わります。 やること 1. 予定が決まった時点で、前後の日を軽くしておく 食べた後から削るのはできません。カロリーは食べる前に決めるものです。当日ではなく、前日と翌日を少し軽くする。これが準備の中身です。 2. 店が決まっているなら、先にメニューを見ておく その場で選ぶと、空腹と雰囲気で決まります。行く前に「これを頼む」と決めておくだけで、当日の判断は消えます。 店を自分で選べるなら、海鮮系や焼き鳥など、低脂質にできるものがおすすめです。同じ満足感でも、脂質の量がまるで違います。 3. 当日は、罪悪感を持たずに食べる 罪悪感を持ちながら食べるのが一番よくありません。楽しむと決めた日は、とことん楽しんでください。それが計画通りです。", "yoru-tabesugi": "結論：1回では太りません 昨日の夜、食べすぎた。それだけでは体脂肪はほとんど増えていません。 脂肪を1kg増やすには、およそ7700kcalの余剰が必要です。1晩でその量を摂ることは、まず起こりません。翌朝に増えている数字は、食べたものと水分の重さです。数日で戻ります。 問題は昨日の夜ではなく、今日これからどうするかです。 太るのは、そのあとの「もういいや」 1回の食べすぎで崩れる人はいません。崩れるのは、そのあとの連鎖です。 食べすぎた → 自分にがっかりする → どうせ今週はもうダメだ → 週末まで戻さない。この流れで失われるカロリーのほうが、昨日の1食よりはるかに大きい。 つまり本当の敵は、食べた量ではなく 「完璧かゼロか」という考え方です。80点を続けた人が勝ちます。100点を狙って、外れた日にゼロにしてしまう人が負けます。 自己嫌悪は、減量の燃料になりません。判断を鈍らせるだけです。 リセットのつもりの断食が、次の食べすぎを作ります 翌日に食事を抜く、極端に減らす。取り返そうとする気持ちからですが、これが次の食べすぎの原因になります。 強い空腹は、意志の力では処理できません。抜いた分は、その日の夜か翌日に、より強い衝動として戻ってきます。そして「また食べてしまった」でもう一度自己嫌悪する。ここが一番抜けにくいループです。 昨日の食べすぎは、抜くことでは消えません。いつも通りに戻すことでしか消えません。 やること 1. 今朝も、いつも通り食べる 抜かない。減らさない。昨日と切り離して、普段の1日をそのまま実行してください。 2. 食べたものを記録に残す なかったことにしない。記録は反省のためではなく、次の判断材料のためです。書くだけで食べ方は変わります。 3. 「なぜ食べたか」を一行だけ書く 疲れていた、夕食が軽すぎた、家にあった。理由が分かれば、次に同じ場面が来たときに手が打てます。原因はたいてい意志ではなく、状況のほうにあります。", "taijukei": "結論：毎日乗って、1日の数字は無視してください 測るのは毎日。ただし、判断に使うのは1週間の平均だけです。 毎日測るのは記録のためで、一喜一憂するためではありません。今日の数字が昨日より増えていても、そこには何の意味もありません。 1日の増減の正体 体重は、1日のうちでも1〜2kg動きます。中身はこれです。 水分：塩分の多い食事の翌日は、体が水を抱えます 便：出る前と後で数百g違います 食べ物そのものの重さ：食べた分だけ、消化されるまで重さとして乗ります 生理周期：時期によって水分の保持量が変わります 脂肪は1日で500gも増減しません。増やすにも減らすにも、数千kcalの出入りが必要だからです。1日の変動は、脂肪以外の全部だと思ってください。 だから見るのは平均です。7日分ならこうした揺れが打ち消し合って、脂肪の増減だけが残ります。 体脂肪率の数字を、そのまま信じないでください 家庭用の体組成計は、体に微弱な電流を流して脂肪を推定しています。水分量に強く影響されるので、朝と夜、運動の前後、飲酒の翌日で簡単に数%動きます。 絶対値は当たりません。見るのは方向、つまり数か月単位で上がっているか下がっているかだけです。「体脂肪率が0.5%増えた」に意味はありません。 もうひとつ。過去の最軽量を目標に置くのもやめてください。そのときと今では、筋肉量も年齢も生活も違います。比べる相手は過去の自分の数字ではなく、先週の自分です。 やること 1. 測る条件を固定する 起床後、トイレを済ませたあと、着替える前。毎日この順番で測ってください。条件が揃っていない数字は比較できません。 2. 7日分を平均して、先週と比べる 比べるのは平均どうしです。この見方なら、増えた日があっても慌てずに済みます。 3. 月に1回、写真を撮る 体重が動かなくても、見た目が変わっていれば成功です。数字より写真のほうが正直です。", "kanshoku": "結論：お菓子を我慢する前に、食事を整えてください 間食がやめられないのは、意志が弱いからではありません。食事が足りていないから、体が求めているだけです。 順番が逆になっている人がとても多い。お菓子を我慢して、そのぶん空腹になって、夜にまとめて食べる。整えるのは食事が先です。 記録に載らないカロリーが、停滞の8割 間食と飲み物が厄介なのは、量が多いからではなく、記憶に残らないからです。 調理に使った油、ドレッシング、マヨネーズ 料理をしながらのつまみ食い カフェラテ、ジュース、アルコール 人からもらったひと口 どれも「食事」として認識されないので、記録から抜けます。本人は正しく食べているつもりなのに数字が動かない、という状態は、たいていここが原因です。 飲み物はとくに危険です。液体は満腹感をほとんど作りません。同じ200kcalでも、固形物なら食欲が下がりますが、飲み物では下がらない。満腹感を返してくれないカロリーが、一番効率よく積み上がります。 「ヘルシー」と書かれた食品ほど疑ってください ヘルシーとダイエットは、まったく別のものです。 グラノーラ、スムージー、プロテインバー、ナッツ、ドライフルーツ。体に良い成分が入っているのは事実です。しかし体に良いことと、カロリーが低いことは無関係です。むしろこれらは、同じ重さのお菓子より高カロリーなことが珍しくありません。 「ヘルシーだから」で選んだ結果、量に無頓着になる。これが一番よくある落とし穴です。プロテインバーも同じで、あれは食品ではなく補助食品です。タンパク質は、できるだけ食事から摂ってください。 やること 1. 食事にタンパク質と食物繊維を足す 肉・魚・卵・大豆と、野菜やきのこ。この2つが足りている食事のあとには、間食の欲求はほとんど出ません。減らすのではなく、足すことで解決します。 2. 飲み物を無糖にする カフェラテをブラックか無糖の紅茶に。ジュースを炭酸水に。ここだけで1日200〜300kcal変わる人が多く、そして満腹感は何も失われません。 3. 家に置かない 一番効く意志力は、買い物のときに使うものです。家にあるものは、いつか食べます。買う時点で勝負は決まっています。", "protein": "結論：体重×1.6〜2.2g。まずここだけ合わせてください 体重60kgの方なら、1日およそ96〜132gです。3食で割ると、1食30〜40g。 食事の中で優先順位を1つだけ決めるなら、ここです。他の細かい調整は、これが埋まってからで構いません。 なぜタンパク質が最優先なのか 減量中の体は、脂肪だけを選んで減らしてはくれません。食事だけで痩せると、脂肪と筋肉はおよそ1対1で減ります。 筋肉が落ちれば消費カロリーが下がり、次の停滞が重くなります。それを防ぐ手段が、筋トレとタンパク質の2つです。材料がなければ、トレーニングをしても筋肉は守れません。 もうひとつ、タンパク質は満腹感が長く続きます。同じカロリーでも、脂質や糖質より腹持ちがいい。つまり摂るほど、我慢する場面が減ります。 守りと攻めを同時にやってくれるのが、この栄養素だけです。 プロテインで足せばいい、とは考えないでください 数字を出すと、多くの方が「では毎日プロテインを飲みます」となります。順番が逆です。 プロテインは食品ではなく、栄養補助食品です。 名前のとおり、補助が役割です。食事から摂れば、タンパク質と一緒に鉄や亜鉛、ビタミン、そして噛む回数がついてきます。粉に溶かして飲めば、タンパク質の数字だけが埋まります。 数字は合っているのに調子が上がらない、という方は、だいたいここが原因です。 プロテインを否定はしません。足りない日を埋める道具として使ってください。 主役にはしないでください。 やること 1. 毎食に、手のひら1枚分のたんぱく源を置く 肉、魚、卵、大豆製品。厚みも含めて手のひら1枚が、だいたい20〜25gです。まずは形で覚えてください。 2. 朝を確認する 3食のうち、抜けやすいのは朝です。パンとコーヒーだけの朝食は、ほぼゼロだと思ってください。卵1個、ヨーグルト、納豆。何か1つ足すだけで変わります。 3. 足りなかった日だけ、プロテインで埋める 毎日ではなく、届かなかった日に使う。この使い方が正解です。", "shishitsu": "結論：1食15g、1日45gは残してください 脂質は1gあたり9kcalあります。減らせば数字がすぐ動くので、真っ先に削られる栄養素です。 ただし下限があります。 ここを下回ると、体調のほうが先に崩れます。 脂質が足りないと、何が壊れるのか 脂質はホルモンの材料です。足りない状態が続くと、ホルモンのバランスが崩れます。女性の場合は生理の乱れとして出ることがあり、男女問わず、肌や髪の変化として現れます。 もうひとつが満腹感です。脂質には、食事の満足感を作る役割があります。 極端に減らした食事は、量を食べても物足りない。その物足りなさが、夜の間食につながります。 減らしたはずなのに総量が増えている、という状態は、ここから始まります。 参考までに、栄養学では1食30g以上を高脂質食と呼びます。目安の15gは、そのちょうど半分です。 決して多い量ではありません。 「低脂質にすればするほどいい」ではありません 外食の記事で「海鮮や焼き鳥など低脂質にできるものを」と書きました。あれは外食が放っておくと高脂質になるからであって、普段の食事でも削り続けてください、という意味ではありません。 脂質ゼロを目指す必要はありません。目指すべきは、削るところと残すところを分けることです。 削る対象は、料理に後から足された脂です。残す対象は、素材そのものが持っている脂です。 やること 1. 揚げ物より先に、調味料を見る ドレッシング大さじ1で約6g、マヨネーズ大さじ1で約9g。無意識にかけている分が、1食分の目安を簡単に超えます。かけるのをやめるのではなく、量を決めてください。 2. 魚・卵・少量のナッツは残す これらは削る対象ではありません。タンパク質やビタミンと一緒に入ってくる脂です。 3. 1食15gを下回る日を、続けない 1日だけならどうということはありません。それが1週間続いているなら、減量の設計としては行きすぎです。", "toshitsu": "結論：効きます。ただし筋肉を売っています まず認めます。糖質制限は、数ある方法の中で一番早く体重が落ちます。 これは事実です。 D/LIGHT が採らないのは、効かないからではありません。効くけれど、代償が大きいからです。 なぜ、あれほど早く落ちるのか 理由は3つあります。 ひとつ目は水分です。体は糖質をグリコーゲンとして蓄えますが、このとき水を一緒に抱えます。糖質を切ると、その水が抜けます。最初の数日で落ちる2〜3kgは、ほぼこれです。 ふたつ目は、食べられるものが減ることです。主食を抜けば、それだけで摂取カロリーは自然に落ちます。 3つ目が食欲の低下です。糖質を切ると血糖の上下が減り、空腹感が出にくくなります。 ここまでは良い話です。問題はその先にあります。 糖質が足りないと、体は筋肉を分解して、そこから糖を作り出します。つまり体重の落ち方の中に、筋肉が含まれています。 筋肉が減れば消費カロリーが下がるので、元の食事に戻したときに、以前より太りやすい体になっています。 「効かないから否定している」ではありません ここを誤解されることが多いので、はっきり書きます。 私たちは、糖質制限を「意味のない方法」だとは考えていません。短期間で結果を出す力は、間違いなくあります。 それでも採らないのは、私たちが見ているのがその先だからです。3ヶ月で落ちても、1年後に戻っていれば、この方法論では失敗として扱います。筋肉を削って手に入れた数字は、返済の必要がある借金と同じです。 速さは味方ではありません。 やること 1. 主食は抜かずに、量を決める ごはんなら茶碗にどれだけ、と決めてください。ゼロにするのではなく、決めた量を守る。守れる量にすることが大事です。 2. トレーニングの前後は、炭水化物を残す 動くための燃料です。ここを削ると、力が出ないだけでなく、筋肉が削られやすくなります。 3. 減らすなら、脂質と一緒に全体で見る 糖質だけを狙い撃ちにしないでください。減らすのは総量です。どの栄養素から削るか、ではありません。", "seni": "結論：何を足すか迷ったら、まず食物繊維です 満腹感、血糖の安定、腸内環境。減量中に効いてほしいものが、これ1つで同時に取れます。 減らす話ばかりしていると苦しくなります。足すことで解決できるのが、この栄養素です。 3つの効き方 満腹感。 食物繊維は水を含んで膨らみ、胃に留まる時間が長くなります。同じカロリーでも、腹の減り方が変わります。 血糖の安定。 糖の吸収をゆるやかにするので、食後の血糖の急な上下が抑えられます。この上下が大きいほど、数時間後に強い空腹が来ます。午後3時に甘いものが欲しくなるのは、昼食の中身のせいであることが多いです。 腸内環境。 減量中は食べる量が減るので、便通が乱れやすくなります。体重計の数字が動かない原因が、単に出ていないだけ、というケースも珍しくありません。 どれも地味ですが、効きます。 「野菜を食べているから足りている」とは限りません ここが一番の落とし穴です。 サラダを1皿食べると、食物繊維を摂った気になります。ところがレタス中心のサラダ1皿に入っているのは1g程度です。1日の目安は男性21g以上、女性18g以上とされていますから、まるで足りていません。 サラダを増やしても、この差は埋まりません。増やすべきは、量ではなく種類です。 きのこ、海藻、豆、いも、オートミール。これらは同じ体積でも含有量が桁違いです。 やること 1. 毎食に、汁物か副菜を1つ置く 具の多い味噌汁が最も手軽です。わかめ、きのこ、根菜を入れるだけで、サラダ数皿分に届きます。 2. きのこと海藻を常備する 冷凍のきのこ、乾燥わかめ、もずく。どれも日持ちして、そのまま足せます。手間がかからないものだけを選んでください。 手間のかかる方法は続きません。 3. 主食を少しだけ置き換える 白米にもち麦を混ぜる、パンをオートミールに変える日を作る。全部を変える必要はありません。1日1食で十分です。", "kakoudo": "結論：手が加わっていないものほど、腹に溜まります 300kcalのお菓子と、300kcalの定食。数字は同じでも、そのあと3時間の空腹の残り方はまったく違います。 「食事の質」という言葉の正体は、これです。栄養素の名前ではなく、同じカロリーでどれだけ満たされるかの話です。 加工されるほど、体は気づかなくなります 食べ物は、加工されるほど3つのものを失います。 噛む回数。 柔らかくなるほど噛まずに飲み込めます。噛む回数は満腹の信号が届くまでの時間を稼ぐ手段なので、ここが減ると、届く前に食べ終わります。 体積。 水分と繊維が抜けて小さくなります。りんご1個は食べ応えがありますが、同じカロリーのジュースは数口で終わります。 吸収の速さ。 細かく砕かれるほど早く吸収され、血糖が急に上がって急に下がります。この下がり際に、また空腹が来ます。 つまり加工食品は、同じカロリーで、より少ない満足しか返してくれません。 悪い食べ物だから太るのではなく、割に合わないから太ります。 「カロリーさえ合っていれば中身は何でもいい」ではありません 減量はカロリー収支で決まります。これは事実です。ただし、そこで話を終わらせると実務が回りません。 問題は、その収支を守り続けられるかどうかだからです。 同じ1500kcalでも、加工食品で埋めた1日は夜に空腹が残ります。素材で埋めた1日は残りません。翌日も、その翌日も続けられるのは後者です。 カロリーの話と、食欲をどう扱うかの話は別物です。実際に体重を動かすのは、後者を扱えたかどうかです。 やること 1. 原材料の欄を見る カロリー表示ではなく、原材料です。並んでいるものの数が少ないほど、加工度が低いと考えて構いません。 2. 飲むより、食べる ジュースよりも果物、スムージーよりもそのままの野菜。液体は満腹感をほとんど返してくれません。 3. 主食を、少しだけ精製度の低いものに寄せる 白米に雑穀を混ぜる、パンを全粒粉に。全部を変える必要はありません。1日1食からで十分です。", "konbini": "結論：主菜から先に決めてください コンビニは敵ではありません。選ぶ順番を変えるだけで、中身が変わります。 多くの方は、おにぎりやパスタなど主食から手に取ります。この順番だと、最後にタンパク質が余ります。逆から組んでください。 順番が中身を決めます 主食から選ぶと、その時点で予算とお腹の容量の大半が埋まります。残りで選べるのは、せいぜい飲み物か小さな一品です。 一方、主菜から選べば、タンパク質は必ず確保されます。そのあとで主食の量を調整すればいいので、削る場所が残ります。 同じ棚から同じ値段で買っていても、順番が違うだけで、こうなります。 主食から：おにぎり2個＋唐揚げ → タンパク質20g前後、脂質は多め 主菜から：サラダチキン＋味噌汁＋おにぎり1個 → タンパク質30g前後、脂質は控えめ 我慢はどちらにも入っていません。順番だけの違いです。 サラダとスープだけ、は正解ではありません 一番よくある失敗がこれです。ヘルシーに見えて、実際にはその日の夜に取り返すことになります。 サラダ1パックとスープでは、タンパク質も、必要なカロリーも足りません。午後に空腹が来て、間食で埋める。帰宅後の食事量が増える。合計すると、普通に定食を食べた日より多くなります。 昼を軽くした分は、夜に請求されます。昼に足りないものは、その場で足しておくほうが安く済みます。 やること 1. 最初に主菜を取る サラダチキン、焼き魚、ゆで卵、豆腐、納豆。まずこれをカゴに入れてください。 2. 次に、汁物か野菜を足す 具の多い味噌汁かスープ、あるいはカット野菜。満腹感と食物繊維をここで確保します。 3. 最後に、主食を量で調整する おにぎりを1個にするか2個にするかは、ここで決めます。主食は削る場所として最後に残しておく。 これが順番を変える目的です。", "jisui": "結論：自炊は最強の手段です。でも、今すぐ始めなくて構いません 油の量も、味付けの濃さも、一人前の量も、自分で決められるのは自炊だけです。手段としての強さは他と比べものになりません。 ただし続かない人にいきなり勧めても、意味がありません。 3日でやめて「自分は意志が弱い」と結論が出るだけです。それは減量にとって、何もしないより悪い結果です。 自炊が強いのは、見えないカロリーが消えるから 外食や惣菜で数字が読めなくなる原因は、味付けと調理法にあります。 炒め油、ドレッシング、砂糖とみりん、揚げ衣。これらは料理の中に溶けていて、食べる側からは見えません。同じ「鶏肉と野菜」でも、作り方で300kcal以上変わります。 自炊をすると、この見えない部分が全部見えます。何をどれだけ入れたか、自分で入れているからです。 停滞の8割の犯人が「見えないカロリー」だと書きました。自炊はその犯人を、根本から消す手段です。 「自炊しないと痩せない」ではありません ここを間違えると、続かない方法に時間を溶かします。 私たちが優先するのは、理屈の上での最適解より、その人が続けられる次善策です。週7日の自炊が3日で終わるなら、週1回の自炊と、6日分の「選び方」のほうが結果が出ます。 自炊は目標ではなく、選択肢のひとつです。いま生活が回っていないなら、無理に入れなくて構いません。 やらない判断も、ちゃんとした判断です。 やること 1. まず、週に1回だけ作る日を決める 毎日ではありません。週1回、多めに作って2〜3食分にする。それだけで、その週の見えないカロリーが減ります。 2. 買ってきたものに、1品だけ足す 作らないなら、足すだけでも構いません。惣菜に、ゆで卵か納豆か味噌汁を1つ。これは自炊のうちに入ります。 3. 続かなかったら、外食の選び方に戻す 失敗ではありません。手段を1つ試して、合わなかっただけです。選び方だけで結果を出している方も、実際にいます。", "kaimono": "結論：家に置かないことが、最強の意志力です 夜10時、疲れた自分がお菓子を我慢できるかどうか。ここで勝負しないでください。 勝負は、まだ元気で理性的だった買い物の時点で終わっています。家にあるものは、いつか食べます。例外はほとんどありません。 意志力は、使うほど減っていきます 意志力は、一日中同じ量あるわけではありません。仕事の判断、人づきあい、家事。使うたびに減っていき、夜には残っていません。 つまり一番弱っている時間帯に、一番強い誘惑と向き合う構造になっています。勝てるはずがありません。 一方、買い物の時点は違います。目的があり、頭も動いていて、その場でお腹が空いていなければ、判断は驚くほど簡単です。 同じ「食べない」という結果を、難しい場面ではなく簡単な場面で取りにいく。 これが環境を設計するという意味です。 「家にあっても我慢すればいい」ではありません 我慢は、できます。1回なら。 問題は回数です。家にお菓子があれば、その袋がなくなるまで、毎晩その判断を迫られます。 10回勝っても、11回目に負ければ食べます。そして負けた自分に落ち込みます。 我慢する力の問題ではなく、我慢を求められる回数の問題です。買わなければ、その回数はゼロになります。 減量がうまくいっている人は、我慢が上手なのではありません。我慢しなくていい環境を作っているだけです。 やること 1. 空腹のまま買い物に行かない 空腹時の買い物は、量も種類も増えます。食後か、せめて何か口に入れてから行ってください。これだけで買うものが変わります。 2. リストを作ってから行く 決めてから入る。棚を見てから決めない。買い物中の判断を減らすことが目的です。 3. 買うなら、1回分だけ 完全に断つ必要はありません。大袋ではなく小分けのものを、その日食べる分だけ。残りが家にない状態を作ってください。", "hayagui": "結論：噛む回数は、満腹の信号が届くまでの時間を稼ぐ手段です 「よく噛みましょう」と言われる理由は、消化のためだと思われています。減量においては違います。 時間を稼ぐためです。 体が「もう足りた」と気づく前に食べ終わってしまうことが、早食いの本当の問題です。 満腹の信号は、遅れて届きます 食事を始めてから満腹感が届くまでには、およそ15〜20分かかります。胃に入ったものが吸収され、ホルモンが出て、脳に届くまでの時間です。 ここに落とし穴があります。10分で食べ終わると、満腹の信号が届く前に食事が終わっています。 まだ足りない気がして、おかわりをする。デザートに手が伸びる。そして食べ終わって15分後に、急に苦しくなる。これは意志の問題ではなく、時間差の問題です。 同じ量でも、20分かけて食べれば、途中で満足が来ます。食べる量を減らさずに、食べる量が減るのはこのためです。 早食いの人が太りやすいという話は、体質ではなく、この構造から来ています。 噛むこと自体が目的ではありません 「30回噛みましょう」と言われて、続いた人をあまり見たことがありません。数えることに意識が向いて、食事が作業になるからです。 目的は回数ではなく、食事に20分かけることです。噛む回数はその手段のひとつにすぎません。 だから、汁物から始めても、途中で会話をしても構いません。時間さえかかれば、方法は何でもいいです。 やること 1. 一口ごとに、箸を置く 最も効きます。持ったままだと、噛んでいる途中で次の一口を用意してしまいます。置くだけで、自然に時間が伸びます。 2. 汁物か野菜から始める 最初の数口を、噛む必要があるものにしてください。いきなり丼物から入ると、そのまま最後まで速度が落ちません。 3. ながら食べをやめる スマホを見ながら、テレビを見ながらの食事は、速くなるうえに食べた記憶が残りません。食べた記憶がないと、2時間後にまた空腹を感じます。", "kaisu": "結論：どちらでも構いません。続く方でいい 1日3食にするか、少量を5回に分けるか。よく聞かれますが、総量が同じなら結果はほとんど変わりません。 決める基準は代謝ではなく、生活です。自分の1日に無理なく収まる回数を選んでください。 回数を増やしても、代謝は上がりません 「こまめに食べると代謝が上がる」という話が広く知られています。根拠とされているのは、食事のあとに消費が少し増える現象です。 ただしこの増加分は、食べた量に比例します。 1日1800kcalを3回に分けても5回に分けても、合計が同じなら、増える分も同じです。回数を増やして得をする、という計算にはなりません。 血糖の安定という点では、分けたほうが有利な人がいます。空腹が強く出る人、食事の間隔が長く空く人です。逆に、回数が増えることで食べる機会そのものが増え、総量が膨らむ人もいます。 つまりどちらが有利かは、人によって逆になります。 一般論で決められる話ではありません。 「分けたほうが痩せる」でも「まとめたほうが痩せる」でもない 近年よく聞く「16時間空ける」といった方法も同じです。効果が出る人がいるのは事実ですが、それは食べる時間を制限した結果、総量が減っているからです。 回数や時間そのものに、脂肪を減らす力はありません。効いているのはいつも総量です。 だから選ぶ基準は、「どちらが痩せるか」ではなく、「どちらなら破綻しないか」になります。 やること 1. 自分の生活に合う回数を決めて、固定する 日によって変えないでください。決めた形を繰り返すほど、体も習慣も安定します。 2. 空腹が強く出る人は、分ける 昼から夜まで間隔が空くなら、夕方に軽く入れてください。夜の食べすぎを防ぐほうが、間食を我慢するより効きます。 3. 間食も1食として数える 分ける場合、これを忘れると総量が増えます。追加ではなく、分割です。 ここを取り違えると、回数を増やしただけになります。", "choshoku": "結論：食べても、抜いても構いません 朝食を抜くと太る。いや、抜いたほうが痩せる。どちらもよく聞きますが、朝食そのものに太らせる力も、痩せさせる力もありません。 決めるのは総量です。朝をどうするかは、その総量をどう配分するかの問題でしかありません。 「朝食を抜くと太る」の中身 この話の元になっているのは、朝食を抜く人のほうが体重が多い、という調査です。ただしこれは朝食が原因だとは言っていません。 朝食を抜く人の生活を見ると、夜が遅い、睡眠が短い、昼と夜の量が多い、といった傾向が一緒に出てきます。太っているのは、そちらの影響である可能性が高い。 逆に「抜けば痩せる」も同じです。抜いた分だけ総量が減れば痩せますが、昼と夜で取り返せば何も変わりません。 実際、取り返す人のほうが多数です。 つまり朝食の有無は、それ単体では結果を決めません。決めているのは、抜いたあとの行動のほうです。 どちらでもいい、が「日によって変えていい」ではありません ここだけ注意してください。 昨日は食べて、今日は抜いて、明日は気分で決める。これが一番よくない形です。空腹のリズムが安定せず、昼や夜の量が読めなくなります。 どちらを選んでも構いませんが、選んだら固定してください。 体は繰り返しに適応します。適応した状態が、一番コントロールしやすい状態です。 やること 1. 抜くなら、昼で取り返さない 抜いた分の食欲は昼に出ます。ここで大盛りにすると、抜いた意味がなくなります。抜くと決めたら、昼はいつも通りの量にしてください。 2. 食べるなら、タンパク質を入れる パンとコーヒーだけでは、昼までもちません。卵、ヨーグルト、納豆のどれか1つ。ここが入るかどうかで、午前中の空腹がまったく変わります。 3. 決めたパターンを、2週間続けてみる どちらが自分に合うかは、やってみないと分かりません。日替わりで試しても答えは出ません。2週間ずつ固定して、比べてください。", "osake": "結論：問題はお酒より、そのあとの食事です お酒をやめる必要はありません。やめるべきなのは、飲んだあとの流れのほうです。 飲んだ日に増えるカロリーの内訳を見ると、酒そのものより、つまみと〆のほうが大きいことがほとんどです。 飲んでいる間、脂肪は使われません 体はアルコールを毒として扱います。入ってくると、他の処理を止めて分解を最優先します。 その間、脂肪の分解は後回しになります。飲んでいる数時間、脂肪は使われないまま止まっている、と考えてください。 さらに厄介なのが食欲です。アルコールは判断を緩めます。普段なら選ばないものを選び、普段なら止まるところで止まらなくなる。〆のラーメンは、意志ではなくアルコールが選んでいます。 つまりお酒の影響は、カロリーの足し算だけでは終わりません。その日の残り全部の判断が甘くなるところまで含めて影響です。 「糖質ゼロなら太らない」ではありません ハイボールや糖質ゼロのビールを選ぶ方が増えました。悪くない選択ですが、勘違いも同時に増えています。 アルコール自体が1gあたり7kcalあります。糖質がゼロでも、アルコールの分のカロリーは残ります。糖質ゼロは、ゼロカロリーではありません。 そしてもっと大きいのは、「糖質ゼロだから大丈夫」と思うことで杯数とつまみが増えることです。切り替えた結果、総量が増えている方をよく見ます。 選ぶものより、量と、そのあとです。 やること 1. 飲む前に、何か食べておく 空腹で飲み始めると、酔いも早く、つまみも進みます。乳製品でもおにぎり1個でも構いません。 2. 水を交互に飲む 杯数が自然に減ります。翌日の残り方も変わります。最も簡単で、最も効きます。 3. 〆をどうするか、飲む前に決めておく 酔ってから決めると、必ず食べます。食べないと決めるか、何を食べるか決めておくか。 判断はしらふのうちに済ませてください。", "ryoko": "結論：その週は諦めなくていい。前後で均します 旅行に行くと決まった時点で、多くの方が「今週はもうダメだ」と考えます。この考え方のほうが、実際の食事より高くつきます。 旅行そのものでは、そこまで太りません。 太るのは、諦めたあとの数週間です。 3日食べても、脂肪はそこまで増えません 脂肪を1kg増やすには、およそ7700kcalの余剰が必要です。3日間で毎日1000kcal多く食べたとしても、増える脂肪は500g程度です。 帰ってきた翌朝に2kg増えていることはありますが、その中身は水分と食べ物の重さです。塩分の多い食事が続けば体は水を抱えますし、腸の中身も残っています。数日で戻ります。 ここで焦って食事を抜くと、かえって長引きます。抜けば反動が来て、その反動で本当に脂肪が増える。「旅行で太った」の正体は、たいてい帰宅後の1〜2週間です。 見る単位は、その日でも、その週でもありません。前後を含めた数日から10日です。 諦めると、旅行より高くつきます 「今週はもう無理」と決めた瞬間、帰ってからも戻らなくなります。区切りが消えるからです。 大事な人との食事や、楽しみにしていた旅行を、ダイエットのために我慢する必要はありません。その日を100%楽しむために、前後を準備する。 これが計画の中身です。 我慢しないことと、諦めることは別物です。 やること 1. 帰った翌日から、いつも通りに戻す 減らすのではなく、戻す。特別なことは何もしなくて構いません。この1点だけで、ほとんどの人は元に戻ります。 2. 移動日は、歩く量を稼ぐ 観光でも空港でも、旅行中は普段より歩いていることが多いです。ここは意識して増やしてください。事後調整として現実的な手段です。 3. 体重は、帰ってから3日おいて見る 翌朝の数字は水分です。見ても意味がないどころか、判断を誤らせます。3日待ってから、1週間の平均で見てください。", "seiri": "結論：その時期の増加は、無視して構いません 生理前に1〜2kg増える。甘いものが止まらなくなる。だるくて動きたくない。 どれも正常な反応です。 意志が弱くなったわけでも、努力が足りなかったわけでもありません。 増えているのは水分です 生理前は、ホルモンの影響で体が水分を抱えやすくなります。脂肪が増えているわけではないので、周期が過ぎれば自然に戻ります。 食欲も同じです。この時期は基礎代謝がわずかに上がり、体は必要な分を求めます。甘いものが欲しくなるのも、ホルモンの働きによるところが大きいとされています。 つまりこの数日間に起きていることは、生理現象です。体重計の数字も、食欲の強さも、いつもと同じ物差しで測るべきものではありません。 ここを知らないまま数字だけ見ると、「頑張っているのに増えた」となります。その落ち込みから食事が崩れる。本当のダメージは、増えたことではなく、増えたと勘違いすることのほうです。 「気の緩み」ではありません 生理前に食べてしまったことを、自分の弱さとして記録している方が多いです。ここは切り分けてください。 意志の問題として扱うと、対策が「もっと我慢する」しかなくなります。生理現象として扱えば、対策は「その時期の設計を変える」になります。 後者のほうが、はるかに現実的です。戦う相手を間違えないでください。 やること 1. 記録に、周期を書き込む 体重の記録に、生理の開始日を入れてください。2〜3ヶ月続けると、自分の増減のパターンが見えます。「毎回この時期に増えて、この時期に戻る」と分かれば、慌てなくなります。 2. その週は、平均どうしを比べない 前の週と比べても意味がありません。比べるなら、前の月の同じ時期です。 3. 甘いものは、量を決めて食べる 我慢して耐えるより、決めた量を食べるほうが結果的に少なく済みます。完全に断つと、周期が明けたあとに反動が来ます。", "kintore-yusen": "結論：食事 ＞ 筋トレ ＞ 有酸素、の順です 痩せたいから走る、という方が多いです。間違いではありませんが、手をつける順番が3番目です。 先にやるべきことが2つあります。 3つは役割がまったく違います 食事は、動かせる幅が一番大きいところです。1食を整えるだけで数百kcal変わります。同じ量を運動で作ろうとすると、何時間もかかります。 筋トレは、減らす手段ではありません。守る手段です。減量中は放っておくと筋肉も一緒に落ちます。落ちれば代謝が下がり、次の停滞が重くなる。それを防げるのは筋トレだけです。 有酸素は、消費を足す道具です。脂肪を燃やす効率そのものは、実は有酸素のほうが高い。これは事実として認めます。ただし1時間走って稼げるのは数百kcalで、しかも筋肉は守ってくれません。 だから順番はこうなります。大きく動かせる順ではなく、失うものが少ない順です。 「痩せたいなら有酸素」は、半分だけ正解です 有酸素で体重は落ちます。ここは否定しません。 問題は、落ちた中身です。食事制限と有酸素だけで進めると、脂肪と一緒に筋肉が減ります。体重計の数字は下がるのに、見た目が引き締まらない。よくある行き詰まり方です。 そして筋肉が減った体は、以前と同じ食事量で太るようになります。次のダイエットが、前回より難しくなるということです。 有酸素をやるなとは言いません。筋トレを削って有酸素に回すのをやめてください、という話です。 やること 1. 週2回の筋トレを、先に予定に入れる 有酸素の時間を確保する前に、こちらを押さえてください。順番はここで決まります。 2. 有酸素は、余った時間に足す やらなくても構いません。やるなら、筋トレのあとか、別の日に。筋トレの前に長時間やると、力が出ません。 3. 食事が整っていないうちは、運動を増やさない 運動で取り返そうとするのが、一番効率の悪いやり方です。まず食事、それから運動です。", "kinniku-tsukanai": "結論：減量中の目標は「維持」です。それで勝ちです 痩せながら筋肉を増やしたい。多くの方がそう考えます。 残念ですが、この2つは同時に成立しません。 体の仕組みとして無理があります。 必要なカロリーの向きが逆だからです 筋肉を増やすには、材料とエネルギーが余っている必要があります。プラスの状態です。 脂肪を減らすには、使う量が入る量を上回っている必要があります。マイナスの状態です。 一方でプラス、一方でマイナス。同じ期間に両方を作ることはできません。だからボディビルの世界では、増量期と減量期を分けます。 減量中に体が置かれているのはマイナス側です。この状態で筋肉を増やそうとしても、体は応じません。できるのは、いま持っている筋肉を減らさないことだけです。 そしてそれは、十分に価値のある目標です。何もしなければ確実に減るからです。 「引き締まった」の正体 減量中に「筋肉がついた」と感じることはあります。実際に起きているのは別のことです。 脂肪が減って、もともとあった筋肉の形が見えるようになっただけです。筋肉の量は増えていません。ただし見た目は確実に変わります。求めていた結果は、たいていこちらです。 もうひとつ、トレーニングを始めた最初の数週間は、扱える重量が伸びます。これも筋肉が増えたからではなく、神経が使い方を覚えたからです。 つまり「増やせない」ことは、目標が遠のく話ではありません。目標の言い方が変わるだけです。 やること 1. 目標を「維持」に置き換える 減量中の筋トレは、増やすためではなく、守るためにやっています。ここが分かると、重量が伸びない時期も焦らずに済みます。 2. タンパク質を落とさない 守るための材料です。体重×1.6〜2.2g。食事量を減らす時期ほど、ここは死守してください。 3. 増やすのは、減量が終わってから 順番があります。まず落とす、それから増やす。同時にやろうとすると、どちらも中途半端になります。", "shu2kai": "結論：週2回で、必要なものはほぼ取れます 週5回行けないから意味がない、と思っている方がいます。逆です。 行った回数がそのまま結果になります。週2回続いた人は、週5回を3週間でやめた人に勝ちます。 筋肉は、週2回の刺激で維持できます トレーニングの効果は、同じ部位にどれくらいの間隔で刺激を入れられるかで決まります。 週2回であれば、中3〜4日。前回の効果が薄れる前に次が入るので、維持には十分な間隔です。増やすことを狙うならもっと必要になりますが、減量中の目標は維持なので、ここは足ります。 週1回だと間隔が空きすぎて、前回の分が薄れてから次を入れることになります。積み上がりにくい。週1と週2の差は、週2と週4の差より大きいと考えてください。 つまり最初に越えるべき線は、週2回です。そこから先は、余裕があれば足す話になります。 「毎日やったほうが効く」ではありません 筋肉は、トレーニング中ではなく、そのあとの休んでいる間に回復します。連日同じ部位を追い込むと、回復が追いつかず、かえって伸びません。 そして現実的な問題として、毎日の予定は崩れます。 仕事が伸びた、子どもが熱を出した、疲れて動けない。週5回の計画は、崩れた時点で「今週はもうダメだ」になりやすい。 週2回なら、1回崩れても週内で振り替えられます。崩れに耐えられる計画かどうかが、続くかどうかを決めます。 完璧な計画より、崩れても戻れる計画を選んでください。 やること 1. 週2回を、曜日で固定する 「今週どこかで2回」ではなく、火曜と金曜、のように決めてください。決まっていない予定は消えます。 2. 1回あたり45〜60分で組む 長くする必要はありません。種目を絞れば、この時間で必要なものは入ります。 3. 行けなかった週も、記録を切らさない 散歩でも構いません。ゼロの週を作らないことのほうが、回数を増やすより効きます。", "shumoku": "結論：大きな動きを5〜6個。それで全身が入ります トレーニングを覚え始めると、種目を増やしたくなります。雑誌にも動画にも、次々と新しいものが出てきます。 ただし種目の数と効果は比例しません。 増やして得られるのは、たいてい疲労だけです。 一度に複数の関節が動く種目が効率的です 種目は大きく2つに分かれます。 複数の関節が同時に動くもの。 スクワット、デッドリフト、押す動き、引く動き。1種目で多くの筋肉が同時に働きます。扱える重量も大きく、体全体への刺激が入ります。 1つの関節だけが動くもの。 腕を曲げる、脚を伸ばす。狙った部位に効かせられますが、範囲が狭く、消費も刺激も限定的です。 前者を5〜6個そろえると、体の主要な筋肉はほぼ全部カバーできます。 後者は、そのあとに余裕があれば足す位置づけです。 限られた時間で結果を出すなら、選ぶのは前者です。 「種目が多いほど効く」ではありません 種目を増やすと、1種目あたりに割ける集中力と体力が落ちます。10種目を軽くこなすより、5種目をきちんとやるほうが刺激は入ります。 もうひとつ、記録が取れなくなります。 種目が多いと前回の重量や回数を覚えていられず、伸びているのか止まっているのか分からなくなる。改善の手がかりが消えます。 そして単純に、時間が伸びて続かなくなります。 種目を増やしたくなったときは、足すのではなく、いまの5〜6個の中身が伸びているかを見てください。 やること 1. いまのメニューを5〜6個まで絞る 削るのは、1つの関節だけを使う種目からです。何を残すかはセッションで一緒に決めましょう。 2. 毎回、重量と回数を記録する 同じ種目を続けるからこそ、伸びが見えます。種目を変えると、比べる相手がいなくなります。 3. 3ヶ月は同じ組み合わせで続ける 飽きたから変える、はまだ早いです。変えるのは、伸びが止まってからで構いません。", "kinnikutsu": "結論：痛みの有無で、効いたかどうかは判断できません 「今日は筋肉痛が来なかったから、効いていない」 よく聞きます。ただしこの2つはつながっていません。 痛みは、効果の証明にも、不足の証明にもなりません。 筋肉痛が出る条件は、限られています 筋肉痛が強く出るのは、主に次の場合です。 慣れていない動きをしたとき 筋肉が伸ばされながら力を出す動きが多かったとき（下ろす動作、降りる動作） 久しぶりに動かしたとき つまり筋肉痛は「新しい刺激だった」ことのサインであって、「十分な刺激だった」ことのサインではありません。 同じメニューを続ければ、体は慣れて痛みは出にくくなります。このとき効果が消えたわけではありません。慣れただけです。 逆に、久しぶりに全力で走れば強い筋肉痛が出ますが、それで筋肉が増えるわけでもありません。 痛みを追いかけると、遠回りになります 筋肉痛を効果の証拠だと思っていると、毎回それが出るまで追い込むことになります。 その結果、回復が追いつかず、次のトレーニングの質が落ちます。関節や腱を痛めるリスクも上がります。そして何より、毎回きついので続きません。 判断に使うべきは、痛みではなく記録です。 前回より重い、前回より多い、前回より安定している。この3つのどれかが動いていれば、進んでいます。 減量中は、そのどれも伸びない時期があります。それでも落ちていなければ勝ちです。 やること 1. 効いたかどうかは、記録で判断する 重量、回数、フォームの安定。数字と感覚を残してください。痛みは記録に使いません。 2. 強い筋肉痛の日は、その部位を休ませる 痛みがあるうちに同じ場所を追い込んでも、質が落ちるだけです。別の部位を動かすか、歩いてください。 3. 痛みが出ないことを、不安に思わない 慣れた証拠です。続いている証拠でもあります。", "juryo": "結論：落ちていなければ、勝ちです 減量を始めてしばらくすると、扱える重量が伸びなくなります。人によっては少し落ちます。 正常です。 燃料が足りていない状態で動いているので、当たり前の反応です。 力を出すための燃料が減っています 減量中は、意図的にカロリーを不足させています。体の中の糖の蓄えも減っています。 この糖は、強い力を短時間出すときの主な燃料です。蓄えが減れば、出せる力も落ちます。 技術が落ちたわけでも、筋肉が減ったわけでもありません。 さらに、睡眠や疲労の影響も乗ります。食事量が減っている時期は、回復そのものも遅くなります。 つまり減量中に重量が伸びないのは、設計通りです。伸ばしたいなら、まず食べる量を増やす必要があります。それは減量をやめるということです。 数字が落ちたときに、やってはいけないこと 重量が落ちると、多くの方が2つのどちらかをします。 ひとつは、無理に前回と同じ重量を上げようとすること。 フォームが崩れ、狙った場所に入らず、けがのリスクだけが上がります。 もうひとつは、トレーニングそのものをやめてしまうこと。 これが一番まずい。伸びないから意味がないと感じて足が遠のく。ところが減量中の筋トレは、伸ばすためではなく守るためにやっています。やめた瞬間に、守るものがなくなります。 伸びない時期に続けられるかどうかが、減量後の体を決めます。 やること 1. 記録は続ける。ただし判断基準を変える 減量中は「維持できているか」で見てください。前回と同じ重量が同じ回数上がったなら、成功です。 2. 重量が落ちたら、回数かフォームで質を保つ 軽くしてでも、動きの質は落とさない。数字より、狙った場所に入っているかです。 3. 伸ばすのは、減量が終わってから 期限を決めて減量し、終わったら維持期へ移る。伸ばす時期は、そのあとに来ます。", "gotsuku": "結論：まず、なりません 重いものを持つと脚が太くなる、腕がゴツくなる。心配して重量を上げない方が多いです。 その心配は、ほぼ起こりません。 起こるとしたら、何年もそれを目標にして努力した場合だけです。 筋肉を大きくするホルモンの量が違います 筋肉を大きくする働きを持つホルモンの分泌量は、一般に女性のほうがかなり少ないとされています。同じトレーニングをしても、太くなる方向には進みにくい。 そして筋肉は、狙って増やそうとしても簡単には増えません。 男性でも、増量期を作り、食べる量を増やし、何ヶ月も続けてようやく数kgです。 まして減量中はマイナスの状態なので、筋肉は増えません。目標は維持です。増やせない状態で、太くなる心配をしていることになります。 「筋トレを始めたら脚が太くなった」という話には、たいてい別の理由があります。トレーニング直後の一時的な張り、あるいは食事量が増えて脂肪がついた場合です。 軽い重量で回数を増やしても、細くはなりません 太くなるのが怖くて、軽い重量を何十回もやる方がいます。狙いと逆の結果になりやすいやり方です。 軽すぎる負荷では、筋肉を維持するのに必要な刺激が入りません。減量中に一番避けたいのは、筋肉が落ちることです。落ちれば代謝が下がり、体は締まらないまま小さくなります。 引き締まって見えるのは、脂肪が減って、その下の筋肉の形が出たときです。筋肉を残さなければ、出てくる形がありません。 やること 1. 重量を上げることを、怖がらない きちんとしたフォームで扱える範囲で、しっかり負荷をかけてください。フォームはセッションで見ます。 2. 太くなったと感じたら、食事を見る トレーニングではなく、食事量が原因であることがほとんどです。 3. 見た目は、鏡ではなく写真で比べる 日々の見え方は体調や時間帯で変わります。1ヶ月前の写真と並べてください。", "hiit": "結論：きつすぎて続かないなら、価値はゼロです 短時間で終わる、効率がいい、脂肪が燃える。HIIT（高強度の運動と休憩を繰り返す方法）はよく勧められます。 効果があるのは本当です。ただし続いた場合に限ります。 効率の良さは、きつさと引き換えです HIITが短時間で済むのは、その分だけ強度が高いからです。総量は減っていません。同じ仕事を、短く濃くしているだけです。 ここに落とし穴があります。強度が高いということは、 終わったあとの疲労が大きい 回復に時間がかかる 次にやる前に気が重くなる 「20分で終わる」に惹かれて始めた人が、3回目でやめる。これが最もよくある結末です。 そして週1回もできないHIITより、週2回続く筋トレと、毎日の散歩のほうが、合計では圧倒的に上回ります。 運動の価値は、1回あたりの効率ではなく、続いた期間の合計で決まります。 「効率がいいから最適」ではありません 効率という言葉は、時間あたりの話をしています。しかし減量で効いてくるのは、続いた月数のほうです。 もうひとつ、減量中は回復力が落ちています。食事量が減り、睡眠の質も揺れやすい時期に、最も回復を必要とする運動を足すのは、順番として無理があります。 HIITが向いているのは、すでに運動が習慣になっていて、体力に余裕があり、時間だけが足りない人です。運動を始めたばかりの人が最初に選ぶものではありません。 やること 1. まず、週2回の筋トレを固定する 土台はこちらです。HIITを足すのは、これが3ヶ月続いてからで構いません。 2. やるなら、週1回から いきなり週3回にしないでください。1回やって、次の日の体の重さを見てから決めます。 3. 「きついからやめた」を、失敗と考えない 自分に合わなかっただけです。続く方法を探すのが正解で、続かない方法に耐えるのは正解ではありません。", "form": "結論：始めたほうが得です 正しいフォームができるようになってから始めたい。真面目な方ほどこう考えます。 気持ちは分かりますが、フォームは動いた回数でしか良くなりません。 待っている間に上手くはならないので、待つほど遠ざかります。 フォームは、知識ではなく感覚で覚えます 動画を見て理解することと、自分の体でそれを再現できることは、別の能力です。 膝の向き、背中の角度、力を入れる順番。これらは繰り返す中で神経が覚えていくもので、頭で分かっただけでは体が動きません。 トレーニングを始めた最初の数週間、扱える重量が急に伸びることがあります。筋肉が増えたからではなく、神経が動きを覚えたからです。この期間は、体が学習しているという意味でもあります。 つまり最初の数週間は、成果を出す期間ではなく、フォームを覚えるための期間です。ここを飛ばして完成形から始めることはできません。 ただし「自己流で重いものを持つ」は別です 始めたほうが得だ、という話は、軽い重量で正しい方向を教わりながらという前提つきです。 自己流のまま重量を上げると、間違った動きが固まります。あとから直すほうが、最初から覚えるより時間がかかります。けがのリスクもここで上がります。 この2つは分けて考えてください。 始めるのを待つ → 損 教わらずに重くする → 危険 D/LIGHT に来ていただいている理由は、ここにあります。最初の数週間を、見ている人がいる状態で通過するためです。 やること 1. 軽い重量で、回数をこなす いま持てる範囲の軽さで構いません。動きを繰り返すことが目的です。 2. 分からない動きは、その場で聞く 家で悩まないでください。セッション中に一度見せてもらえれば、その場で直せます。 3. 動画で自分を撮る 正面と横から1本ずつ。自分の感覚と実際の動きは、思っているよりずれています。", "yusanso": "結論：食べすぎた後、数日かけて薄めるときです 有酸素運動は「あれば良い」ものです。減量の主役ではありません。 ただしはっきり出番がある場面が一つあります。 食べすぎた後の調整です。 向きが逆だと、結果も逆になります 同じ「運動と食事」の話でも、順番によって結果が変わります。 前借り。 運動したから食べていい、という考え方です。多くの場合、消費した量より食べる量のほうが上回ります。1時間歩いて稼げるのは200〜300kcal。おにぎり1個と少しです。これは、ほぼ必ず赤字になります。 事後調整。 食べすぎたから、数日かけて薄める、という考え方です。こちらは成立します。1回のイベントを1回の運動で消すことはできませんが、数百kcalを数日に分けて上乗せするのは現実的です。 同じ有酸素運動でも、前借りに使うと損をして、事後調整に使うと効きます。先か後か、それだけの違いです。 「有酸素をやれば痩せる」ではありません 脂肪を燃やす効率そのものは、有酸素運動のほうが高い。これは事実として認めます。 ただし現実に動かせる幅は、食事のほうが圧倒的に大きいです。1時間走って稼ぐ300kcalは、夕食を少し軽くすれば作れます。しかも走るほうは1時間かかり、筋肉は守ってくれません。 そして有酸素を増やすために筋トレを削るのが、一番損な組み替えです。守り手を減らして、消費を少し足すことになります。 有酸素をやるなという話ではありません。主役に置かないでください、という話です。 やること 1. 食べすぎた翌日から、数日かけて歩く量を足す 1日で取り返そうとしないでください。3〜4日に分けたほうが、体にも予定にも無理がありません。 2. 筋トレを削って有酸素に回さない 足すなら、筋トレの後か、別の日に。順番は変えないでください。 3. 特別な運動を用意しない 通勤で一駅歩く、階段を使う、買い物に歩いて行く。この積み重ねが、走るより現実的で、続きます。", "katakori": "結論：揉んでも戻るのは、原因が姿勢の「時間」にあるからです 肩を揉むと、その場は楽になります。でも数時間で戻る。多くの方が経験していると思います。 戻るのは、ほぐし方が足りないからではありません。凝りを作っている時間のほうが、まだ何も変わっていないからです。1日8時間の姿勢に対して、10分のマッサージで勝とうとしている状態です。 頭は5kg以上あります 頭の重さは体重の約1割、多くの方で5〜6kgあります。ボウリングの球ほどです。 この重さが背骨の真上に乗っているうちは、骨で支えられます。ところが画面を見るために頭が前に出ると、骨では支えきれなくなり、首と肩の筋肉がずっと引っ張って支えることになります。 筋肉は、縮んだり緩んだりして初めて血が巡ります。支えっぱなしの筋肉は緩む瞬間がないので、血流が落ちたまま固まります。これが凝りの正体です。 だから凝りやすいかどうかを決めているのは、筋力よりも同じ姿勢でいた時間の長さです。 「凝ってから対処する」をやめてください 多くの方が、凝りを感じてから何かをします。揉む、貼る、伸ばす。どれも悪くはありませんが、全部が起きたあとの対処です。 対処だけを繰り返すと、ほぐす頻度がだんだん上がっていきます。原因が減っていないので当然です。そして「自分は凝りやすい体質だ」という結論になる。体質ではなく、環境の問題であることがほとんどです。 順番を逆にしてください。ほぐすより先に、凝らせる時間を減らす。 やること 1. 画面の高さを上げる ノートパソコンをそのまま机に置くと、必ず頭が前に出ます。台や本を重ねて、画面の上端が目線と同じ高さに来るようにしてください。外付けのキーボードがあると、これだけで首の負担が変わります。 2. カバンの持ち方を変える 同じ肩にかけ続けると、片側だけが支え続けることになります。リュックにするか、こまめに持ち替えてください。荷物そのものを軽くできるなら、それが一番効きます。 3. 30〜60分ごとに、一度立つ ストレッチでなくて構いません。立って、数歩歩くだけでいい。筋肉が緩む瞬間を作ることが目的です。立った回数が、その日の凝りの量を決めます。 腕のしびれ、力が入らない、じっとしていても強く痛む場合は、セルフケアの範囲を超えています。まず医療機関で診てもらってください。判断に迷うとき、受診したあとの体の使い方については、トレーナーにもご相談ください。", "shisei": "結論：姿勢は意識では直りません。直るのは条件のほうです 「気をつけよう」と思って直る姿勢は、数分で戻ります。意識は続かないからです。 姿勢は、意志ではなくその人が1日で一番長くとっている形と、その形を支えられる体かどうかで決まります。変えるべきはこの2つで、気合いではありません。 体は、長くとっている形を「標準」だと覚えます 1日に8時間座っていれば、体はその形を基準にします。縮んでいる側は縮んだまま、伸ばされている側は伸ばされたまま、それが普通の状態として固定されていきます。 猫背も反り腰も、その結果として出てくる形です。姿勢が悪いから体が固まったのではなく、固まった結果としてその姿勢になっている、という順番です。 だから鏡の前で正しい形を作れても、それは一時的に上書きしているだけで、机に戻れば元の形に戻ります。 足元も効いています。かかとの高い靴を履くと、体は前に倒れないよう骨盤を傾けてバランスを取ります。毎日それを続ければ、その傾きが標準になります。 「胸を張る」は、反り腰では逆効果になります 良い姿勢と言われて、多くの方が胸を張って背中を反らせます。猫背の自覚がある方はとくにそうです。 ところが反り腰の方がこれをやると、もともと反っている腰をさらに反らせることになります。肩の位置は良くなったように見えても、腰の負担は増えている。見た目が整うことと、負担が減ることは別です。 自分がどちらのタイプかは、鏡や写真だけでは判断が難しいところです。ここはセッションで一度見せてください。方向を間違えたまま続けると、良かれと思ってやったことが負担になります。 やること 1. 立つときは、足の裏全体に体重を乗せる つま先寄り、かかと寄りのどちらかに偏っている方が多いです。足の裏全体で床を踏んでいる感覚を、1日に何度か確認してください。 2. かかとの高い靴を、毎日にしない 履くなという話ではありません。連日にしないだけで、体が受け取る「標準」が固定されずに済みます。 3. 座る時間を分割する 同じ形でいる時間を切ることが、一番効きます。30〜60分ごとに立って歩いてください。姿勢を良くしようとするより、同じ姿勢を続けないほうが確実です。", "mukumi": "結論：足りないのは水分ではなく、動く時間です 夕方になると靴がきつい。ふくらはぎが張る。この状態を「水を摂りすぎた」と考えている方が多いのですが、原因はほぼ逆です。 むくみは、下に降りた水分が戻れなくなっている状態です。戻す仕組みが働いていないことが問題で、水の量そのものが問題ではありません。 脚の血液は、ふくらはぎが押し上げています 心臓から送り出された血液は、重力に従って脚に降ります。ところが戻るときは、重力に逆らって上がらなければいけません。 このとき押し上げるポンプの役割をしているのが、ふくらはぎの筋肉です。歩いたり、立ったりするたびに筋肉が縮み、血管を押して中身を上へ送り出しています。ふくらはぎが第二の心臓と呼ばれるのは、この働きがあるからです。 つまり、座りっぱなし・立ちっぱなしで筋肉が動かない時間が続くと、ポンプが止まります。降りた水分は降りたまま溜まる。夕方にむくみが出るのは、その時間が積み上がった結果です。 塩分も関係します。体は塩分の濃度を一定に保とうとするので、塩分が多いとその分だけ水を抱え込みます。ただしこれは量を増やす要因であって、溜まる仕組みそのものは動かない時間のほうです。 水を控えると、むくみは悪化します 一番よくある対応が、水を飲む量を減らすことです。これは逆効果になります。 体は水が足りないと判断すると、今ある水を手放さないように抱え込みます。 出ていく量が減るので、むくみはかえって残ります。脱水気味の人ほどむくみやすい、というのはこのためです。 着圧ソックスも同じ位置づけです。履いているあいだは楽になりますが、それは外から押さえているだけで、ポンプが動くようになったわけではありません。脱げば戻ります。使うのは構いませんが、それで解決したことにはしないでください。 減らすのは水ではなく、動かない時間です。 やること 1. 1時間に一度、ふくらはぎを動かす 立ち上がって歩くのが一番です。席を離れられないときは、座ったままかかとを上げ下げするだけでも構いません。20回ほどで血液は動きます。 回数より、間隔を空けないことが効きます。 2. 水はむしろ、いつも通り飲む 控えるのをやめてください。こまめに飲んで、こまめに出す。この流れがあるほうがむくみは引きます。 3. 塩分は、夜より昼に寄せる 夜に濃い味のものを食べると、寝ているあいだに水を抱えたまま朝を迎えます。味の濃い食事は昼に寄せて、野菜や果物を添えてください。カリウムが余分な塩分を出す助けになります。 片脚だけが急に腫れた、押すと強く痛む、赤みや熱を持っている、息苦しさを伴う。こうした場合は、ただのむくみではないことがあります。様子を見ずに医療機関を受診してください。それ以外のむくみや、脚の使い方については、トレーナーにご相談ください。", "shisei-ishiki": "結論：姿勢は、意識ではなく環境で決まります 「姿勢に気をつけてください」と言われて、数分は直せます。でも仕事に集中した瞬間、元に戻る。 これは意志が弱いからではありません。意識は、他のことに使えば無くなる資源だからです。 意識できるのは、1日のうち数分です 人が姿勢を意識できるのは、他に考えることがないときだけです。メールを打ちながら、資料を読みながら、同時に背中の角度を保つことはできません。 1日8時間のデスクワークのうち、姿勢を意識できるのは、合計しても数分です。残りの7時間55分は、机と椅子とモニターの高さが姿勢を決めています。 つまり姿勢を決めているのは、あなたの意識ではなく、あなたが座っている環境のほうです。 「体幹が弱いから」ではありません 猫背の相談を受けると、多くの方が「体幹が弱いからですよね」と言います。 ですが、筋力が十分にある方でも、ノートパソコンを机に直置きすれば必ず丸まります。画面が低ければ、誰の背中も丸まります。 筋力の問題ではなく、位置の問題です。 体幹のトレーニングは無駄ではありません。ただし順番が逆です。環境を直してから鍛えると効きます。 環境が悪いまま鍛えても、1日の大半で崩され続けます。 やること 1. 画面の上端を、目線の高さに合わせる 台でも本を重ねてでも構いません。これだけで頭の位置が変わり、背中が丸まる理由がひとつ減ります。 2. 「意識する」のをやめて、合図を置く 30分か60分で音が鳴るようにして、鳴ったら座り直す。姿勢を保ち続けるのではなく、崩れたら戻す仕組みにしてください。 3. 週2回、背中を使う種目を入れる 環境を直したうえで、支える力を足します。引く動作の種目をトレーニングに入れておくと、戻したときの姿勢が保ちやすくなります。", "desk-suwarikata": "結論：正しい座り方より、同じ座り方を続けないことです 理想の座り方はあります。ただ、どんなに良い座り方も、3時間固定すれば体を痛めます。 座り方で本当に効くのは、形よりも、変えられるかどうかです。 固定された筋肉は、血が巡りません 筋肉は縮んだり緩んだりして、ポンプのように血を送ります。座って固定されている間、脚とお尻の筋肉はそのポンプを止めています。 だから長時間座ると、脚がむくみ、腰が重くなり、立ち上がるときに固まっています。姿勢が悪いから起きるのではなく、動かない時間が長いから起きます。 背筋を伸ばした「良い姿勢」でも、それを固定すれば同じことが起きます。 背筋をピンと伸ばし続けるのが正解ではありません 「良い姿勢」と聞くと、胸を張って背筋を伸ばした形を思い浮かべます。あの形を8時間保つのは、実はかなりの運動です。ほとんどの方は10分で疲れて、反動でより深く沈み込みます。 目指すのは、力まなくても崩れにくい座り方です。それは筋力ではなく、椅子と机の高さで決まります。 やること 1. 足の裏が、床にしっかりつく高さにする 足が浮いていると、体は太ももの裏と腰で支えます。椅子を下げるか、足台を置いてください。足裏がついた瞬間に、腰の負担が減ります。 2. 机と肘の高さを合わせる 肘が90度くらいで机に乗る高さが目安です。机が高いと肩が上がり、低いと背中が丸まります。 3. 30分ごとに、座り直す 立たなくても構いません。お尻の位置を入れ直す、背もたれに預ける、前に出る。形を変えることが目的です。 立てるなら立ってください。そのほうが効きます。", "sumaho-kubi": "結論：首の問題ではなく、目線の高さの問題です 首が前に出るのは、首が悪いからではありません。見たいものが下にあるから、頭がそこへ行っているだけです。 直す場所は首ではなく、画面の位置です。 15度傾けると、首の負担は倍以上になります 頭の重さは5〜6kgです。真上に乗っているうちは、骨で支えられます。 ところが前に傾けると、テコの原理で首にかかる負担が増えます。15度で約12kg、30度を超えると18kg前後に相当すると言われます。スマホを見ている数十分、首は米袋を支え続けている状態です。 首の後ろの筋肉は、その間ずっと緩めません。これが張りと痛みになります。 首を後ろに引く運動だけでは、戻ります 「顎を引く運動」は有効です。ただ、それをやった直後にスマホを下で見れば、また同じ姿勢に戻ります。 運動は1日数分、スマホは1日数時間です。時間が長いほうが勝ちます。 先に変えるのは、持ち方のほうです。 やること 1. スマホを、目の高さまで上げる 腕は疲れます。ですが、下を向き続けるより首の負担はずっと小さい。もう片方の手で肘を支えると、長く持てます。 2. 両手で持つ 片手だと自然に低くなり、体もねじれます。両手で持つだけで位置が上がります。 3. 時間に区切りを入れる 動画を1本見たら顔を上げる、電車で1駅ごとに上げる。続けて下を向く時間を短くすることが、いちばん効きます。 手や腕のしびれ、力の入りにくさがあるときは、セルフケアの範囲を超えています。まず医療機関で診てもらってください。そのうえでの体の使い方は、トレーナーにもご相談ください。", "makikata": "結論：胸の前が縮んで、背中が使われていない状態です 巻き肩は、肩が内側に入って見える状態です。原因は肩ではなく、胸の前側が短くなり、背中側が引く仕事をしていないことにあります。 引っ張り合いの、片方が勝っている状態です。 腕を前で使う時間が長すぎます 一日を思い返してください。パソコン、スマホ、料理、運転、荷物を持つ。ほとんどの動作が、腕を体の前で使います。 腕を前に出す姿勢が続くと、胸の前の筋肉は縮んだまま固定されます。同時に、背中側の筋肉は伸ばされたまま、ほとんど使われません。 使われない筋肉は、力の出し方を忘れます。これが「背中が使えていない」状態です。 肩を後ろに引き続けても、治りません 気づいたときに肩を後ろに引く。悪くはありませんが、力を抜けば戻ります。縮んだ胸の前が、そのままだからです。 順番は、縮んだ側を緩めてから、使えていない側を鍛えるです。逆にすると、固いまま引くことになるので、首や腰で代償します。 やること 1. 胸の前を開く時間をつくる ドアの枠に前腕をつけて、体を前に出す。20〜30秒で十分です。入浴後がいちばん伸びます。 2. 引く種目をトレーニングに入れる 背中を使う種目を、押す種目と同じ回数だけ入れてください。押す種目ばかりだと、巻き肩は進みます。 3. 作業中の腕の位置を、体に近づける キーボードとマウスを手前に置くだけで、肩が前に出る時間が減ります。遠くに置くほど、腕は前に伸びます。", "kotsuban": "結論：どちらが悪いかではなく、真ん中に戻れるかどうかです 骨盤が前に傾いている、後ろに傾いている。どちらも「悪い姿勢」として語られがちですが、問題は傾きそのものではありません。 傾いたまま、そこから動けなくなっていることが問題です。 骨盤は、動くのが本来の状態です 骨盤は、股関節とお腹まわりの筋肉に前後から引っ張られています。前側が強く引けば前傾、後ろ側が強く引けば後傾です。 歩く、しゃがむ、立ち上がる。日常の動作の中で、骨盤は絶えず前後に動いています。 動いている限り、どちらかに寄っていても問題は起きにくい。 困るのは、片方に寄ったまま固まったときです。前傾で固まれば腰の反りが強くなり、後傾で固まれば背中が丸まります。どちらも、動かないことが原因です。 反り腰は、それ自体が異常ではありません 「反り腰だから腰が痛くなる」と説明されることがありますが、反りがあっても平気な方はたくさんいます。 見るべきは反りの深さより、そこから戻せるかどうかです。仰向けで膝を立てたときに腰の隙間が減るなら、動きは残っています。まったく変わらないなら、固まっています。 やること 1. 座るとき、坐骨で座る お尻の下の硬い骨に体重を乗せます。後ろに転がると後傾、前に転がりすぎると前傾です。その中間を探してください。 2. 股関節を前後に動かす習慣をつくる しゃがむ、大きく踏み出す、階段を上る。骨盤を動かす動作を、意識して1日に何度か入れます。 3. お腹に軽く力が入る呼吸を覚える 息を最後まで吐き切ると、お腹に自然と力が入り、骨盤が真ん中に寄ります。これが戻る感覚です。 力み続ける必要はありません。", "kokansetsu": "結論：硬いのは筋肉より、動かす角度が少ない生活のほうです 股関節が硬い方は多いです。ただ、生まれつき硬いわけではありません。 使っていない角度が、使えなくなっているだけです。 座っている間、股関節はずっと90度です 椅子に座ると、股関節は約90度で固定されます。1日8時間座れば、8時間その角度のままです。 体は、よく使う範囲を維持し、使わない範囲を手放します。深くしゃがむ角度も、大きく開く角度も、使わなければ失われます。 硬さは、その結果です。 だから硬さの正体は、筋肉の性質というより、生活で使っている角度の狭さです。 ストレッチだけでは、翌日には戻ります ストレッチは有効です。ただ、伸ばした直後に8時間座れば、元の範囲に戻ります。 伸ばすこと自体が悪いのではなく、伸ばしたあとに、その範囲を使わないことが問題です。 広げた可動域は、使って初めて残ります。 やること 1. 1日に何度か、深くしゃがむ 床のものを取るとき、膝を曲げてしゃがんでください。日常の中でしゃがむ回数が、いちばん効きます。 2. トレーニングで、広い範囲を使う種目を入れる 浅い動きを繰り返すより、無理のない範囲で深く動かすほうが可動域は残ります。深さの目安は、トレーナーに見てもらってください。 3. 座り続ける時間を切る 60分に一度立って、数歩歩く。股関節を90度から出す回数を増やすことが、ストレッチより先です。", "zenkutsu": "結論：もも裏の硬さより、骨盤が倒れていないことが原因です 前屈で手が床につかない。多くの方が「もも裏が硬いから」と考えます。半分は当たっていますが、もっと大きいのは、骨盤が前に倒れていないことです。 前屈は、腰ではなく股関節から折る動作です 正しい前屈は、骨盤ごと前に倒れる動きです。背骨はほぼまっすぐのまま、股関節が曲がります。 骨盤が倒れないと、体はそれでも前に行こうとして、背中と腰を丸めてごまかします。 見た目には前屈できているようで、股関節はほとんど動いていません。 この形を続けると、もも裏は伸びず、腰だけが引っ張られます。硬さが変わらないまま、腰に負担が溜まります。 痛いのを我慢するほど柔らかくなる、ではありません 強く伸ばすと、筋肉は縮んで守ろうとします。痛みが強いほど、この反応も強くなります。限界まで伸ばすやり方は、効率が悪いだけでなく戻りも早い。 伸びるのは、「痛気持ちいい」より少し手前です。そこで呼吸を止めずに待つと、ゆるみます。 やること 1. 膝を軽く曲げて、股関節から倒す 膝を伸ばしきると骨盤が倒れません。少し曲げて、お尻を後ろに引くように倒してください。 もも裏に伸びを感じたら、そこが正しい位置です。 2. 反動をつけない 弾みをつけると筋肉は縮みます。20〜30秒、息を吐きながら止めてください。 3. 入浴後にやる 体が温まっているときのほうが伸びます。寝る前の数分を、その時間にあててください。", "ashikubi": "結論：スクワットが浅いのは、足首が止めていることが多いです しゃがむとかかとが浮く、深くしゃがめない。原因を膝や股関節に探しがちですが、足首の曲がる角度で止まっていることがよくあります。 すねが前に倒れないと、しゃがめません しゃがむ動作では、すねが前に倒れます。この動きを足首の背屈といいます。 背屈の角度が足りないと、体は前に倒れられません。それでもしゃがもうとすると、かかとが浮くか、背中を丸めるか、膝が内に入るかのどれかで代わりを取ります。 つまり、膝や腰の崩れの原因が、足首にあることがあります。 かかとを浮かせて深くしゃがむのは、解決ではありません かかとの下に板を入れると、深くしゃがめるようになります。トレーニングでは有効な手段です。 ただしそれは、足りない角度を道具で埋めているだけです。日常でしゃがむ場面では、板はありません。並行して、足首そのものを動かしておく必要があります。 やること 1. 壁で、いまの角度を確かめる つま先を壁から10cmほど離して立ち、かかとをつけたまま膝を壁につけます。つかなければ、足首が硬いということです。左右で差があるかも見てください。 2. ふくらはぎを緩める 段差にかかとを落として20〜30秒。ふくらはぎが硬いと、足首は曲がりません。 3. 靴のかかとの高さを見直す かかとが高い靴を長時間履くと、足首は曲がらない角度で固まります。歩く時間が長い日ほど、影響が出ます。", "kenkokotsu": "結論：はがすものではなく、動かす回数が足りていないだけです 「肩甲骨をはがす」という言い方が広まっていますが、肩甲骨は骨盤や背骨と違って、肋骨の上を滑って動く骨です。くっついているものを剥がすイメージとは、少し違います。 動かなくなるのは、動かしていないからです。 肩甲骨は6方向に動きます 肩甲骨は、上げる・下げる・寄せる・開く・上に回す・下に回す。この6方向に動きます。 日常で使うのは、そのうち「開く」と「上げる」に偏っています。前に手を出す、キーボードを打つ、スマホを持つ。どれも肩甲骨を開いた位置で止める動作です。 寄せる、下げる、上に回す。この3つはほとんど使いません。使わない方向から、動かなくなります。 ほぐすだけでは、動きは戻りません マッサージや肩甲骨まわりのほぐしは、その場の張りには効きます。ですが、動かせる範囲そのものは、自分で動かさないと増えません。 人にほぐしてもらうのは受け身、動かすのは能動です。増やしたいのは後者です。 やること 1. 6方向に、ゆっくり動かす 肩をすくめる、下げる、後ろに寄せる、前に開く、腕を上げて回す。各方向5回ずつで構いません。 大きく、ゆっくり動かします。 2. 背中を引く種目を、トレーニングに入れる 寄せる・下げる動きが自然に入ります。押す種目だけだと、開いた位置がさらに固定されます。 3. 腕を頭の上まで上げる回数を増やす 一日のうち、腕を完全に上げる機会はほとんどありません。高い棚に手を伸ばす、伸びをする。それだけで違います。", "kokyu": "結論：吸えないのではなく、吐き切れていません 呼吸が浅いと感じると、多くの方は「もっと大きく吸おう」とします。ですが、吸えない原因は、前の息が残っていることにあります。 入る量を決めているのは、出した量です。 猫背では、肋骨が広がりません 呼吸は、横隔膜が下がり、肋骨が広がって空気が入ります。 背中が丸まって胸が閉じていると、肋骨が動ける範囲が狭くなります。入れ物が広がらないので、深く吸えません。 そのぶん回数を増やして補うので、浅く速い呼吸になります。 デスクワークで一日中丸まっている方が「息が浅い」と感じるのは、これが理由です。 深呼吸を頑張ることではありません 大きく吸おうとすると、肩が上がります。首まわりの筋肉を使って、無理やり胸を持ち上げる形です。 これは深い呼吸ではなく、首で吸っている状態です。首と肩が疲れるだけで、量は増えません。 やることは逆で、まず吐き切ることです。 やること 1. 息を、最後まで吐き切る 口から細く、これ以上出ないところまで吐きます。吐き切ると、吸うのは勝手に起きます。 意識するのは吐くほうだけで構いません。 2. 座り方を直す 胸が閉じたままでは広がりません。坐骨で座り、画面の高さを上げる。呼吸の前に、入れ物の形を整えます。 3. 鼻から吸う 口呼吸は浅く速くなりがちです。鼻から吸って、口から長く吐く。 これを1日に数回、思い出したときにやってください。", "knee-in": "結論：膝の向きは、お尻と足裏が決めています しゃがんだとき、階段を降りるとき、膝が内側に入る。膝そのものが悪いわけではありません。 膝は、上の股関節と下の足首に挟まれた関節です。 向きは、その上下が決めています。 お尻の横の筋肉が、脚を外に保っています 太ももの骨は、股関節から下に伸びています。この骨を外向きに保っているのが、お尻の横にある筋肉です。 ここが働かないと、体重がかかった瞬間に太ももが内側に倒れます。膝は骨のつなぎ目なので、上が倒れれば一緒に内に入ります。 足裏も関わります。土踏まずがつぶれると、すねが内にねじれ、膝も内に入ります。 上と下、両方から挟まれている状態です。 膝を意識しても、直りません 「膝を外に」と意識すると、その場では直ります。ですが、力を抜いた瞬間や、疲れた終盤には戻ります。 膝には、自分を外に開く筋肉がありません。指示を出す先が違います。 出すならお尻と足裏です。 やること 1. つま先と膝の向きを、そろえる しゃがむとき、膝がつま先と同じ方向を向いているか見てください。鏡か、動画で撮るのが確実です。 2. お尻の横を使う種目を入れる 片脚で立つ、横に踏み出す。日常なら、階段を一段ずつ、まっすぐ上ることでも使えます。 3. 階段を降りるときに気をつける 降りる動作は、上る動作より膝の負担が大きい。内に入りやすいのも降りるときです。 手すりを使い、ゆっくり降りてください。 膝に痛みや腫れ、引っかかりがあるときは、まず医療機関で診てもらってください。そのうえでの動作の直し方については、トレーナーにご相談ください。", "ashiura": "結論：足裏の疲れは、地面と体の間の設定の問題です 足裏は、体のいちばん下で全体重を受けています。ここの設定が合っていないと、上のすべてに影響します。 疲れやすい足裏は、足そのものが弱いというより、条件が合っていないことが多いです。 土踏まずは、バネです 足の裏には、縦と横にアーチがあります。この形が、着地の衝撃を受け止めて、次の一歩に返しています。 アーチが落ちると、衝撃はそのまま脛と膝に伝わります。足裏の筋肉も、形を保とうとして働き続けます。休む時間がないので、疲れが抜けません。 長く立つ日、歩く日ほど、この差がはっきり出ます。 インソールだけでは、解決しません インソールは有効です。落ちたアーチを外から支えてくれます。 ただ、支えられている間、足裏の筋肉は仕事をしません。 支えを外したときの状態は変わらないままです。道具で楽にしながら、足自身も使っておく必要があります。 やること 1. 靴を見直す かかとがぐらつく靴、底が薄すぎる靴、サイズが大きい靴。どれも足裏の仕事を増やします。 かかとが固定される靴を選んでください。 2. 足の指を使う 床でタオルを足指で手繰り寄せる、指をグーパーする。1日1〜2分で構いません。足指が使えると、アーチが保ちやすくなります。 3. 左右の立ち方の差を見る いつも同じ側に体重を乗せていないか。靴底の減り方を見ると分かります。 左右で違えば、立ち方に癖があります。", "hie": "結論：熱を作る量と、運ぶ力の両方が足りていません 冷えは、外が寒いから起きるだけではありません。体の中で熱が作られる量と、それを手足まで運ぶ力の、どちらかが落ちると起きます。 温めるだけの対処が続かないのは、作る側と運ぶ側が変わっていないからです。 熱を作るのは、主に筋肉です 体の熱の多くは、筋肉が作っています。筋肉量が少ないほど、じっとしているときに作られる熱が少なくなります。 運ぶのは血液です。心臓から送られた血は、ふくらはぎの筋肉がポンプになって戻されます。 座りっぱなしでこのポンプが動かないと、末端まで巡りにくくなります。 冷えやすい方に、筋肉量が少なく、座っている時間が長い方が多いのは、この2つが重なるためです。 温めるだけでは、外した瞬間に戻ります カイロ、靴下、湯たんぽ。どれも助けになります。ただ、外からもらった熱は、外せば無くなります。 減らしたいのは、外からの熱に頼る度合いです。そのためには、作る量と運ぶ力を上げるしかありません。 やること 1. ふくらはぎを、こまめに動かす 座ったまま、かかとを上げ下げする。1時間に20回で十分です。 血を戻すポンプを動かすことが目的です。 2. 週2回、下半身の筋トレを入れる 大きい筋肉は脚にあります。ここを増やすのが、熱を作る量を上げるいちばん早い方法です。 3. 食事量を減らしすぎない 食べる量を極端に落とすと、体は熱を作るのを節約します。減量中に急に冷えるようになったら、減らしすぎのサインです。", "tachishigoto": "結論：立ちっぱなしは、座りっぱなしと同じ「固定」です 「座りすぎは体に悪い」と聞いて、立って仕事をする方が増えました。ただ、立ち続けることも、動いていない点では同じです。 体が嫌がっているのは、姿勢の種類ではなく、固定されることのほうです。 動かない脚では、血が戻りません 立っている間、血液は重力で下に溜まります。それを戻しているのが、ふくらはぎの筋肉のポンプです。 歩いていればポンプは動きます。ですが、同じ場所に立ち続けると、脚の筋肉は支えるだけで、縮んだり緩んだりしません。 ポンプが止まり、血と水分が下に溜まります。 夕方に脚が重くなる、靴がきつくなるのは、これが理由です。 立っている＝運動ではありません 立ち仕事の方から「一日中動いているから運動は足りている」と言われることがあります。 移動を伴う立ち仕事なら、確かに歩数は稼げます。ですが、同じ場所に立っているだけの時間は、消費も刺激もほとんどありません。 疲れているのに運動にはなっていない、という状態が起こります。 やること 1. 重心を、こまめに移す 左右に体重を移す、前後に揺れる。その場で足踏みできるなら、いちばん効きます。 2. 片足を、少し高い場所に乗せる 低い台や棚のふちに片足を乗せると、骨盤の角度が変わり、腰の負担が減ります。数分ごとに左右を入れ替えてください。 3. 休憩中に、かかとを上げ下げする 座って休むより、ふくらはぎを動かすほうが脚は軽くなります。 20回ほどで変わります。", "onaka-mie": "結論：お腹の出方の一部は、脂肪ではなく骨盤の角度です 体重は落ちたのに、お腹だけ出て見える。その一部は、脂肪ではなく立ち方で説明がつきます。 同じ体で、立ち方を変えるだけで見え方が変わります。 骨盤が前に傾くと、内臓が前に出ます 骨盤が前に強く傾くと、腰の反りが深くなります。このとき、骨盤という器が前に傾いた形になるので、中にある内臓が前下方に押し出されます。 同時に、お腹の前側の筋肉は伸ばされたままになり、支える力が働きません。結果として、下腹が前に出た形で固定されます。 脂肪が同じでも、この角度が違えば見た目は変わります。 腹筋運動を増やしても、変わりません 上体を起こす腹筋運動は、お腹の前側を縮める運動です。反りが強い方がこれを増やしても、骨盤の角度は変わりません。 変えたいのは、力の入れ方と立ち方のほうです。 やること 1. 立つとき、肋骨を下げる 胸を張りすぎると、肋骨が持ち上がって腰が反ります。息を吐きながら、肋骨をお腹の上に乗せる位置を探してください。それが真ん中です。 2. 息を吐き切って、お腹に力が入る感覚を覚える 最後まで吐くと、お腹の奥に自然と力が入ります。この力が、内臓を支えます。力み続ける必要はありません。 3. 体重ではなく、鏡と写真で判断する 見た目の変化は、体重計には出ません。同じ場所・同じ時間・同じ服で、月に1度撮っておいてください。", "suimin": "結論：寝つきは、布団に入る3時間前に決まっています 寝つけないとき、布団の中で何とかしようとしても、ほとんど何もできません。眠りに入れるかどうかは、その日の夕方から夜にかけての過ごし方でほぼ決まっているからです。 変えるのは、寝る瞬間ではなく、その手前です。 人は、体温が下がるときに眠くなります 眠気は「体の内側の温度が下がっていく過程」で強くなります。上がりきったところから下る、その落差が大きいほど深く入れます。 だから入浴が効きます。一度しっかり体温を上げておくと、そのあとの下がり方が急になるからです。逆に、寝る直前に熱い風呂に入ると、体温が高いままで寝つけません。 もうひとつが光です。夜に強い光を浴びると、体は「まだ昼だ」と判断して、眠りに向かう準備を止めます。天井の照明とスマホの画面は、体にとっては夕方の空と同じです。 カフェインも見落とされがちです。効果が半分になるまでにおよそ4〜6時間かかるので、夕方の1杯は就寝時にまだ半分残っています。 寝酒は、寝つきだけを良くして睡眠を壊します アルコールを飲むと、たしかに早く眠れます。ここで多くの方が「自分には効く」と判断します。 ただし壊れているのは後半です。アルコールが分解される過程で眠りが浅くなり、夜中に目が覚めやすくなる。寝つきが良くなった分を、朝方に返しているような状態です。 「早く寝ようと、いつもより早く布団に入る」のも逆効果になりがちです。眠くない時間に横になると、布団の中で考えごとをする時間が伸び、体が「布団＝考える場所」と覚えてしまいます。 寝つきが悪いなら、早く入るのではなく、眠くなるまで入らないほうが早く解決します。 やること 1. 入浴を就寝の90分前に済ませる 湯船に10〜15分。上がってから体温が下がってくるタイミングで布団に入ると、そのまま入れます。 2. 寝る1時間前に、部屋を暗くする 天井の照明を消して、手元の明かりだけにしてください。スマホを見るなとまでは言いません。ただし部屋の明るさを落とすだけで、眠気の来方が変わります。 3. カフェインは午後2時まで コーヒー、緑茶、エナジードリンク。夕方以降に飲んでいる方は、まずここを止めてみてください。1週間で違いが出ます。 大きないびきや呼吸の止まり、日中に耐えがたい眠気がある場合は、生活の工夫では解決しません。睡眠の専門外来で相談してください。それ以外の寝つきや生活の整え方については、トレーナーにもご相談ください。", "atama": "結論：疑うのは、画面との距離と、浅くなった呼吸です 夕方になると頭が重い。目の奥が押されるように痛い。この訴えの多くは、目そのものではなく、目を使うときの体の使い方から来ています。 見るべきは画面の位置と、その前での過ごし方です。 集中している間、人は呼吸を止めています 画面に集中しているとき、体では3つのことが同時に起きています。 ひとつ目は、まばたきの減少です。集中すると回数が大きく減り、目の表面が乾きます。 ふたつ目は、ピント調節の固定です。同じ距離を見続けると、ピントを合わせる筋肉が緊張したまま休めません。近い距離を見続けるほど、この筋肉は働き続けます。 3つ目が呼吸です。前かがみで集中していると、胸が広がりにくくなり、呼吸が浅く速くなります。呼吸が浅いと首まわりの筋肉が補助的に働き続け、その緊張が後頭部から目の奥にかけての重さにつながります。 つまり、目が疲れているというより、目と首と呼吸がまとめて固まっている状態です。 目薬と鎮痛薬で乗り切っていると、原因が見えなくなります つらいときに薬を使うのは構いません。問題は、それで乗り切れてしまうことです。 対処ができると、原因を探さなくなります。そして「夕方に頭が重いのはいつものこと」になり、環境は何年も変わらないまま残ります。頻度が上がっていることにも気づきにくくなります。 回数が増えているなら、それは効いていない証拠だと考えてください。 やること 1. 20分ごとに、遠くを見る 窓の外でも廊下の奥でも構いません。数秒で十分です。ピントを合わせる筋肉に、緩む瞬間を作ることが目的です。 2. 画面を目線の高さに上げる 画面が低いと、見下ろす姿勢になり、頭が前に出ます。首の負担と目の負担は同じ原因から出ていることが多いので、ここは一度に両方効きます。 3. 1時間に一度、深く息を吐く 吸うほうではなく、吐くほうを長く。数回で構いません。浅い呼吸のまま何時間も過ごしていることに気づくだけでも変わります。 突然の激しい頭痛、手足のしびれ、ろれつが回らない、物が二重に見えるといった症状を伴う場合は、すぐに医療機関を受診してください。いつもと違う痛み方は、様子を見ないでください。それ以外の重さや目の疲れ、姿勢との関係については、トレーナーにご相談ください。", "yonaka": "結論：目が覚めること自体は、異常ではありません 夜中に一度も目を覚まさない人のほうが、実は少数です。問題は目が覚めることではなく、そこから戻れないことです。 戻れない理由は、たいてい目が覚めたあとの行動にあります。 眠りは、90分ほどで浅くなります 睡眠は、深い眠りと浅い眠りをおよそ90分周期で繰り返します。浅くなったタイミングでは、物音や寝返りで簡単に目が覚めます。 これは設計どおりの動きです。 覚めても数分で戻れていれば、翌朝には覚えてすらいません。 問題になるのは、覚めた瞬間に頭が働き始めたときです。時計を見て残り時間を計算し、「あと4時間しかない」と焦る。焦りは覚醒を強めるので、そこから戻れなくなります。 「眠らなければ」と考えるほど、遠ざかります 眠りは、力を抜いたときに来ます。がんばって取りにいく行為とは相性が悪い。 目を閉じて必死に眠ろうとしている状態は、体としては起きて作業している状態に近い。眠ろうとする努力そのものが、覚醒を保っています。 やること 1. 時計を見ない これがいちばん効きます。残り時間を知った瞬間に、計算が始まります。 スマホは手の届かない場所に置いてください。 2. 起きても、明かりをつけない トイレに行くときも、できるだけ暗いままで。強い光を浴びると、体は朝が来たと判断します。 3. 寝る前の水分とお酒を減らす 夜中に起きる原因の多くはトイレです。就寝の2時間前から水分を控え、お酒は利尿作用があるので、量と時間を見直してください。", "nidone": "結論：寝過ぎた朝がだるいのは、体内時計がずれるからです たくさん寝たのに、いつもより体が重い。よくあることです。 長く寝たことが問題なのではなく、起きる時刻がずれたことが問題です。 体は、起きる時刻を基準に準備しています 体内時計は、毎日ほぼ同じ時刻に「起きる準備」を始めます。体温を上げ、血圧を上げ、目覚めのホルモンを出す。この準備は、いつもの起床時刻に合わせて行われます。 そこで2時間長く寝ると、準備が終わったあとに、もう一度深い眠りに入ることになります。 深い眠りの途中で起きるので、だるさが強く出ます。 時差ぼけと同じ状態が、自分の寝室で起きているわけです。 長く寝るほど回復する、ではありません 睡眠は貯められません。足りない分を後から補うことはある程度できますが、余分に寝た分が翌週の貯金になることはありません。 週末に10時間寝ても、月曜からの睡眠不足は防げません。防げるのは、平日の側だけです。 やること 1. 起きる時刻を、平日と休日でそろえる ずれは2時間以内に収めてください。これだけで月曜の朝が変わります。 2. 二度寝は、20分まで 短ければ深い眠りに入りません。アラームを2回かけず、20分後に一度だけ鳴らしてください。 3. 足りないなら、夜を早める 朝を遅らせるのではなく、夜を早める。同じ7時間でも、体への負担がまったく違います。", "nemae-sumaho": "結論：光より、終わりがないことのほうが問題です 寝る前のスマホは、ブルーライトの話として語られがちです。それも一因ですが、もっと効いているのは、終わりが来ない設計のほうです。 次が自動で始まる仕組みになっています 動画もSNSも、一つ終わると次が自動で始まります。区切りが来ないので、やめる判断を毎回自分で下すことになります。 疲れた夜に、その判断は続きません。「あと1本」を10回繰り返すのは、意志が弱いからではなく、そう作られているからです。 加えて、内容そのものが頭を働かせます。気になる情報、他人の投稿、仕事の連絡。光を消しても、頭は起きたままです。 ナイトモードにすれば大丈夫、ではありません 画面を暖色にすれば、光の刺激は減ります。ただ、見ている内容と、続いてしまう仕組みは変わりません。 対策として弱いのは、原因の一部にしか手を打っていないからです。 やること 1. 置く場所を、手の届かないところに変える 充電器をベッドから離した位置に移すだけで、寝床に持ち込む回数が減ります。いちばん確実な方法です。 2. 終わりを、自分で決めておく 「23時になったら置く」ではなく、「この1本を見たら置く」。時刻より、区切りのほうが守れます。 3. 代わりにやることを用意する やめるだけだと手持ち無沙汰になり、また手が伸びます。紙の本、ストレッチ、翌日の準備。何でも構いません。", "caffeine": "結論：カフェインは、半分消えるのに5〜6時間かかります コーヒーを飲んで眠れなくなる人と、平気な人がいます。ただ、「平気」と感じている人も、眠りの深さは影響を受けています。 眠気の信号を、ふさいでいます 起きている間、脳には眠気を伝える物質がたまり続けます。これが一定量を超えると、眠くなります。 カフェインは、この物質が受け取られる場所に先回りして座ります。眠気そのものは消えていません。信号が届かなくなっているだけです。 そしてカフェインは、体内で半分に減るまでに5〜6時間かかります。15時のコーヒーは、21時にまだ半分残っています。 「寝られるから効いていない」ではありません カフェインを飲んでも寝られる方はいます。ですが調べると、深い眠りの割合が減っていることが分かっています。 寝つけるかどうかと、眠りの質は別です。「朝すっきりしない」の原因が、前日の夕方の1杯ということは珍しくありません。 やること 1. 14時以降は、カフェインを入れない 23時に寝るなら、14時が目安です。 ここを守るだけで、寝つきと深さが変わります。 2. 一日の杯数を数える コーヒーだけでなく、緑茶、紅茶、エナジードリンク、一部の栄養ドリンクにも入っています。合計で見てください。 3. 午後の一杯を、置き換える 麦茶、ルイボスティー、炭酸水、白湯。「何か飲む」習慣は残したまま、中身だけ変えるのがいちばん続きます。", "nezake": "結論：お酒は寝つきを良くして、眠りを浅くします 「飲まないと眠れない」という方は多いです。寝つきが良くなるのは本当です。 ただし、そのあとが崩れます。 前半は深く、後半が壊れます アルコールが入ると、脳の働きが抑えられ、寝つきは早くなります。前半の眠りも一時的に深くなります。 問題は後半です。アルコールが分解される過程で、体は覚醒の方向に振れます。 夜中の2時、3時に目が覚めるのはこのためです。 さらに、夢を見る浅い眠り（レム睡眠）が減ります。この眠りは、記憶の整理と気分の回復に関わっています。時間は寝ているのに疲れが抜けない、という状態になります。 寝酒は、睡眠薬の代わりになりません 寝つきの改善だけを見ると、効いているように見えます。ですが、眠りの後半を犠牲にして前半を買っているのが実態です。 しかも、慣れると同じ量では寝つけなくなり、量が増えていきます。ここが、いちばん困る点です。 やること 1. 就寝の3時間前までに、飲み終える 分解の時間を確保できると、後半の乱れが小さくなります。遅い時間の一杯ほど、影響が大きい。 2. 量を、日常の範囲に収める 多いほど後半が崩れます。「寝るために飲む一杯」だけは、やめてください。 そこが増え始める入口です。 3. お酒と同量の水を、間に挟む 利尿作用で夜中のトイレが増えます。水を挟むと、この分がいくらか減ります。", "suimin-jikan": "結論：時間の数字より、翌日の眠気で判断してください 「何時間寝ればいいですか」とよく聞かれます。統計上は7時間前後が多いのですが、個人差があり、数字だけを追う意味はあまりありません。 見るべき指標は、別にあります。 足りているかは、日中に出ます 睡眠が足りているかどうかは、日中に眠くならないかで判断できます。 昼食後に少し眠くなるのは自然な反応です。ですが、会議中に意識が飛ぶ、電車で必ず寝てしまう、休日は昼まで寝てしまう。これらが揃うなら、平日の睡眠が足りていません。 必要な時間は、季節や運動量、ストレスによっても変わります。固定の数字ではなく、その時期の自分の反応を見てください。 ショートスリーパーには、なれません 短い睡眠で足りる体質の人は実在しますが、遺伝的な要素が大きく、割合はごくわずかです。訓練で身につくものではありません。 短時間で慣れたと感じるのは、眠気に鈍くなっただけということがほとんどです。判断力や食欲のコントロールは、落ちたままです。 やること 1. 起きる時刻を固定して、そこから逆算する 寝る時刻をそろえるより、起きる時刻をそろえるほうが体は安定します。 必要な時間を逆算して、就寝時刻を決めてください。 2. 2週間、30分だけ早く寝てみる いま足りているか分からないなら、30分増やして日中の眠気が変わるかを見ます。 変われば足りていなかったということです。 3. 記録して、比べる 寝た時間と、翌日の眠気を数字で残す。1週間分並べると、自分に必要な時間が見えてきます。", "nedame": "結論：寝だめは、借金の返済にはなっても、貯金にはなりません 平日に足りない分を、休日にまとめて寝る。ある程度は取り返せます。 ただし、次の週のために貯めることはできません。 そして、取り返し方を間違えると、月曜がさらにつらくなります。 起床時刻がずれると、時差ぼけが起きます 平日は7時、休日は11時。この4時間の差は、体にとっては4時間の時差がある土地に飛んだのと同じです。 日曜の夜に眠れなくなり、月曜の朝が起きられない。これは「休みボケ」ではなく、体内時計が実際にずれた結果です。 しかも、この時差は毎週繰り返されます。週末ごとに海外に行って帰ってくるような負担が、毎週かかっています。 休日に長く寝れば取り戻せる、ではありません 睡眠不足による判断力や代謝の低下は、一晩長く寝ただけでは完全には戻らないことが分かっています。 足りない分は、その週のうちに埋めるのがいちばん効率的です。 週末にまとめる方式は、効率が悪いうえに時差を生みます。 やること 1. 起床時刻のずれは、2時間以内に収める 平日7時なら、休日は9時まで。この範囲なら、体内時計はほとんどずれません。 2. 足りない分は、昼寝で補う 朝はいつも通り起きて、午後に20分の昼寝を入れる。夜の睡眠を乱さずに補えます。 3. 平日の就寝を、15分ずつ早める 一気に変えると続きません。15分なら、たいてい気づかないうちに定着します。", "hirune": "結論：20分まで。それを超えると、夜に響きます 昼寝は、うまく使えば午後の効率が上がります。ただし、長さと時刻を間違えると、その日の夜を壊します。 境目ははっきりしています。 20分を超えると、深い眠りに入ります 眠り始めてから20〜30分ほどで、体は深い眠りに入ります。 深い眠りの途中で起こされると、起きたあと1時間近く、頭がぼんやりしたままになります。 昼寝したのに午後がつらい、というのはこの状態です。 さらに、日中に深い眠りを取ると、夜に必要な深い眠りが前借りされます。夜の寝つきが悪くなるのは、これが理由です。 長く寝るほど回復する、ではありません 疲れているときほど、長く寝たくなります。ですが昼寝に関しては、短いほうが効果が高いことが分かっています。 狙うのは、深い眠りに入る手前で切り上げることです。 やること 1. 20分でアラームをかける 寝つくまでの時間を含めて、25分後に鳴らすくらいでちょうどいい。 起きられないなら、それは夜の睡眠が足りていません。 2. 15時までに済ませる 夕方の仮眠は、夜の寝つきに直接響きます。 15時を過ぎたら、我慢して夜に回してください。 3. 横にならず、座ったまま寝る 椅子で背もたれに預ける、机に伏せる。深く入りすぎないので、起きやすくなります。", "shinshitsu": "結論：眠りは、体温が下がるときに深くなります 寝つきが悪い方の相談を聞くと、寝室の条件が合っていないことがよくあります。温度と光は、自分の努力より確実に効きます。 深部体温が下がると、眠くなります 体の内側の温度は、一日の中で上下します。夕方に最も高く、そこから下がり始め、下がる勢いが大きいほど深く眠れます。 部屋が暑いと、体は熱を逃がせず、内側の温度が下がりません。眠りが浅くなり、夜中に目が覚めます。 光も同じ方向に働きます。目に強い光が入ると、体は「まだ昼だ」と判断して、眠りの準備を止めます。 豆電球でも、影響を受ける方はいます。 厚着して温める、ではありません 「体を温めると眠れる」と言われますが、正確には手足から熱を逃がすことで、内側の温度が下がるのが眠りの合図です。 靴下を履いて足を締めつけると、逃がすはずの熱が逃げません。温めるのは、寝る前の入浴までです。 やること 1. 夏は26〜28度、冬は18〜20度を目安にする 朝までつけたままで構いません。 途中で切れて暑くなるほうが、眠りは崩れます。 2. できるだけ暗くする 遮光カーテン、常夜灯を消す、充電ランプを隠す。暗いほど深くなります。 3. 入浴は、寝る90分前に 湯船で上がった体温が、90分ほどかけて下がります。その下がるタイミングで布団に入ると、寝つきが早くなります。", "nemae-shokuji": "結論：寝る直前の食事は、体が休む時間を削ります 遅い時間に食べると太る、とよく言われます。時間そのものより、睡眠が浅くなることのほうが大きな問題です。 消化している間、体は休めません 食べたものを消化する間、内臓は働き続けます。このとき体の内側の温度は下がりにくくなります。 眠りが深くなるのは、内側の温度が下がるときです。消化が続いていると、この下降が邪魔されます。 寝つけても浅く、朝に疲れが残ります。 さらに、脂質の多い食事ほど消化に時間がかかります。揚げ物やラーメンを食べてすぐ寝た翌朝が重いのは、これが理由です。 空腹で寝れば痩せる、ではありません 逆に、我慢して何も食べずに寝ると、空腹で目が覚めることがあります。眠りが浅くなれば、翌日の食欲が増えます。 結果として食べる量は増えます。 極端に振らず、量と中身を調整するほうが現実的です。 やること 1. 就寝の3時間前までに、食べ終える 23時に寝るなら20時まで。これが守れる日は、これで構いません。 2. 遅くなる日は、二回に分ける 夕方におにぎりやサンドイッチなどを入れておき、帰宅後は汁物と主菜だけにする。 量を分けると、寝る前が軽くなります。 3. 遅い日ほど、脂を減らす 同じカロリーでも、脂質が多いほど消化に時間がかかります。遅くなった日は、揚げ物を避けてください。", "asahi": "結論：夜の眠りは、朝の光で決まります 寝つきが悪いとき、多くの方は夜の過ごし方を変えようとします。ですが、いちばん効くのは朝の行動です。 眠りの準備は、起きた瞬間から始まっています。 光を浴びた14〜16時間後に、眠くなります 朝、目に光が入ると、体内時計がその時刻を「一日の始まり」として設定します。 そこから14〜16時間後に、眠りを促すホルモンが出始めます。7時に光を浴びれば、21時から23時ごろに眠気が来る計算です。 逆に、カーテンを閉めたまま起きて、光を浴びるのが10時になれば、眠気が来るのは深夜になります。夜眠れないのは、朝が遅かったからということが起こります。 夜だけ工夫しても、足りません 寝る前にスマホをやめ、部屋を暗くする。どれも有効です。ただ、そもそもの起点がずれていれば、夜だけ整えても間に合いません。 順番としては、朝が先です。 やること 1. 起きて30分以内に、光を浴びる カーテンを開けて、窓際で数分。それだけで構いません。ベランダに出られるなら、なお良い。 2. 曇りでも、外の光を使う 曇りの日の屋外でも、室内の照明よりはるかに明るい。天気に関係なく、外に出て、空のほうを向いてください。 3. 起床時刻を、毎日そろえる 光を浴びる時刻がそろうと、眠気が来る時刻もそろいます。これが、寝つきを整えるいちばん確実な方法です。", "undo-timing": "結論：運動は眠りを深くします。ただし直前は逆です 運動している方のほうが、深い眠りが多いことは分かっています。トレーニングは、睡眠に対しても効きます。 ただし、やる時刻によって結果が変わります。 上がった体温が下がるときに、眠くなります 運動すると、体の内側の温度が上がります。そして運動をやめると、時間をかけて下がっていきます。 この下がるタイミングで布団に入ると、寝つきが早く、眠りが深くなります。夕方から夜の早い時間の運動が良いとされるのは、この下降が就寝時刻に重なるからです。 逆に、就寝の直前に強い運動をすると、体温も心拍も上がったまま布団に入ることになります。眠りの準備と逆の状態です。 夜遅くても同じ、ではありません 「運動しているのに眠れない」という方は、時刻を確認してみてください。22時にトレーニングを終えて23時に寝ようとすれば、体はまだ上がっている途中です。 強度が高いほど、この影響は長く残ります。 やること 1. 就寝の3時間前までに、終える 23時に寝るなら20時まで。下がる時間を確保してください。 2. 夕方に動けるなら、そこが最適 16時から19時ごろは、体温が高く力も出やすい時間帯です。眠りへの効果も、この時間がいちばん出ます。 3. 遅い時間しか取れないなら、強度を下げる 夜しか時間がない方は、その日は軽めにするか、有酸素を短めに。 続けることのほうが優先です。", "suiminbusoku-shokuyoku": "結論：寝不足の日に食べすぎるのは、意志の問題ではありません 睡眠が足りない日ほど、甘いものや脂っこいものが欲しくなる。これは体の仕組みとして、そうなります。 責める場所を間違えると、対策も間違えます。 食欲のホルモンが、両方とも悪い方に振れます 睡眠が不足すると、食欲を強めるホルモンが増え、食欲を抑えるホルモンが減ります。アクセルが強くなり、ブレーキが弱くなるという状態です。 さらに、判断を担う脳の働きが落ち、目の前の報酬を選びやすくなります。 高カロリーのものが特に魅力的に見えるのは、このためです。 研究では、睡眠不足の日は摂取カロリーが数百kcal増えることが繰り返し確認されています。 意志が弱いから、ではありません 「昨日は我慢できなかった」と落ち込む方が多いのですが、同じ条件なら誰でも同じように振れます。 反省で解決する問題ではありません。寝る時間を確保することが、いちばん強い食欲対策です。 やること 1. 寝不足の日は、買い物に行かない 判断が甘くなっているときに売り場に立つのは、いちばん不利な戦い方です。 買い置きがあれば、それで済ませてください。 2. たんぱく質を先に食べる 満腹を感じやすくなります。寝不足の日ほど、最初の一口を肉・魚・卵にしてください。 3. その日は、早く寝ることを優先する 食事を我慢するより効きます。30分早く寝るだけで、翌日の食欲が変わります。", "ibiki": "結論：いびきは、空気の通り道が狭くなっているサインです いびきは、疲れているから出るのではありません。寝ている間に、喉の空気の通り道が狭くなり、そこを空気が通るときの振動音です。 音そのものより、狭くなっていることのほうが問題です。 仰向けと体重と鼻づまりが、通り道を狭くします 眠ると、喉まわりの筋肉がゆるみます。仰向けでは、舌の付け根が重力で落ちて、通り道をふさぎます。 首まわりに脂肪がつくと、外からも押されて狭くなります。体重が増えたタイミングでいびきが始まる方が多いのは、このためです。 鼻がつまっていると口で呼吸することになり、口が開くと顎が下がって、さらに狭くなります。この3つが重なると、いびきは大きくなります。 疲れているからいびきをかく、ではありません 「疲れた日はいびきがひどい」というのは、お酒を飲んだ日や、深く眠った日に筋肉がよりゆるむためです。原因は疲れではなく、構造のほうにあります。 通り道の狭さが変わらない限り、休んでも無くなりません。 やること 1. 横向きで寝る いちばん手軽で、効果もはっきりしています。 抱き枕を使うと、仰向けに戻りにくくなります。 2. 鼻で呼吸できる状態にする 鼻がつまっていると口が開きます。慢性的な鼻づまりは、耳鼻科で相談してください。 3. 体重を見直す 首まわりの脂肪が減ると、通り道が広がります。いびきが体重の増減と連動している方は、ここが効きます。 寝ている間に呼吸が止まっていると指摘された、日中に強い眠気がある、朝に頭痛がある。この場合は睡眠時無呼吸の可能性があります。セルフケアの範囲ではありませんので、必ず医療機関で診てもらってください。", "nemurenai-yoru": "結論：眠れないままベッドにいると、ベッドが眠れない場所になります 眠れない夜、多くの方は「そのうち眠れるはず」と、そのまま横になっています。この時間が、いちばん状態を悪くします。 場所と状態は、結びつきます 体は、場所と状態を結びつけて覚えます。ベッドで毎晩すぐ眠っていれば、ベッドに入るだけで眠くなるようになります。 逆に、眠れないまま何時間も横になる夜が続くと、ベッドは「悶々とする場所」として覚えられます。 横になった瞬間に、頭が働き始めるようになる。 不眠が長引く方に共通して起きているのが、この結びつきの逆転です。 目を閉じて横になっていれば休まる、ではありません 「眠れなくても、横になっていれば体は休まる」と言われることがあります。多少はそのとおりです。 ただ、焦りながら横になっている時間は、休息にはなりません。 そして、その時間が長いほど、逆転の結びつきが強くなります。 天秤にかけると、一度出るほうが得です。 やること 1. 20分たっても眠れなければ、一度ベッドを出る 時計は見ずに、「だいぶ経ったな」と感じたら出てください。 それで十分です。 2. 暗い部屋で、静かに過ごす 明るい照明とスマホは避けてください。紙の本を薄明かりで読む程度が適しています。 眠気が来たら戻ります。 3. 起きる時刻だけは、変えない 眠れなかった翌朝も、いつもの時刻に起きる。ここを崩すと、次の夜も眠れなくなります。 その日は、昼寝で補ってください。", "kiroku": "結論：書くだけで、食べ方が変わります 何かひとつだけ習慣にするなら、記録です。運動でも、食材選びでもありません。 不思議に思われますが、記録には、記録する以外の効果があります。 それを狙って書いてもらっています。 見られている、と思った瞬間に選択が変わる 記録の本当の効果は、集計ではありません。食べる前に、一拍おく時間が生まれることです。 書くと決めていると、手に取った瞬間に「これを書くのか」と思います。そこで一度、選択が意識に上がります。無意識に口に入っていたものが、選んだものに変わる。 この一拍が、1日に何度も起きます。数字を計算するより、こちらのほうがはるかに効きます。 もうひとつ、自分の癖が見えます。疲れた日の夜に甘いものが増える、外食の翌日に朝食を抜いている、水曜だけ間食が多い。これは記録がなければ絶対に気づけません。 覚えていないからです。 自分では「たまに」だと思っていたことが、週3回だったと分かる。ここから対策が始まります。 記録は、反省するためのものではありません 多くの方が、書いたものを見て落ち込みます。そして落ち込むのが嫌で、書かなくなります。 これは使い方が違います。記録は次の判断のための材料であって、過去を裁くための証拠ではありません。 食べすぎた日の記録こそ、一番価値があります。何がきっかけだったのかが、そこに残っているからです。理由が分かれば、次に同じ場面が来たときに手が打てます。 きれいな記録に意味はありません。正直な記録に意味があります。 やること 1. 写真でいい 書くのが面倒なら、撮るだけで構いません。あとから見返せれば、目的は果たせます。 2. 食べる前に撮る 食べたあとではなく、前に。これで「一拍おく」効果が生まれます。撮り忘れたものは、それ自体が情報です。 3. 週に1回、まとめて見返す 毎日反省する必要はありません。週末に1週間分を並べて、気づいたことを1つ見つける。それだけで十分です。", "kiroku-yameru": "結論：完璧な記録より、続く記録です 3日空いた。1週間つけていない。そこで「もうダメだ」となって、そのまま終わる方がとても多いです。 空白があっても、記録は死んでいません。 落とすべきは記録そのものではなく、記録の精度のほうです。 記録が止まるのは、細かすぎるからです 続かなくなった方の記録を見せてもらうと、たいてい丁寧すぎます。 グラム数まで量り、調味料まで入力し、外食のときは推定値を調べる。最初の1週間は完璧で、2週目に止まっています。 例外なく、この形です。 理由は明快で、手間が効果を上回ったからです。記録の効果は、食べる前に一拍おくところにあります。その一拍のために、毎回5分かける必要はありません。 写真1枚でも一拍は生まれます。効果はほとんど同じで、手間は10分の1です。 止まったのは意志の問題ではなく、設計の問題です。 中断は、やり直しではありません ここが一番大事なところです。 1週間空いたあとに再開するとき、多くの方が「また最初から」と考えます。そして最初からやるのが億劫で、再開できなくなります。 空いた1週間は、失われていません。 その前の記録も、そこから見つけた自分の癖も、全部残っています。再開するのは続きからで構いません。 「完璧かゼロか」が、この方法論では最大の敵です。80点を続けた人が勝ちます。100点を狙って、外れた日にゼロにしてしまう人が負けます。 記録も同じです。7日のうち4日書けていれば、それは成功した週です。 やること 1. 項目を減らす グラム数をやめる。カロリー計算をやめる。写真だけにする。続く形まで削ってください。 2. 平日だけにする 週末は書かない、と決めてしまうのも手です。決めた上で書かないなら、それは中断ではありません。 3. 止まった理由を、一行だけ書く 忙しかった、面倒だった、見たくなかった。理由が分かれば、次に止まりにくい形に変えられます。ここだけは書いてください。", "kigen": "結論：終わりの日を、先に決めてください いつまでに、どうなっているか。ここが決まっていない減量は、ほぼ確実に緩みます。 「痩せるまで」は期限ではありません。 終わりが見えない状態を人は長く維持できません。 期限がないと、2つの壊れ方をします ひとつは、緩む壊れ方です。終わりがないので、今日一日くらい、が積み重なります。明確な締め切りがない仕事が進まないのと同じ構造です。 もうひとつは、その逆です。終わりがないまま、ずっと減量を続けてしまう。 こちらのほうが深刻です。 減量中の食事は、意図的に不足を作っている状態です。一時的だから成立します。それを何年も続ければ、代謝も、筋肉も、生活の楽しさも削れていきます。 痩せたけれど人生が貧しくなった、という結果を、この方法論では失敗として扱います。期限を切ることは、そこに落ちないための安全装置です。 「ダイエットはずっと続けるもの」ではありません 一生続ける前提で始めると、最初の1ヶ月から力が入りません。そして緩んだ状態が普通になります。 正しくはこうです。やると決めた期間は、必ずやる。達成したら、緩めていい。 3ヶ月と決めたなら、その3ヶ月は妥協しない。そのかわり、終わったら食事の自由度を戻します。ずっと80%の力で続けるより、はっきり区切ったほうが結果も出ますし、生活も守れます。 人生を楽しむことが最優先で、ダイエットはその下にあります。順番を入れ替えないでください。 やること 1. 終了日をカレンダーに書く 「3ヶ月後」ではなく、日付で書いてください。曖昧な期限は期限として働きません。 2. その日の目標を、体重以外でも置く 数字だけだと、達成しても実感が薄いことがあります。着たい服、撮りたい写真、続けられている行動。体重は目的ではなく、達成度を測る指標のひとつです。 3. 終了日が来たら、維持期の設計に移る 終わった瞬間に元の生活へ戻すと、元の体に戻ります。終わりの日は、次の設計を始める日でもあります。", "ijiki": "結論：減量期と維持期は、別の競技です 目標を達成したあと、多くの方が同じ失敗をします。減量のやり方をやめて、元の生活に戻す。 戻す先が間違っています。元の生活が、いまの体を作ったからです。 ルールが正反対になります 減量期にやっていたのは、意図的に不足を作ることです。摂る量より使う量を多くして、その差で脂肪を減らしていました。 維持期は違います。目指すのは均衡です。 摂る量と使う量を釣り合わせて、その状態を長く続ける。 やることが変わるのに、多くの方は「減量が終わった＝何もしなくていい」と考えます。ここで一気に戻すと、体重も一気に戻ります。しかも減量中に筋肉が少し落ちているので、同じ食事量でも、以前より太りやすくなっています。 戻すのは食事の量です。戻さないのは習慣のほうです。記録、選び方、トレーニング。この3つは維持期にも残してください。 リバウンドしても、失敗ではありません 先に書いておきます。維持期に戻ることはあります。それ自体は失敗ではありません。 大事なのは、「一度できた、こうやればできる」と分かっていることです。やり方を知っている人は、何度でも戻せます。知らない人は、また一からになります。 その意味で、減量期に身につけたノウハウこそが本当の資産です。体重は副産物にすぎません。 いつでも使える状態にしておくこと。 これが維持期の本当の目的です。 やること 1. 食事は、少しずつ戻す 一気に戻さないでください。1〜2週間ごとに少しずつ増やして、体重の動きを見ながら着地点を探します。 2. 上限のラインを決めておく ここまで増えたら戻す、という数字を1つ決めてください。2〜3kgが目安です。 ラインがあると、早い段階で気づけます。5kg増えてから気づくと、もう一度減量期が必要になります。 3. 記録は週1に落として、続ける 毎日でなくて構いません。ただしゼロにしないでください。測っていない期間が、一番戻ります。", "hachijitten": "結論：完璧かゼロか、という考え方が最大の敵です 減量でつまずく人の共通点は、意志の弱さではありません。基準の高さです。 100点を狙って、外れた日にゼロにしてしまう。この落ち方が、一番よく見る失敗です。 崩れるのは、失敗した瞬間ではありません 食べすぎた。トレーニングを1回休んだ。記録が3日空いた。 ここまでは、まだ何も起きていません。 3ヶ月の中の1日、24回のうちの1回、90日のうちの3日です。数字にすればごくわずかで、結果にはほとんど影響しません。 崩れるのは、そのあとです。「もう今週はダメだ」と決めた瞬間に、残りの6日が失われます。「今月はもういいや」と決めれば、25日が失われる。 失敗そのものより、失敗を理由に諦めることのほうが、はるかに高くつきます。 80点の日が続いた人と、100点と0点を繰り返した人では、3ヶ月後の合計がまったく違います。 「中途半端にやっても意味がない」ではありません これは、多くの方が本気で信じている考えです。そして最も損をしている考えでもあります。 減量は積み上げです。60点の日にも、60点分の価値があります。 ゼロの日だけが、ゼロです。 外食した日に「もう崩れたから」と好きなだけ食べるのと、外食はしたが翌日から戻すのとでは、1週間の合計が変わります。やりきれなかった日をどう扱うかが、実力です。 完璧にやることが目的ではありません。続けることが目的です。 やること 1. 「今日は何点だったか」で考える できた・できなかった、の2択をやめてください。70点の日を70点として数えます。 2. 崩れた日の翌日を、決めておく 食べすぎたら翌朝はいつも通り食べる。休んだら次の予定を先に入れる。戻る手順を先に決めておくと、迷わずに済みます。 3. 週単位で振り返る 1日で評価しないでください。7日のうち5日できていれば、それは成功した週です。", "rebound": "結論：一度できた、という事実のほうが資産です 過去にダイエットに成功して、戻ってしまった。その経験を「失敗した過去」として持っている方が多いです。 捉え方が逆です。 一度落とせたなら、あなたはやり方を知っています。 知っている人と、知らない人の差は大きい 何をどれくらい食べれば体重が動くのか。自分がどこでつまずくのか。どういう状況で食べすぎるのか。 一度やり切った人は、これを体で知っています。 初めての人が3ヶ月かけて掴むものを、すでに持っている状態です。 戻ってしまったのは、維持期の設計がなかったからです。減量のやり方は正しく、終わったあとの設計だけが抜けていた。手順の一部が欠けていただけで、全部が間違っていたわけではありません。 だから2回目は速いです。実際、2度目の方のほうが立ち上がりは早い。何をすればいいか分かっているからです。 自己嫌悪は、燃料になりません 戻った自分を責める気持ちは分かります。ただし、それは何の役にも立ちません。 責めている間は、行動が止まります。 そして止まっている間に、さらに戻ります。落ち込みが結果を悪くして、悪くなった結果がまた落ち込みを呼ぶ。この循環に入るのが、リバウンドの本当の害です。 体重が戻ったこと自体は、数字が動いただけです。やり方を忘れていない限り、失ったものはありません。 大事なのは、そのノウハウをいつでも使える状態にしておくことです。 やること 1. 前回うまくいった行動を、3つ書き出す 何が効いたのかを思い出してください。それが今回の出発点になります。 2. 前回崩れたきっかけを、1つ書く 多くの場合、崩れ方には型があります。同じ場面が来たときの手を、先に決めておけます。 3. 今回は、終わったあとの設計まで作る 減量の計画だけでは足りません。終わった日から何をするかまでを、最初に決めてください。", "sengen": "結論：言ったほうが、続きます 黙って始めて、痩せてから驚かせたい。よく聞く気持ちです。 ただし黙っている間は、周りは何も知りません。 知らない人は、あなたのために何もしてくれません。 宣言には3つの働きがあります ひとつ目は、断る理由になること。 「いま食事を気をつけていて」と一言あるだけで、二軒目の誘いも、差し入れのお菓子も、角を立てずに断れます。言っていないと、毎回その場で理由を考えることになります。 ふたつ目は、助けてもらえること。 家族が知っていれば、食卓のおかずが変わります。職場の人が知っていれば、ランチの店が変わります。環境が勝手に整うのは、これが一番大きい。 3つ目が、自分への効き目です。 人に言ったことは、自分の中でも本気度が上がります。心理的な後押しとして、はっきり働きます。 そして、誰が味方かが分かります もうひとつ、宣言には副産物があります。 応援してくれる人と、そうでない人が分かれます。「せっかくの付き合いなのに」「そんなに痩せる必要ある？」と止めてくる人が、必ず出てきます。悪気はないことがほとんどですが、結果としてあなたの邪魔になります。 一方で、店を変えてくれる人、量を調整してくれる人、経過を聞いてくれる人がいます。 応援してくれる人こそが、あなたにとって大切な人です。 ダイエットは、それを見分ける機会にもなります。 大切な人との食事を断る必要はありません。むしろ、その人たちには先に言っておいてください。 やること 1. まず、いちばん一緒に食事をする人に言う 家族、パートナー、同僚。回数が多い相手ほど、効きます。 2. 期限とセットで伝える 「ずっと」ではなく「あと3ヶ月」と言ってください。相手も協力しやすくなります。 3. 止めてくる人には、理由を説明しない 議論する必要はありません。「そう決めたので」で十分です。説得は目的ではありません。", "motivation": "結論：やる気が出るのを待たないでください 「やる気さえ出れば続く」と考えているうちは、続きません。やる気は、来ない日のほうが多いからです。 続いている人は、やる気が高いのではありません。やる気が要らない形にしているだけです。 意志力は、時間とともに減っていきます 意志力は一日中同じ量あるわけではありません。仕事の判断、人づきあい、家事。使うたびに減っていき、夜には残っていません。 つまり一番弱っている時間帯に、一番強い誘惑と向き合う構造になっています。これで勝ち続けるのは無理があります。 続いている人は、判断そのものを減らしています。 家にお菓子を置かない → 夜に我慢する場面が消える 曜日を決めてジムに行く → 行くかどうか毎回考えない 食べるものを前日に決める → 空腹時に選ばない どれも意志の力ではなく、先に決めておくことで判断を消しています。 やる気は、あれば助かる程度のものです。土台にはできません。 「やる気が出れば続く」ではありません 順番が逆であることが多いです。 動いたから、やる気が出ます。 行く前は面倒でも、始めてしまえば普通にできる。これは多くの方が経験しているはずです。トレーニングを終えた後のほうが、次への意欲は高い。 だから待つのではなく、やる気がない状態でも動き出せる仕組みを作ります。予約を先に入れる、道具を前日に出しておく、行く時間を固定する。 やる気は、動き出しのきっかけではなく、動いた結果として出てくるものです。 やること 1. 決めることを、前の日にまとめる 翌日の食事、行く時間、やる種目。疲れていない時間に決めておくと、当日は実行するだけになります。 2. 曜日と時間を固定する 「今週どこかで」をやめてください。予定表に先に入っているものだけが実行されます。 3. やる気が出ない日は、最小単位だけやる ジムに行くのが無理なら、10分歩く。ゼロの日を作らないことが、やる気より効きます。", "saki-ni-yaru": "結論：先にやったほうが、続きます 痩せたら服を買う。痩せたら写真を撮る。痩せたら旅行に行く。 その順番だと、たいてい先延ばしになります。 そして、そのうち目的そのものを忘れます。 我慢の期間が長いほど、目的が遠くなります 「痩せてから」と決めた瞬間、その楽しみは達成のご褒美になります。ご褒美は、達成するまで手に入りません。 ところが減量には3ヶ月かかります。その間ずっと、我慢の期間が続きます。楽しみのない努力を3ヶ月続けるのは、かなり難しい。 しかも達成しても、多くの方は買いません。「もう少し落としてから」と、線を引き直します。目標が動くので、いつまでも到達しません。 そもそも、この方法論では人生を楽しむことが最優先です。ダイエットはその下にあります。楽しみを全部後ろに送るのは、順番が逆です。 先にやると、行動が変わります いま着られる範囲で、一段いい服を買う。今月のうちに写真を撮る。旅行の予定を入れる。 これをやると、いくつか変化が起きます。 まず、目的が具体的になります。 「痩せる」ではなく「この服をきれいに着る」になる。目標が体重の数字から離れると、日々の判断がぶれにくくなります。 そして、変化が見えます。 先に買った服が、2ヶ月後に違う着こなしになる。体重計より、こちらのほうが正直です。 最後に、楽しみが前倒しになります。 我慢だけの期間が消えます。 やること 1. 「痩せたらやりたいこと」を3つ書く まず言葉にしてください。頭の中にあるうちは、いつまでも先送りできます。 2. そのうち1つを、今月やる 全部でなくて構いません。1つだけ、前に持ってきてください。 3. 体重以外の目標を1つ決める 着たい服、撮りたい写真、続けたい行動。体重は目的ではなく、達成度を測る指標のひとつです。", "kuraberu": "結論：他人の経過は、条件が違いすぎて参考になりません SNSで見た人は1ヶ月で5kg落ちている。自分は2kg。同じようにやっているのに、と感じたことがあると思います。 同じようには、やれていません。条件がまるで違うからです。 落ちる速さを決めるのは、努力量ではありません 体重の落ち方は、いくつもの条件で変わります。 開始時の体重。重い人ほど、最初は速く落ちます 年齢と筋肉量。基礎代謝が違えば、同じ食事でも差が出ます 生活。座り仕事か立ち仕事か、通勤の距離、睡眠時間 これまでのダイエット歴。何度も繰り返している人は、落ちにくくなっていることがあります さらにSNSでは、うまくいった人だけが投稿します。 うまくいかなかった人は投稿しないので、目に入りません。見えているのは結果の一部です。 同じ方法でも、出る数字は人によって変わります。速さの違いは、正しさの違いではありません。 比べる相手を間違えると、判断まで狂います 他人と比べて焦ると、たいてい間違った手を打ちます。 食事をさらに減らす。運動を増やしすぎる。もっと速い方法に乗り換える。どれも、続かなくなる方向です。 そして乗り換えるたびに、前の方法の効果が測れなくなります。3週間続ければ答えが出たものを、2週間でやめてしまう。 比べるべき相手は、先週の自分です。先週より平均体重が下がっているか、先週より続けられているか。この比較だけが、次にやることを教えてくれます。 やること 1. 比べるのは、先週の平均と今週の平均 数字は自分の中だけで比べてください。他人の数字は、条件が違うので比較になりません。 2. 落ち方が遅く感じたら、ペースを確認する 現実的な減量ペースは月に体重の2〜4%です。それより速いのは、筋肉を売っている可能性があります。 3. 見るのがつらいものは、見ない 比べて落ち込むアカウントは、少しの間ミュートしてください。環境を整えるのは、食べ物だけの話ではありません。", "golf-shokuji": "結論：前日に減らさない。当日は切らさない 後半にスコアが崩れる原因を、技術や集中力の問題だと思っている方が多いです。 燃料切れであることが、かなりあります。 ここは食べ方で変えられます。 後半に落ちるのは、蓄えが尽きるからです 体は、強く動くときの燃料を糖の形で蓄えています。ただし蓄えられる量には限りがあり、半日動けば大きく減ります。 ラウンドは、朝から夕方までの長時間です。歩く距離も長く、スイングのたびに全身を使います。後半に入る頃には、蓄えがかなり減っている状態です。 燃料が減ると、まず落ちるのが集中力と判断です。筋力そのものより先に、細かいコントロールが効かなくなります。後半の3打が乱れるのは、多くの場合ここです。 前日に「明日に備えて軽くしておこう」と食事を減らすと、蓄えが減った状態でスタートすることになります。これが一番よくない準備です。 「軽くしたほうが動ける」ではありません 体を軽くしたほうがスイングしやすい、という感覚は分かります。ただし体重は前日の食事では変わりません。変わるのは、使える燃料の量だけです。 同じように、当日の昼食を軽くしすぎるのもよくあります。午後に響きます。 もうひとつ見落とされるのが飲み物です。汗をかいた分の水分が戻っていないと、判断でも集中でもパフォーマンスが落ちます。喉が渇いてから飲むのでは、すでに遅い。 準備は前日から、補給は切れる前に。 この2つだけです。 やること 1. 前日は、いつも通り食べる 減らさないでください。主食を抜くのは特にまずい。蓄えは前日の食事で作られます。 2. 当日の朝は、必ず食べる 時間がなくても、おにぎり1個とタンパク質を1つ。空腹スタートは後半に響きます。 3. 前半の途中で、少し補給する お腹が空く前に入れてください。空いてから食べるのでは、落ちたあとの回復になります。 4. 水分は、喉が渇く前に こまめに飲んでください。1ホールごとに一口で構いません。", "golf-kaisen": "結論：胸が回らないぶんを、腕が振っています 飛距離を伸ばそうとして、筋力をつけようとする方が多いです。順番が違います。 まず見るべきは、体がどれだけ捻れるかです。捻れない体に力を足しても、行き先がありません。 捻る場所が足りないと、別の場所が代わりに動きます スイングは、下半身が支え、背中の上のほうが回り、腕がその動きに乗って加速する、という順番で力が伝わります。 このとき回る役割を担っているのが、背中の上のほう（胸のあたり）と股関節です。ここが硬いと、捻る量が足りません。 そして体は、足りない分をどこかで補います。多くの場合、腰が代わりに捻れ、腕が代わりに振られます。 結果として起きるのが、 腕だけで振っている感覚 振り遅れ、当たりの薄さ ラウンド後の腰の張り 力が足りないのではなく、力を伝える道が途中で切れている状態です。 「筋力をつければ飛ぶ」ではありません 筋力は必要です。ただし、それは回る土台がある場合の話です。 捻れない状態で強い力を出そうとすると、その力は腕と腰に集中します。飛距離はさほど伸びず、負担だけが増える。練習量に対して結果が出ない典型がこれです。 順番はこうです。まず回る範囲を戻す。次に、その範囲の中で力を出せるようにする。最後に、その動きを繰り返せる体力をつける。 D/LIGHT でゴルフの方に最初にストレッチと可動域の確認をするのは、この順番のためです。 やること 1. 自分の回る量を、一度確認する 椅子に座って、上半身だけを左右に回してみてください。左右差があるかどうかも見ます。多くの方に差があります。 2. ラウンド前に、回す動きを入れる いきなり打たないでください。回る範囲を出してから振るだけで、当たりが変わります。 3. 腰で捻ろうとしない 腰は本来あまり捻れない場所です。捻ろうとすると痛めます。回すのは、その上と下です。"}</script>
 <footer class="ft">
   <p class="ft__logo"><span class='ft__logo__a'>D<span>/</span>LIGHT</span><span class='ft__logo__b'>BODY LABO</span></p>
   <p class="ft__txt">このページは会員の方向けです。内容についてのご質問は、セッションのときに担当トレーナーへどうぞ。</p>

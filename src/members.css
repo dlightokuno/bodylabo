@@ -105,13 +105,17 @@ ul,ol{margin:0;padding:0;list-style:none}
 .search input::-webkit-search-cancel-button{cursor:pointer}
 
 /* グループ */
-.grp{margin-top:44px}
-.grp[hidden]{display:none}
-.grp__hd{display:flex;align-items:baseline;gap:16px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+/* 分野の見出し。カードと同じ表の中に、横いっぱいの1行として入ります */
+.grp__hd{
+  grid-column:1/-1;display:flex;align-items:baseline;gap:16px;
+  padding-bottom:14px;margin-top:34px;border-bottom:1px solid var(--line);
+}
+.grp__hd:first-child{margin-top:0}
+.grp__hd[hidden]{display:none}
 .grp__hd h2{font-family:var(--f-serif);font-size:19px;font-weight:600;letter-spacing:.1em;color:var(--navy)}
 .grp__hd p{font-size:12px;letter-spacing:.08em;color:var(--ink-3)}
 
-.cards{display:grid;gap:16px;margin-top:22px;grid-template-columns:repeat(auto-fill,minmax(288px,1fr))}
+.cards{display:grid;gap:16px;margin-top:8px;grid-template-columns:repeat(auto-fill,minmax(288px,1fr))}
 .card[hidden]{display:none}
 .card a{
   display:flex;flex-direction:column;height:100%;padding:26px 26px 22px;
@@ -144,6 +148,8 @@ ul,ol{margin:0;padding:0;list-style:none}
 .tag--paid{background:var(--navy);color:var(--gold);letter-spacing:.1em;font-weight:500}
 
 .empty{padding:70px 0;text-align:center;font-size:14px;color:var(--ink-3)}
+.hits{margin:2px 0 -6px;font-size:12px;letter-spacing:.08em;color:var(--ink-3)}
+.hits[hidden]{display:none}
 
 /* ---------- 記事 ---------- */
 .art{width:min(100% - 40px,var(--read));margin-inline:auto;padding-bottom:80px}
@@ -342,12 +348,34 @@ ul,ol{margin:0;padding:0;list-style:none}
 .card[data-paid="1"] a{border-left-color:var(--navy)}
 
 /* 分野ごとに見出しの下線の色も変える */
-.grp[data-cat="food"] .grp__hd{border-bottom-color:rgba(198,166,103,.5)}
-.grp[data-cat="training"] .grp__hd{border-bottom-color:rgba(190,110,88,.4)}
-.grp[data-cat="posture"] .grp__hd{border-bottom-color:rgba(78,122,114,.4)}
-.grp[data-cat="sleep"] .grp__hd{border-bottom-color:rgba(120,135,159,.45)}
-.grp[data-cat="mind"] .grp__hd{border-bottom-color:rgba(122,104,150,.4)}
-.grp[data-cat="golf"] .grp__hd{border-bottom-color:rgba(96,132,86,.4)}
+.grp__hd[data-cat="food"]{border-bottom-color:rgba(198,166,103,.5)}
+.grp__hd[data-cat="training"]{border-bottom-color:rgba(190,110,88,.4)}
+.grp__hd[data-cat="posture"]{border-bottom-color:rgba(78,122,114,.4)}
+.grp__hd[data-cat="sleep"]{border-bottom-color:rgba(120,135,159,.45)}
+.grp__hd[data-cat="mind"]{border-bottom-color:rgba(122,104,150,.4)}
+.grp__hd[data-cat="golf"]{border-bottom-color:rgba(96,132,86,.4)}
+
+/* ---------- トップ画 ---------- */
+
+/* 記事のいちばん上に出る大きい画像 */
+.cover{
+  margin:0 0 26px;aspect-ratio:2/1;overflow:hidden;
+  background:var(--navy);border-radius:var(--r-lg);box-shadow:var(--sh);
+}
+.cover img{width:100%;height:100%;object-fit:cover}
+
+/* 目次カードの上に出る小さい画像 */
+.card__img{
+  display:block;margin:-26px -26px 18px;aspect-ratio:2/1;overflow:hidden;
+  background:var(--navy);border-radius:13px 13px 0 0;
+}
+.card__img img{width:100%;height:100%;object-fit:cover;transition:transform .55s var(--ease)}
+.card a:hover .card__img img{transform:scale(1.045)}
+
+@media (max-width:640px){
+  .cover{margin-bottom:20px}
+  .card__img{margin:-22px -20px 16px}
+}
 
 /* ---------- 長い記事のための要素 ---------- */
 

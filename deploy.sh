@@ -1,27 +1,29 @@
 #!/bin/bash
 # =========================================================
-# サイトを作り直して、Netlify に送る
+# 【使いません】Netlify に送るための古いスクリプトです
 #
-#     ./deploy.sh
+# いまの公開先は GitHub Pages です。公開するときは
 #
-# Netlify にビルド作業をさせず、出来上がったファイルだけを送ります。
-# そのため、無料枠のビルド時間は消費しません。
+#     python3 publish.py
+#
+# を実行してください。
+#
+# Netlify はアカウントのクレジットを使い切っていて、送っても弾かれます。
+# 中身は下に残してありますが、実行しても止まるようにしてあります。
 # =========================================================
-set -e
-cd "$(dirname "$0")"
+cat <<'MSG'
 
-echo "■ サイトを作り直します"
-python3 build.py
+  このスクリプトは使いません。
 
-echo ""
-echo "■ Netlify に送ります（ビルド時間は消費しません）"
+  公開先は GitHub Pages に移りました。次を実行してください。
 
-# netlify コマンドが入っていれば、それを使う（起動が速い）
-if command -v netlify >/dev/null 2>&1; then
-  netlify deploy --prod --dir site --no-build
-else
-  npx --yes netlify-cli@latest deploy --prod --dir site --no-build
-fi
+      python3 publish.py
 
-echo ""
-echo "完了しました。 https://dlight-body-labo.netlify.app/"
+  公開URL: https://dlightokuno.github.io/bodylabo-site/
+
+MSG
+exit 1
+
+# ------- 以下、以前の内容（実行されません） -------
+# python3 build.py
+# netlify deploy --prod --dir site --no-build
